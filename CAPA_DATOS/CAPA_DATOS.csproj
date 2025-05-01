@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CAPA_DE_PRESENTACION\CAPA_DE_PRESENTACION.csproj" />
     <ProjectReference Include="..\CAPA_ENTIDAD\CAPA_ENTIDAD.csproj" />
     <ProjectReference Include="..\CAPA_NEGOCIO\CAPA_NEGOCIO.csproj" />
   </ItemGroup>
