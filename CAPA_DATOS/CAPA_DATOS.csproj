@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CAPA_DE_PRESENTACION\CAPA_DE_PRESENTACION.csproj" />
+    <ProjectReference Include="..\CAPA-PRESENTACION\CAPA-PRESENTACION.csproj" />
     <ProjectReference Include="..\CAPA_ENTIDAD\CAPA_ENTIDAD.csproj" />
     <ProjectReference Include="..\CAPA_NEGOCIO\CAPA_NEGOCIO.csproj" />
   </ItemGroup>
