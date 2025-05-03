@@ -36,7 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "LOGIN";
-            Text = "LOGIN";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += LOGIN_Load;
             ResumeLayout(false);
         }
