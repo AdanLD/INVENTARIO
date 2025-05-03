@@ -1,6 +1,6 @@
 ﻿namespace CAPA_PRESENTACION
 {
-    partial class PADRE
+    partial class LOGIN
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             SuspendLayout();
             // 
-            // PADRE
+            // LOGIN
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
-            Name = "PADRE";
+            Name = "LOGIN";
+            Text = "LOGIN";
+            Load += LOGIN_Load;
             ResumeLayout(false);
         }
 
