@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CAPA-PRESENTACION\CAPA-PRESENTACION.csproj" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.119" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CAPA_ENTIDAD\CAPA_ENTIDAD.csproj" />
-    <ProjectReference Include="..\CAPA_NEGOCIO\CAPA_NEGOCIO.csproj" />
   </ItemGroup>
 
 </Project>

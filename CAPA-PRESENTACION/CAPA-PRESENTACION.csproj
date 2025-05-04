@@ -11,8 +11,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="BD_INVENTARIO_FINAL.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="BD_INVENTARIO_FINAL.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FontAwesome" Version="4.7.0" />
     <PackageReference Include="FontAwesome.Sharp" Version="6.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CAPA_ENTIDAD\CAPA_ENTIDAD.csproj" />
+    <ProjectReference Include="..\CAPA_NEGOCIO\CAPA_NEGOCIO.csproj" />
   </ItemGroup>
 
   <ItemGroup>

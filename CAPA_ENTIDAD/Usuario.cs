@@ -18,7 +18,7 @@ namespace CAPA_ENTIDAD
         public string nombre_Materno_Usuario { get; set; } = string.Empty;
         public string nombre_Usuario { get; set; } = string.Empty;
         public TimeOnly hora_Creacion_Usuario { get; set; }
-        bool estado_Actividad_Usuario { get; set; }
-        string documento_Usuario { get; set; } = string.Empty;
+        public bool estado_Actividad_Usuario { get; set; }
+        public string documento_Usuario { get; set; } = string.Empty;
     }
 }
