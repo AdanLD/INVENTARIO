@@ -27,11 +27,14 @@ namespace CAPA_PRESENTACION
         private void iconButton1_Click(object sender, EventArgs e)
         {
             List<Usuario> TEST = new CN_Usuario().Enlistar();
-            Usuario ObjUsuario = new CN_Usuario().Enlistar().Where(u => u.documento_Usuario == txt_Login_Usuario.Text && u.contraseña_Usuario == txt_Login_Contraseña.Text).FirstOrDefault(); //Busca al usuario(obj) con las coincidencias (Adan);
 
+            Usuario ObjAUsuario = new CN_Usuario().Enlistar().Where(u => u.documento_Usuario == txt_Login_Usuario.Text && u.contraseña_Usuario == txt_Login_Contraseña.Text).FirstOrDefault(); //Busca al usuario(obj) con las coincidencias (Adan);
+
+            if (ObjAUsuario != null)
+            {
                 //Nueva instancia del form (Adan).
-                Menu menu = new Menu();
-
+                Menu menu = new Menu(ObjAUsuario);
+                
                 //Abre el nuevo formulario (Adan).
                 menu.Show();
 
@@ -39,6 +42,12 @@ namespace CAPA_PRESENTACION
                 this.Hide();
 
                 menu.FormClosing += frm_Cerrado; // Cuando se cierre el formulario Menu entonces se llevara a cabo el evento frm_Cerrado (Adan).
+            }
+            else
+            {
+                MessageBox.Show("Usuario inexistente");
+            }
+               
 
         }
 
