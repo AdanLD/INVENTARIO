@@ -23,11 +23,12 @@ namespace CAPA_PRESENTACION
             InitializeComponent();
         }
 
+        static string nombreC = nombreC;
         private void Menu_Load(object sender, EventArgs e)
         {
             Menu menu = new Menu(UsuarioActual);
-            string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " +  UsuarioActual.nombre_Materno_Usuario;
-            menu.Text = $"{menu.Text} {nombreC}"; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
+            string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " +  UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
+            this.Text = $"{ menu.Text} {nombreC}."; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
         }
 
 
