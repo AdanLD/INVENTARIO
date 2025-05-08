@@ -53,7 +53,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Informacion_Menu });
             menuStrip1.Location = new Point(0, 23);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 83);
+            menuStrip1.Size = new Size(887, 83);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -89,7 +89,7 @@
             iconMenuItem_Categoria_Menu.IconColor = Color.Black;
             iconMenuItem_Categoria_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Categoria_Menu.Name = "iconMenuItem_Categoria_Menu";
-            iconMenuItem_Categoria_Menu.Size = new Size(125, 22);
+            iconMenuItem_Categoria_Menu.Size = new Size(180, 22);
             iconMenuItem_Categoria_Menu.Text = "Categoria";
             iconMenuItem_Categoria_Menu.Click += iconMenuItem_Categoria_Menu_Click;
             // 
@@ -99,7 +99,7 @@
             iconMenuItem_Producto_Menu.IconColor = Color.Black;
             iconMenuItem_Producto_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Producto_Menu.Name = "iconMenuItem_Producto_Menu";
-            iconMenuItem_Producto_Menu.Size = new Size(125, 22);
+            iconMenuItem_Producto_Menu.Size = new Size(180, 22);
             iconMenuItem_Producto_Menu.Text = "Producto";
             iconMenuItem_Producto_Menu.Click += iconMenuItem_Producto_Menu_Click;
             // 
@@ -228,7 +228,7 @@
             mnString_Titulo_Menu.Location = new Point(0, 0);
             mnString_Titulo_Menu.Name = "mnString_Titulo_Menu";
             mnString_Titulo_Menu.RightToLeft = RightToLeft.Yes;
-            mnString_Titulo_Menu.Size = new Size(800, 23);
+            mnString_Titulo_Menu.Size = new Size(887, 23);
             mnString_Titulo_Menu.TabIndex = 1;
             mnString_Titulo_Menu.Text = "menuStrip2";
             mnString_Titulo_Menu.ItemClicked += mnString_Titulo_Menu_ItemClicked;
@@ -238,14 +238,14 @@
             panel_Contenedor.Dock = DockStyle.Fill;
             panel_Contenedor.Location = new Point(0, 106);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(800, 381);
+            panel_Contenedor.Size = new Size(887, 410);
             panel_Contenedor.TabIndex = 2;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 487);
+            ClientSize = new Size(887, 516);
             Controls.Add(panel_Contenedor);
             Controls.Add(menuStrip1);
             Controls.Add(mnString_Titulo_Menu);

@@ -23,12 +23,11 @@ namespace CAPA_PRESENTACION
             InitializeComponent();
         }
 
-        static string nombreC = nombreC;
+        //static string nombreC = nombreC;
         private void Menu_Load(object sender, EventArgs e)
         {
-            Menu menu = new Menu(UsuarioActual);
-            string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " +  UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
-            this.Text = $"{ menu.Text} {nombreC}."; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
+            string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " + UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
+            this.Text = $"Usuario: {nombreC}."; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
         }
 
 
@@ -43,29 +42,40 @@ namespace CAPA_PRESENTACION
 
         private void AbrirFormulario(IconMenuItem menu, Form formulario) /* Recibe el inconMenuItem pulsado y su respectivo formulario */
         {
-            if (menuPulsado != null)
+            try
             {
-                menuPulsado.BackColor = Color.White;
+                if (menuPulsado != null)
+                {
+                    menuPulsado.BackColor = Color.White;
+                }
+
+                menu.BackColor = Color.Silver;
+
+                menuPulsado = menu;
+
+                if (formActivo != null)
+                {
+                    formActivo.Close();
+                    formActivo.Dispose();
+                }
+
+                formActivo = formulario;
+
+                panel_Contenedor.Controls.Clear();
+
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None; //Suprimira sus bordes.
+                formulario.Dock = DockStyle.Fill; //Se expandira en plenitud dentro del panel contenedor (Adan).
+                panel_Contenedor.Controls.Add(formulario); //Agrega el formulario al panel contenedor (Adan);
+
+                formulario.Show();
             }
-
-            menu.BackColor = Color.Silver;
-
-            menuPulsado = menu;
-
-            if (formActivo != null)
+            catch (Exception EX)
             {
-                formActivo.Close();
+                MessageBox.Show(EX.Message);
+                throw;
             }
-
-            formActivo = formulario;
-
-            formulario.TopLevel = false;
-            formulario.FormBorderStyle = FormBorderStyle.None; //Suprimira sus bordes.
-            formulario.Dock = DockStyle.Fill; //Se expandira en plenitud dentro del panel contenedor (Adan).
-
-            panel_Contenedor.Controls.Add(formulario); //Agrega el formulario al panel contenedor (Adan);
-
-            formulario.Show();
+            
 
         }
 
@@ -76,12 +86,12 @@ namespace CAPA_PRESENTACION
 
         private void iconMenuItem_Categoria_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_Categoria_Menu, new FormCategoria()); //Llamada al metodo abrir formulario con destino a FormCategoria (Adan).
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormCategoria()); //Llamada al metodo abrir formulario con destino a FormCategoria (Adan).
         }
 
         private void iconMenuItem_Producto_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_Producto_Menu, new FormProducto()); //Llamada al metodo abrir formulario con destino a FormProducto (Adan).
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormProducto()); //Llamada al metodo abrir formulario con destino a FormProducto (Adan).
         }
 
         private void iconMenuItem_Registrar_Menu_Click(object sender, EventArgs e)
@@ -96,12 +106,12 @@ namespace CAPA_PRESENTACION
 
         private void iconMenuItem_RegistrarCompras_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_RegistrarCompras_Menu, new FormCompras()); //Llamada al metodo abrir formulario con destino a FormCompras (Adan).
+            AbrirFormulario(iconMenuItem_Compras_Menu, new FormCompras()); //Llamada al metodo abrir formulario con destino a FormCompras (Adan).
         }
 
         private void iconMenuItem_VerDetalleCompras_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_VerDetalleCompras_Menu, new FormDetalleCompra()); //Llamada al metodo abrir formulario con destino a FormDetallesVentas (Adan).
+            AbrirFormulario(iconMenuItem_Compras_Menu, new FormDetalleCompra()); //Llamada al metodo abrir formulario con destino a FormDetallesVentas (Adan).
         }
 
         private void iconMenuItem_Clientes_Menu_Click(object sender, EventArgs e)
