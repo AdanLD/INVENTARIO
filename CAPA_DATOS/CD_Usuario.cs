@@ -23,6 +23,7 @@ namespace CAPA_DATOS
             {
                 try
                 {
+                    //string query = "SELECT usuario_ID,correo_Usuario,contrasena_Usuario,nombre_paterno_Usuario,numero_telefonico_Usuario,nombre_Materno_Usuario,nombre_Usuario,estado_Actividad_Usuario,documento_Usuario FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
                     string query = "SELECT * FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
 
                     SQLiteCommand cmd = new SQLiteCommand(query, cn); //Quizas deba cambiarse por sqlcomand (Adan).  
@@ -37,18 +38,18 @@ namespace CAPA_DATOS
                         {
                             lista.Add(new Usuario() //Quizas aun deba modificar algunas columnas (Adan).
                             {
-                                usuario_ID = Convert.ToInt32(sqdr["usuarioID"]),
-                                correo_Usuario = sqdr["correoUsuario"].ToString(),
-                                contraseña_Usuario = sqdr["contraseñaUsuario"].ToString(),
-                                nombre_Paterno_Usuario = sqdr["apellidoPaterno"].ToString(),
-                                numero_telefonico_Usuario = sqdr["numeroTelefonico"].ToString(),
+                                usuario_ID = Convert.ToInt32(sqdr["usuario_ID"]),
+                                correo_Usuario = sqdr["correo_Usuario"].ToString(),
+                                contraseña_Usuario = sqdr["contrasena_Usuario"].ToString(),
+                                nombre_Paterno_Usuario = sqdr["nombre_paterno_Usuario"].ToString(),
+                                numero_telefonico_Usuario = sqdr["numero_telefonico_Usuario"].ToString(),
                                 ObjCargo = new Cargo(),
                                 fecha_Creacion_Usuario = DateOnly.FromDateTime(DateTime.Now),
-                                nombre_Materno_Usuario = sqdr["apellidoMaterno"].ToString(),
+                                nombre_Materno_Usuario = sqdr["nombre_Materno_Usuario"].ToString(),
                                 nombre_Usuario = sqdr["nombre_Usuario"].ToString(),
                                 hora_Creacion_Usuario = TimeOnly.FromDateTime(DateTime.Now),
-                                estado_Actividad_Usuario = Convert.ToBoolean(sqdr["estadoActividad"]),
-                                documento_Usuario = sqdr["documentoUsuario"].ToString(),
+                                estado_Actividad_Usuario = Convert.ToBoolean(sqdr["estado_Actividad_Usuario"]),
+                                documento_Usuario = sqdr["documento_Usuario"].ToString()
 
                             });
                         }

@@ -73,7 +73,7 @@
             // iconMenuItem_Mantenedor_Menu
             // 
             iconMenuItem_Mantenedor_Menu.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem_Categoria_Menu, iconMenuItem_Producto_Menu });
-            iconMenuItem_Mantenedor_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Mantenedor_Menu.IconChar = FontAwesome.Sharp.IconChar.Tools;
             iconMenuItem_Mantenedor_Menu.IconColor = Color.Black;
             iconMenuItem_Mantenedor_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Mantenedor_Menu.IconSize = 60;
@@ -106,7 +106,7 @@
             // iconMenuItem_Ventas_Menu
             // 
             iconMenuItem_Ventas_Menu.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem_RegistrarVentas_Menu, iconMenuItem_VerDetalleVentas_Menu });
-            iconMenuItem_Ventas_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Ventas_Menu.IconChar = FontAwesome.Sharp.IconChar.Usd;
             iconMenuItem_Ventas_Menu.IconColor = Color.Black;
             iconMenuItem_Ventas_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Ventas_Menu.IconSize = 60;
@@ -139,7 +139,7 @@
             // iconMenuItem_Compras_Menu
             // 
             iconMenuItem_Compras_Menu.DropDownItems.AddRange(new ToolStripItem[] { iconMenuItem_RegistrarCompras_Menu, iconMenuItem_VerDetalleCompras_Menu });
-            iconMenuItem_Compras_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Compras_Menu.IconChar = FontAwesome.Sharp.IconChar.Truck;
             iconMenuItem_Compras_Menu.IconColor = Color.Black;
             iconMenuItem_Compras_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Compras_Menu.IconSize = 60;
@@ -171,7 +171,7 @@
             // 
             // iconMenuItem_Clientes_Menu
             // 
-            iconMenuItem_Clientes_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Clientes_Menu.IconChar = FontAwesome.Sharp.IconChar.UserFriends;
             iconMenuItem_Clientes_Menu.IconColor = Color.Black;
             iconMenuItem_Clientes_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Clientes_Menu.IconSize = 60;
@@ -184,7 +184,7 @@
             // 
             // iconMenuItem_Proveedores_Menu
             // 
-            iconMenuItem_Proveedores_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Proveedores_Menu.IconChar = FontAwesome.Sharp.IconChar.UsersCog;
             iconMenuItem_Proveedores_Menu.IconColor = Color.Black;
             iconMenuItem_Proveedores_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Proveedores_Menu.IconSize = 60;
@@ -197,7 +197,7 @@
             // 
             // iconMenuItem_Reportes_Menu
             // 
-            iconMenuItem_Reportes_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Reportes_Menu.IconChar = FontAwesome.Sharp.IconChar.File;
             iconMenuItem_Reportes_Menu.IconColor = Color.Black;
             iconMenuItem_Reportes_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Reportes_Menu.IconSize = 60;
@@ -210,7 +210,7 @@
             // 
             // iconMenuItem_Informacion_Menu
             // 
-            iconMenuItem_Informacion_Menu.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            iconMenuItem_Informacion_Menu.IconChar = FontAwesome.Sharp.IconChar.Info;
             iconMenuItem_Informacion_Menu.IconColor = Color.Black;
             iconMenuItem_Informacion_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Informacion_Menu.IconSize = 60;
@@ -238,14 +238,14 @@
             panel_Contenedor.Dock = DockStyle.Fill;
             panel_Contenedor.Location = new Point(0, 106);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(800, 344);
+            panel_Contenedor.Size = new Size(800, 381);
             panel_Contenedor.TabIndex = 2;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 487);
             Controls.Add(panel_Contenedor);
             Controls.Add(menuStrip1);
             Controls.Add(mnString_Titulo_Menu);
