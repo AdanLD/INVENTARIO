@@ -8,7 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CAPA_DATOS
+namespace CAPA_DATOS 
 {
     public class CD_Permisos
     {
