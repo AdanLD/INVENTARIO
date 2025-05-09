@@ -8,6 +8,6 @@ namespace CAPA_DATOS
 {
     public class CD_Permisos
     {
-       
+        
     }
 }
