@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CAPA_NEGOCIO;
 using CAPA_ENTIDAD;
+using FontAwesome.Sharp;
 
 namespace CAPA_PRESENTACION
 {
@@ -31,8 +32,6 @@ namespace CAPA_PRESENTACION
                 List<Usuario> TEST = new CN_Usuario().Enlistar();
 
                 Usuario ObjAUsuario = new CN_Usuario().Enlistar().Where(u => u.documento_Usuario == txt_Login_Usuario.Text && u.contraseña_Usuario == txt_Login_Contraseña.Text).FirstOrDefault(); //Busca al usuario(obj) con las coincidencias (Adan);
-
-                
 
                 if (ObjAUsuario != null)
                 {

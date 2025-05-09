@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 using FontAwesome.Sharp;
 using FontAwesome;
 
@@ -26,7 +27,21 @@ namespace CAPA_PRESENTACION
         //static string nombreC = nombreC;
         private void Menu_Load(object sender, EventArgs e)
         {
+            List<Permiso> listaPermisos = new CN_Permiso().Listar(UsuarioActual.usuario_ID); //Se asigna a la listaPermisos el resultado de la consulta de permisos para el usuario actual (Adan).
+
+            foreach (IconMenuItem iconMenu in menuStrip_Menu_Menu.Items) //Recorre todos los menus (Adan).
+            {
+                bool encontrado = listaPermisos.Any(a => a.codigo_Permiso == iconMenu.Name); //Verifica si el menu esta en la lista de permisos (Adan).
+
+                if (encontrado == false)
+                {
+                    iconMenu.Visible = false;
+                }
+            }
+            
+
             string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " + UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
+
             this.Text = $"Usuario: {nombreC}."; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
         }
 

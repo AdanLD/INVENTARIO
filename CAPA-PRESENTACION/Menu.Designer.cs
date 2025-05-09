@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
+            menuStrip_Menu_Menu = new MenuStrip();
             iconMenuItem_Usuarios_Menu = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem_Mantenedor_Menu = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem_Categoria_Menu = new FontAwesome.Sharp.IconMenuItem();
@@ -45,18 +45,19 @@
             iconMenuItem_Informacion_Menu = new FontAwesome.Sharp.IconMenuItem();
             mnString_Titulo_Menu = new MenuStrip();
             panel_Contenedor = new Panel();
-            menuStrip1.SuspendLayout();
+            menuStrip_Menu_Menu.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // menuStrip_Menu_Menu
             // 
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Informacion_Menu });
-            menuStrip1.Location = new Point(0, 23);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1262, 88);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+
+            menuStrip_Menu_Menu.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Informacion_Menu });
+            menuStrip_Menu_Menu.Location = new Point(0, 23);
+            menuStrip_Menu_Menu.Name = "menuStrip_Menu_Menu";
+            menuStrip_Menu_Menu.Size = new Size(887, 83);
+            menuStrip_Menu_Menu.TabIndex = 0;
+            menuStrip_Menu_Menu.Text = "menuStrip1";
+   
             // 
             // iconMenuItem_Usuarios_Menu
             // 
@@ -90,7 +91,9 @@
             iconMenuItem_Categoria_Menu.IconColor = Color.Black;
             iconMenuItem_Categoria_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Categoria_Menu.Name = "iconMenuItem_Categoria_Menu";
+
             iconMenuItem_Categoria_Menu.Size = new Size(157, 26);
+
             iconMenuItem_Categoria_Menu.Text = "Categoria";
             iconMenuItem_Categoria_Menu.Click += iconMenuItem_Categoria_Menu_Click;
             // 
@@ -100,7 +103,8 @@
             iconMenuItem_Producto_Menu.IconColor = Color.Black;
             iconMenuItem_Producto_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Producto_Menu.Name = "iconMenuItem_Producto_Menu";
-            iconMenuItem_Producto_Menu.Size = new Size(157, 26);
+
+            iconMenuItem_Producto_Menu.Size = new Size(157, 26); 
             iconMenuItem_Producto_Menu.Text = "Producto";
             iconMenuItem_Producto_Menu.Click += iconMenuItem_Producto_Menu_Click;
             // 
@@ -249,22 +253,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1262, 719);
             Controls.Add(panel_Contenedor);
-            Controls.Add(menuStrip1);
+            Controls.Add(menuStrip_Menu_Menu);
             Controls.Add(mnString_Titulo_Menu);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MainMenuStrip = menuStrip1;
+            MainMenuStrip = menuStrip_Menu_Menu;
             Name = "Menu";
             Text = "USUARIO:";
             Load += Menu_Load;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
+            menuStrip_Menu_Menu.ResumeLayout(false);
+            menuStrip_Menu_Menu.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
+        private MenuStrip menuStrip_Menu_Menu;
         private MenuStrip mnString_Titulo_Menu;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem_Informacion_Menu;
         private FontAwesome.Sharp.IconMenuItem iconMenuItem_Usuarios_Menu;
