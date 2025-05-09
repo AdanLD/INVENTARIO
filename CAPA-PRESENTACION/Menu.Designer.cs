@@ -50,10 +50,11 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Informacion_Menu });
             menuStrip1.Location = new Point(0, 23);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(887, 83);
+            menuStrip1.Size = new Size(1262, 88);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -65,7 +66,7 @@
             iconMenuItem_Usuarios_Menu.IconSize = 60;
             iconMenuItem_Usuarios_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Usuarios_Menu.Name = "iconMenuItem_Usuarios_Menu";
-            iconMenuItem_Usuarios_Menu.Size = new Size(74, 79);
+            iconMenuItem_Usuarios_Menu.Size = new Size(93, 84);
             iconMenuItem_Usuarios_Menu.Text = "USUARIOS";
             iconMenuItem_Usuarios_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Usuarios_Menu.Click += iconMenuItem_Usuarios_Menu_Click;
@@ -79,7 +80,7 @@
             iconMenuItem_Mantenedor_Menu.IconSize = 60;
             iconMenuItem_Mantenedor_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Mantenedor_Menu.Name = "iconMenuItem_Mantenedor_Menu";
-            iconMenuItem_Mantenedor_Menu.Size = new Size(99, 79);
+            iconMenuItem_Mantenedor_Menu.Size = new Size(123, 84);
             iconMenuItem_Mantenedor_Menu.Text = "MANTENEDOR";
             iconMenuItem_Mantenedor_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -89,7 +90,7 @@
             iconMenuItem_Categoria_Menu.IconColor = Color.Black;
             iconMenuItem_Categoria_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Categoria_Menu.Name = "iconMenuItem_Categoria_Menu";
-            iconMenuItem_Categoria_Menu.Size = new Size(180, 22);
+            iconMenuItem_Categoria_Menu.Size = new Size(157, 26);
             iconMenuItem_Categoria_Menu.Text = "Categoria";
             iconMenuItem_Categoria_Menu.Click += iconMenuItem_Categoria_Menu_Click;
             // 
@@ -99,7 +100,7 @@
             iconMenuItem_Producto_Menu.IconColor = Color.Black;
             iconMenuItem_Producto_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_Producto_Menu.Name = "iconMenuItem_Producto_Menu";
-            iconMenuItem_Producto_Menu.Size = new Size(180, 22);
+            iconMenuItem_Producto_Menu.Size = new Size(157, 26);
             iconMenuItem_Producto_Menu.Text = "Producto";
             iconMenuItem_Producto_Menu.Click += iconMenuItem_Producto_Menu_Click;
             // 
@@ -112,7 +113,7 @@
             iconMenuItem_Ventas_Menu.IconSize = 60;
             iconMenuItem_Ventas_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Ventas_Menu.Name = "iconMenuItem_Ventas_Menu";
-            iconMenuItem_Ventas_Menu.Size = new Size(72, 79);
+            iconMenuItem_Ventas_Menu.Size = new Size(76, 84);
             iconMenuItem_Ventas_Menu.Text = "VENTAS";
             iconMenuItem_Ventas_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -122,7 +123,7 @@
             iconMenuItem_RegistrarVentas_Menu.IconColor = Color.Black;
             iconMenuItem_RegistrarVentas_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_RegistrarVentas_Menu.Name = "iconMenuItem_RegistrarVentas_Menu";
-            iconMenuItem_RegistrarVentas_Menu.Size = new Size(128, 22);
+            iconMenuItem_RegistrarVentas_Menu.Size = new Size(163, 26);
             iconMenuItem_RegistrarVentas_Menu.Text = "Registrar";
             iconMenuItem_RegistrarVentas_Menu.Click += iconMenuItem_Registrar_Menu_Click;
             // 
@@ -132,7 +133,7 @@
             iconMenuItem_VerDetalleVentas_Menu.IconColor = Color.Black;
             iconMenuItem_VerDetalleVentas_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_VerDetalleVentas_Menu.Name = "iconMenuItem_VerDetalleVentas_Menu";
-            iconMenuItem_VerDetalleVentas_Menu.Size = new Size(128, 22);
+            iconMenuItem_VerDetalleVentas_Menu.Size = new Size(163, 26);
             iconMenuItem_VerDetalleVentas_Menu.Text = "Ver detalle";
             iconMenuItem_VerDetalleVentas_Menu.Click += iconMenuItem_VerDetalle_Menu_Click;
             // 
@@ -145,7 +146,7 @@
             iconMenuItem_Compras_Menu.IconSize = 60;
             iconMenuItem_Compras_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Compras_Menu.Name = "iconMenuItem_Compras_Menu";
-            iconMenuItem_Compras_Menu.Size = new Size(75, 79);
+            iconMenuItem_Compras_Menu.Size = new Size(91, 84);
             iconMenuItem_Compras_Menu.Text = "COMPRAS";
             iconMenuItem_Compras_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             // 
@@ -155,7 +156,7 @@
             iconMenuItem_RegistrarCompras_Menu.IconColor = Color.Black;
             iconMenuItem_RegistrarCompras_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_RegistrarCompras_Menu.Name = "iconMenuItem_RegistrarCompras_Menu";
-            iconMenuItem_RegistrarCompras_Menu.Size = new Size(128, 22);
+            iconMenuItem_RegistrarCompras_Menu.Size = new Size(163, 26);
             iconMenuItem_RegistrarCompras_Menu.Text = "Registrar";
             iconMenuItem_RegistrarCompras_Menu.Click += iconMenuItem_RegistrarCompras_Menu_Click;
             // 
@@ -165,7 +166,7 @@
             iconMenuItem_VerDetalleCompras_Menu.IconColor = Color.Black;
             iconMenuItem_VerDetalleCompras_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_VerDetalleCompras_Menu.Name = "iconMenuItem_VerDetalleCompras_Menu";
-            iconMenuItem_VerDetalleCompras_Menu.Size = new Size(128, 22);
+            iconMenuItem_VerDetalleCompras_Menu.Size = new Size(163, 26);
             iconMenuItem_VerDetalleCompras_Menu.Text = "Ver detalle";
             iconMenuItem_VerDetalleCompras_Menu.Click += iconMenuItem_VerDetalleCompras_Menu_Click;
             // 
@@ -177,7 +178,7 @@
             iconMenuItem_Clientes_Menu.IconSize = 60;
             iconMenuItem_Clientes_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Clientes_Menu.Name = "iconMenuItem_Clientes_Menu";
-            iconMenuItem_Clientes_Menu.Size = new Size(72, 79);
+            iconMenuItem_Clientes_Menu.Size = new Size(86, 84);
             iconMenuItem_Clientes_Menu.Text = "CLIENTES";
             iconMenuItem_Clientes_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Clientes_Menu.Click += iconMenuItem_Clientes_Menu_Click;
@@ -190,7 +191,7 @@
             iconMenuItem_Proveedores_Menu.IconSize = 60;
             iconMenuItem_Proveedores_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Proveedores_Menu.Name = "iconMenuItem_Proveedores_Menu";
-            iconMenuItem_Proveedores_Menu.Size = new Size(91, 79);
+            iconMenuItem_Proveedores_Menu.Size = new Size(115, 84);
             iconMenuItem_Proveedores_Menu.Text = "PROVEDORES";
             iconMenuItem_Proveedores_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Proveedores_Menu.Click += iconMenuItem_Proveedores_Menu_Click;
@@ -203,7 +204,7 @@
             iconMenuItem_Reportes_Menu.IconSize = 60;
             iconMenuItem_Reportes_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Reportes_Menu.Name = "iconMenuItem_Reportes_Menu";
-            iconMenuItem_Reportes_Menu.Size = new Size(73, 79);
+            iconMenuItem_Reportes_Menu.Size = new Size(91, 84);
             iconMenuItem_Reportes_Menu.Text = "REPORTES";
             iconMenuItem_Reportes_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Reportes_Menu.Click += iconMenuItem_Reportes_Menu_Click;
@@ -216,7 +217,7 @@
             iconMenuItem_Informacion_Menu.IconSize = 60;
             iconMenuItem_Informacion_Menu.ImageScaling = ToolStripItemImageScaling.None;
             iconMenuItem_Informacion_Menu.Name = "iconMenuItem_Informacion_Menu";
-            iconMenuItem_Informacion_Menu.Size = new Size(101, 79);
+            iconMenuItem_Informacion_Menu.Size = new Size(123, 84);
             iconMenuItem_Informacion_Menu.Text = "INFORMACION";
             iconMenuItem_Informacion_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Informacion_Menu.Click += iconMenuItem_Informacion_Menu_Click;
@@ -225,10 +226,11 @@
             // 
             mnString_Titulo_Menu.AutoSize = false;
             mnString_Titulo_Menu.BackColor = Color.RoyalBlue;
+            mnString_Titulo_Menu.ImageScalingSize = new Size(20, 20);
             mnString_Titulo_Menu.Location = new Point(0, 0);
             mnString_Titulo_Menu.Name = "mnString_Titulo_Menu";
             mnString_Titulo_Menu.RightToLeft = RightToLeft.Yes;
-            mnString_Titulo_Menu.Size = new Size(887, 23);
+            mnString_Titulo_Menu.Size = new Size(1262, 23);
             mnString_Titulo_Menu.TabIndex = 1;
             mnString_Titulo_Menu.Text = "menuStrip2";
             mnString_Titulo_Menu.ItemClicked += mnString_Titulo_Menu_ItemClicked;
@@ -236,16 +238,16 @@
             // panel_Contenedor
             // 
             panel_Contenedor.Dock = DockStyle.Fill;
-            panel_Contenedor.Location = new Point(0, 106);
+            panel_Contenedor.Location = new Point(0, 111);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(887, 410);
+            panel_Contenedor.Size = new Size(1262, 608);
             panel_Contenedor.TabIndex = 2;
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(887, 516);
+            ClientSize = new Size(1262, 719);
             Controls.Add(panel_Contenedor);
             Controls.Add(menuStrip1);
             Controls.Add(mnString_Titulo_Menu);
