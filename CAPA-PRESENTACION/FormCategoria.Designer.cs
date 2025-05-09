@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            comboBox1 = new ComboBox();
             SuspendLayout();
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 54);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 28);
+            comboBox1.TabIndex = 0;
             // 
             // FormCategoria
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(914, 600);
+            Controls.Add(comboBox1);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "FormCategoria";
             Text = "FormCategoria";
             Load += FormCategoria_Load;
@@ -42,5 +53,7 @@
         }
 
         #endregion
+
+        private ComboBox comboBox1;
     }
 }

@@ -12,6 +12,7 @@ namespace CAPA_DATOS
 {
     public class CD_Permisos
     {
+
         public List<Permiso> Enlistar(int usuario_ID) //Devuelve una lista de permisos (Adan).
         {
             List<Permiso> lista = new List<Permiso>();
