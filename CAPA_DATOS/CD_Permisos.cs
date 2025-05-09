@@ -22,7 +22,8 @@ namespace CAPA_DATOS
                 {
                     StringBuilder query = new StringBuilder();
 
-                    query.AppendLine("SELECT P.cargo_ID, P.codigo_Permiso FROM TB_Permiso P"); // Consulta dividida por lineas (Adan).
+                    // Consulta dividida por lineas (Adan).
+                    query.AppendLine("SELECT P.permiso_ID, P.nombre_Permiso, P.codigo_Permiso, P.cargo_ID FROM TB_Permiso P");
                     query.AppendLine("INNER JOIN TB_Cargo C on C.cargo_ID = P.cargo_ID");
                     query.AppendLine("INNER JOIN TB_Usuario U on U.cargo_ID = C.cargo_ID");
                     query.AppendLine("WHERE U.usuario_ID = @usuario_ID;"); //Usa al usuario_ID como filtro (Adan).
@@ -42,12 +43,12 @@ namespace CAPA_DATOS
                             {
                                 permiso_ID = Convert.ToInt32(sqdr["permiso_ID"]),
                                 nombre_Permiso = sqdr["nombre_Permiso"].ToString(),
-                                codigo_Permiso = sqdr["nombre_Permiso"].ToString(),
+                                codigo_Permiso = sqdr["codigo_Permiso"].ToString(),
                                 fecha_Creacion_Permiso = DateOnly.FromDateTime(DateTime.Now),
                                 hora_Creacion_Permiso = TimeOnly.FromDateTime(DateTime.Now),
                                 ObjCargo = new Cargo()
                                 {
-                                    cargo_ID = Convert.ToInt32(sqdr["cargo_ID"]),
+                                    cargo_ID = Convert.ToInt32(sqdr["cargo_ID"])
                                 }
                             });
                         }
