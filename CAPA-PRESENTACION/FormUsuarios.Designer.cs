@@ -74,8 +74,6 @@
             label12 = new Label();
             txt_NombreMaterno_FormUsuario = new TextBox();
             label1 = new Label();
-            txt_Telefono_FormUsuario = new TextBox();
-            label13 = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).BeginInit();
@@ -131,7 +129,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Location = new Point(12, 323);
+            label5.Location = new Point(12, 282);
             label5.Name = "label5";
             label5.Size = new Size(67, 15);
             label5.TabIndex = 6;
@@ -147,7 +145,7 @@
             // 
             // txt_Contraseaña_FormUsuario
             // 
-            txt_Contraseaña_FormUsuario.Location = new Point(12, 340);
+            txt_Contraseaña_FormUsuario.Location = new Point(12, 299);
             txt_Contraseaña_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             txt_Contraseaña_FormUsuario.Name = "txt_Contraseaña_FormUsuario";
             txt_Contraseaña_FormUsuario.Size = new Size(218, 23);
@@ -157,7 +155,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.White;
-            label6.Location = new Point(12, 365);
+            label6.Location = new Point(12, 324);
             label6.Name = "label6";
             label6.Size = new Size(122, 15);
             label6.TabIndex = 9;
@@ -165,7 +163,7 @@
             // 
             // txt_confirmarContraseaña_FormUsuario
             // 
-            txt_confirmarContraseaña_FormUsuario.Location = new Point(12, 380);
+            txt_confirmarContraseaña_FormUsuario.Location = new Point(12, 339);
             txt_confirmarContraseaña_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             txt_confirmarContraseaña_FormUsuario.Name = "txt_confirmarContraseaña_FormUsuario";
             txt_confirmarContraseaña_FormUsuario.Size = new Size(218, 23);
@@ -175,7 +173,7 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.White;
-            label7.Location = new Point(12, 405);
+            label7.Location = new Point(12, 364);
             label7.Name = "label7";
             label7.Size = new Size(39, 15);
             label7.TabIndex = 11;
@@ -185,7 +183,7 @@
             // 
             cmb_Rol_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_Rol_FormUsuario.FormattingEnabled = true;
-            cmb_Rol_FormUsuario.Location = new Point(12, 420);
+            cmb_Rol_FormUsuario.Location = new Point(12, 379);
             cmb_Rol_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             cmb_Rol_FormUsuario.Name = "cmb_Rol_FormUsuario";
             cmb_Rol_FormUsuario.Size = new Size(218, 23);
@@ -195,7 +193,7 @@
             // 
             cmb_Estado_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_Estado_FormUsuario.FormattingEnabled = true;
-            cmb_Estado_FormUsuario.Location = new Point(12, 460);
+            cmb_Estado_FormUsuario.Location = new Point(12, 419);
             cmb_Estado_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             cmb_Estado_FormUsuario.Name = "cmb_Estado_FormUsuario";
             cmb_Estado_FormUsuario.Size = new Size(216, 23);
@@ -206,7 +204,7 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.White;
-            label8.Location = new Point(12, 445);
+            label8.Location = new Point(12, 404);
             label8.Name = "label8";
             label8.Size = new Size(42, 15);
             label8.TabIndex = 14;
@@ -223,7 +221,7 @@
             btn_Editar_FormUsuario.IconColor = Color.White;
             btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(50, 567);
+            btn_Editar_FormUsuario.Location = new Point(50, 513);
             btn_Editar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
             btn_Editar_FormUsuario.Size = new Size(158, 22);
@@ -244,7 +242,7 @@
             btn_Eliminar_FormUsuario.IconColor = Color.White;
             btn_Eliminar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormUsuario.IconSize = 16;
-            btn_Eliminar_FormUsuario.Location = new Point(50, 593);
+            btn_Eliminar_FormUsuario.Location = new Point(50, 539);
             btn_Eliminar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormUsuario.Name = "btn_Eliminar_FormUsuario";
             btn_Eliminar_FormUsuario.Size = new Size(158, 22);
@@ -265,7 +263,7 @@
             btn_Guardar_FormUsuario.IconColor = Color.White;
             btn_Guardar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormUsuario.IconSize = 16;
-            btn_Guardar_FormUsuario.Location = new Point(50, 534);
+            btn_Guardar_FormUsuario.Location = new Point(50, 487);
             btn_Guardar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormUsuario.Name = "btn_Guardar_FormUsuario";
             btn_Guardar_FormUsuario.Size = new Size(158, 22);
@@ -541,24 +539,6 @@
             label1.TabIndex = 29;
             label1.Text = "Apellido Materno";
             // 
-            // txt_Telefono_FormUsuario
-            // 
-            txt_Telefono_FormUsuario.Location = new Point(12, 298);
-            txt_Telefono_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_Telefono_FormUsuario.Name = "txt_Telefono_FormUsuario";
-            txt_Telefono_FormUsuario.Size = new Size(218, 23);
-            txt_Telefono_FormUsuario.TabIndex = 32;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.White;
-            label13.Location = new Point(12, 281);
-            label13.Name = "label13";
-            label13.Size = new Size(53, 15);
-            label13.TabIndex = 31;
-            label13.Text = "Telefono";
-            // 
             // iconButton1
             // 
             iconButton1.BackColor = Color.RoyalBlue;
@@ -607,8 +587,6 @@
             ClientSize = new Size(1220, 644);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
-            Controls.Add(txt_Telefono_FormUsuario);
-            Controls.Add(label13);
             Controls.Add(txt_NombreMaterno_FormUsuario);
             Controls.Add(label1);
             Controls.Add(txt_NombrePaterno_FormUsuario);
@@ -693,8 +671,6 @@
         private TextBox txt_NombrePaterno_FormUsuario;
         private Label label12;
         private TextBox txt_NombreMaterno_FormUsuario;
-        private TextBox txt_Telefono_FormUsuario;
-        private Label label13;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
     }

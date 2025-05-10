@@ -24,9 +24,11 @@ namespace CAPA_DATOS
                 try
                 {
                     //string query = "SELECT usuario_ID,correo_Usuario,contrasena_Usuario,nombre_paterno_Usuario,numero_telefonico_Usuario,nombre_Materno_Usuario,nombre_Usuario,estado_Actividad_Usuario,documento_Usuario FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
-                    string query = "SELECT * FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("SELECT U.usuario_ID, U.documento_Usuario, U.nombre_Usuario, U.nombre_paterno_Usuario, U.nombre_Materno_Usuario, U.correo_Usuario, U.contrasena_Usuario, C.cargo_ID, C.descripcion_Cargo");
+                    query.AppendLine("FROM TB_Usuario U INNER JOIN TB_Cargo C ON U.usuario_ID = C.cargo_ID");
 
-                    SQLiteCommand cmd = new SQLiteCommand(query, cn); //Quizas deba cambiarse por sqlcomand (Adan).  
+                    SQLiteCommand cmd = new SQLiteCommand(query.ToString(), cn); //Quizas deba cambiarse por sqlcomand (Adan).  
 
                     cmd.CommandType = System.Data.CommandType.Text;
 
@@ -36,14 +38,14 @@ namespace CAPA_DATOS
                     {
                         while (sqdr.Read())
                         {
-                            lista.Add(new Usuario() //Quizas aun deba modificar algunas columnas (Adan).
+                            lista.Add(new Usuario() 
                             {
                                 usuario_ID = Convert.ToInt32(sqdr["usuario_ID"]),
                                 correo_Usuario = sqdr["correo_Usuario"].ToString(),
                                 contraseña_Usuario = sqdr["contrasena_Usuario"].ToString(),
                                 nombre_Paterno_Usuario = sqdr["nombre_paterno_Usuario"].ToString(),
                                 numero_telefonico_Usuario = sqdr["numero_telefonico_Usuario"].ToString(),
-                                ObjCargo = new Cargo(),
+                                ObjCargo = new Cargo() { cargo_ID = Convert.ToInt32(sqdr["cargo_ID"])},//Quizas deba de modificarse (Adan).
                                 fecha_Creacion_Usuario = DateOnly.FromDateTime(DateTime.Now),
                                 nombre_Materno_Usuario = sqdr["nombre_Materno_Usuario"].ToString(),
                                 nombre_Usuario = sqdr["nombre_Usuario"].ToString(),

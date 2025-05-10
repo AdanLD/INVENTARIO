@@ -50,6 +50,36 @@ namespace CAPA_PRESENTACION
                 //cmb_Buscar_FormUsuario.ValueMember = "Texto";
                 //cmb_Buscar_FormUsuario.DisplayMember = "Valor";
                 //cmb_Buscar_FormUsuario.SelectedIndex = 0;
+
+
+                //Mostrar todos los ususarios (Adan).
+                List<Usuario> ListaUsuarios = new CN_Usuario().Enlistar();
+
+                foreach (Usuario item in ListaUsuarios)
+                {
+                    string hora = TimeOnly.FromDateTime(DateTime.Now).ToString();
+                    string fecha = DateOnly.FromDateTime(DateTime.Now).ToString();
+
+                    //Añade nuevas filas a dgv_Data_FormUsuario (Adan).
+                    dgv_Data_FormUsuario.Rows.Add(
+                        new object[] //Arreglo de objetos que se usaran en un registros.
+                        {
+                    //Variables existentes en FormUsuarios o en su contexto (Adan).
+                    "",
+                    txt_ID_FormUsuario.Text,
+                    txt_Documento_FormUsuario.Text,
+                    txt_Nombre_FormUsuario.Text,
+                    txt_NombrePaterno_FormUsuario.Text,
+                    txt_NombreMaterno_FormUsuario.Text,
+                    txt_Correo_FormUsuario.Text,
+                    ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Texto.ToString(),
+                    hora,
+                    fecha
+                        });
+                }
             }
             catch (Exception ex)
             {
@@ -80,11 +110,10 @@ namespace CAPA_PRESENTACION
                     txt_NombrePaterno_FormUsuario.Text,
                     txt_NombreMaterno_FormUsuario.Text,
                     txt_Correo_FormUsuario.Text,
-                    txt_Telefono_FormUsuario.Text,
-                    ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem),
                     ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Texto.ToString(),
-                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor.ToString(),
-                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Texto.ToString(),
+                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor.ToString() == true.ToString() ? 1:0,
+                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Texto.ToString() == true.ToString() ? "Activo":"No activo",
                     hora,
                     fecha
                 }
