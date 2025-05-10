@@ -10,5 +10,10 @@ namespace CAPA_PRESENTACION.Utilidades
     {
         public string Texto { get; set; }
         public object Valor { get; set; } //Se trata de un objeto porque este se podra adaptar a cualquier tipo (Adan).
+
+        public override string ToString()
+        {
+            return Texto; // Esto asegura que el texto se muestre en el ComboBox.
+        }
     }
 }

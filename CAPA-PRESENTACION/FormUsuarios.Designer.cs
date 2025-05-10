@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -42,7 +42,7 @@
             textBox5 = new TextBox();
             label7 = new Label();
             comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
+            cmb_Estado_FormUsuario = new ComboBox();
             label8 = new Label();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -50,12 +50,6 @@
             label9 = new Label();
             label10 = new Label();
             dataGridView1 = new DataGridView();
-            txt_ID_FormUsuario = new TextBox();
-            label11 = new Label();
-            comboBox3 = new ComboBox();
-            textBox6 = new TextBox();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
             btn_Seleccionar_FormUsuario = new DataGridViewButtonColumn();
             usuario_ID = new DataGridViewTextBoxColumn();
             documento_Usuario = new DataGridViewTextBoxColumn();
@@ -68,6 +62,12 @@
             ESTADO = new DataGridViewTextBoxColumn();
             estado_Actividad_Usuario = new DataGridViewTextBoxColumn();
             hora_Creacion_Usuario = new DataGridViewTextBoxColumn();
+            txt_ID_FormUsuario = new TextBox();
+            label11 = new Label();
+            comboBox3 = new ComboBox();
+            textBox6 = new TextBox();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
+            iconButton5 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(12, 63);
+            label2.Location = new Point(12, 71);
             label2.Name = "label2";
             label2.Size = new Size(70, 15);
             label2.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(12, 102);
+            label3.Location = new Point(12, 110);
             label3.Name = "label3";
             label3.Size = new Size(105, 15);
             label3.TabIndex = 2;
@@ -95,7 +95,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(12, 142);
+            label4.Location = new Point(12, 150);
             label4.Name = "label4";
             label4.Size = new Size(43, 15);
             label4.TabIndex = 3;
@@ -103,7 +103,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(12, 80);
+            textBox1.Location = new Point(12, 88);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(218, 23);
@@ -111,7 +111,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(12, 119);
+            textBox2.Location = new Point(12, 127);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(218, 23);
@@ -121,7 +121,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Location = new Point(12, 182);
+            label5.Location = new Point(12, 190);
             label5.Name = "label5";
             label5.Size = new Size(67, 15);
             label5.TabIndex = 6;
@@ -129,7 +129,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(12, 159);
+            textBox3.Location = new Point(12, 167);
             textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(218, 23);
@@ -137,7 +137,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(12, 199);
+            textBox4.Location = new Point(12, 207);
             textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(218, 23);
@@ -147,7 +147,7 @@
             // 
             label6.AutoSize = true;
             label6.BackColor = Color.White;
-            label6.Location = new Point(12, 224);
+            label6.Location = new Point(12, 232);
             label6.Name = "label6";
             label6.Size = new Size(122, 15);
             label6.TabIndex = 9;
@@ -155,7 +155,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(12, 239);
+            textBox5.Location = new Point(12, 247);
             textBox5.Margin = new Padding(3, 2, 3, 2);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(218, 23);
@@ -165,7 +165,7 @@
             // 
             label7.AutoSize = true;
             label7.BackColor = Color.White;
-            label7.Location = new Point(12, 264);
+            label7.Location = new Point(12, 272);
             label7.Name = "label7";
             label7.Size = new Size(24, 15);
             label7.TabIndex = 11;
@@ -175,27 +175,28 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 279);
+            comboBox1.Location = new Point(12, 287);
             comboBox1.Margin = new Padding(3, 2, 3, 2);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(218, 23);
             comboBox1.TabIndex = 12;
             // 
-            // comboBox2
+            // cmb_Estado_FormUsuario
             // 
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(12, 319);
-            comboBox2.Margin = new Padding(3, 2, 3, 2);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(216, 23);
-            comboBox2.TabIndex = 13;
+            cmb_Estado_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_Estado_FormUsuario.FormattingEnabled = true;
+            cmb_Estado_FormUsuario.Location = new Point(12, 327);
+            cmb_Estado_FormUsuario.Margin = new Padding(3, 2, 3, 2);
+            cmb_Estado_FormUsuario.Name = "cmb_Estado_FormUsuario";
+            cmb_Estado_FormUsuario.Size = new Size(216, 23);
+            cmb_Estado_FormUsuario.TabIndex = 13;
+            cmb_Estado_FormUsuario.SelectedIndexChanged += cmb_Estado_FormUsuario_SelectedIndexChanged;
             // 
             // label8
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.White;
-            label8.Location = new Point(12, 304);
+            label8.Location = new Point(12, 312);
             label8.Name = "label8";
             label8.Size = new Size(42, 15);
             label8.TabIndex = 14;
@@ -270,11 +271,11 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 15F);
-            label9.Location = new Point(60, 7);
+            label9.Location = new Point(27, 9);
             label9.Name = "label9";
-            label9.Size = new Size(148, 30);
+            label9.Size = new Size(181, 30);
             label9.TabIndex = 18;
-            label9.Text = "Detalle usuario:";
+            label9.Text = "DETALLE USUARIO:";
             // 
             // label10
             // 
@@ -290,15 +291,15 @@
             // dataGridView1
             // 
             dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario, usuario_ID, documento_Usuario, nombre_Usuario, nombre_Paterno_Usuario, nombre_Materno_Usuario, correo_Usuario, contrasena_Usuario, cargo_ID, ESTADO, estado_Actividad_Usuario, hora_Creacion_Usuario });
             dataGridView1.Location = new Point(251, 70);
@@ -307,84 +308,11 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.SelectionBackColor = Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Size = new Size(958, 419);
             dataGridView1.TabIndex = 19;
-            // 
-            // txt_ID_FormUsuario
-            // 
-            txt_ID_FormUsuario.Location = new Point(192, 47);
-            txt_ID_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_ID_FormUsuario.Name = "txt_ID_FormUsuario";
-            txt_ID_FormUsuario.Size = new Size(39, 23);
-            txt_ID_FormUsuario.TabIndex = 21;
-            txt_ID_FormUsuario.Visible = false;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = Color.White;
-            label11.Location = new Point(445, 35);
-            label11.Name = "label11";
-            label11.Size = new Size(66, 15);
-            label11.TabIndex = 22;
-            label11.Text = "Buscar por:";
-            // 
-            // comboBox3
-            // 
-            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(535, 27);
-            comboBox3.Margin = new Padding(3, 2, 3, 2);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(178, 23);
-            comboBox3.TabIndex = 23;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(779, 27);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(182, 23);
-            textBox6.TabIndex = 24;
-            // 
-            // iconButton4
-            // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(978, 27);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(73, 22);
-            iconButton4.TabIndex = 25;
-            iconButton4.UseVisualStyleBackColor = false;
-            // 
-            // iconButton5
-            // 
-            iconButton5.BackColor = Color.White;
-            iconButton5.Cursor = Cursors.Hand;
-            iconButton5.FlatAppearance.BorderColor = Color.Black;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.ForeColor = Color.Black;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 19;
-            iconButton5.Location = new Point(1075, 28);
-            iconButton5.Margin = new Padding(3, 2, 3, 2);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(62, 22);
-            iconButton5.TabIndex = 26;
-            iconButton5.UseVisualStyleBackColor = false;
             // 
             // btn_Seleccionar_FormUsuario
             // 
@@ -482,6 +410,79 @@
             hora_Creacion_Usuario.Visible = false;
             hora_Creacion_Usuario.Width = 125;
             // 
+            // txt_ID_FormUsuario
+            // 
+            txt_ID_FormUsuario.Location = new Point(192, 55);
+            txt_ID_FormUsuario.Margin = new Padding(3, 2, 3, 2);
+            txt_ID_FormUsuario.Name = "txt_ID_FormUsuario";
+            txt_ID_FormUsuario.Size = new Size(39, 23);
+            txt_ID_FormUsuario.TabIndex = 21;
+            txt_ID_FormUsuario.Visible = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = Color.White;
+            label11.Location = new Point(445, 35);
+            label11.Name = "label11";
+            label11.Size = new Size(66, 15);
+            label11.TabIndex = 22;
+            label11.Text = "Buscar por:";
+            // 
+            // comboBox3
+            // 
+            comboBox3.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(535, 27);
+            comboBox3.Margin = new Padding(3, 2, 3, 2);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(178, 23);
+            comboBox3.TabIndex = 23;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(779, 27);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(182, 23);
+            textBox6.TabIndex = 24;
+            // 
+            // iconButton4
+            // 
+            iconButton4.BackColor = Color.White;
+            iconButton4.Cursor = Cursors.Hand;
+            iconButton4.FlatAppearance.BorderColor = Color.Black;
+            iconButton4.FlatStyle = FlatStyle.Flat;
+            iconButton4.ForeColor = Color.Black;
+            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton4.IconColor = Color.Black;
+            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton4.IconSize = 16;
+            iconButton4.Location = new Point(978, 27);
+            iconButton4.Margin = new Padding(3, 2, 3, 2);
+            iconButton4.Name = "iconButton4";
+            iconButton4.Size = new Size(73, 22);
+            iconButton4.TabIndex = 25;
+            iconButton4.UseVisualStyleBackColor = false;
+            // 
+            // iconButton5
+            // 
+            iconButton5.BackColor = Color.White;
+            iconButton5.Cursor = Cursors.Hand;
+            iconButton5.FlatAppearance.BorderColor = Color.Black;
+            iconButton5.FlatStyle = FlatStyle.Flat;
+            iconButton5.ForeColor = Color.Black;
+            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            iconButton5.IconColor = Color.Black;
+            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton5.IconSize = 19;
+            iconButton5.Location = new Point(1075, 28);
+            iconButton5.Margin = new Padding(3, 2, 3, 2);
+            iconButton5.Name = "iconButton5";
+            iconButton5.Size = new Size(62, 22);
+            iconButton5.TabIndex = 26;
+            iconButton5.UseVisualStyleBackColor = false;
+            // 
             // FormUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -501,7 +502,7 @@
             Controls.Add(iconButton2);
             Controls.Add(iconButton1);
             Controls.Add(label8);
-            Controls.Add(comboBox2);
+            Controls.Add(cmb_Estado_FormUsuario);
             Controls.Add(comboBox1);
             Controls.Add(label7);
             Controls.Add(textBox5);
@@ -537,7 +538,7 @@
         private TextBox textBox5;
         private Label label7;
         private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private ComboBox cmb_Estado_FormUsuario;
         private Label label8;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
