@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CAPA_NEGOCIO;
 using CAPA_ENTIDAD;
 using FontAwesome.Sharp;
+using CAPA_PRESENTACION.Utilidades;
 
 namespace CAPA_PRESENTACION
 {

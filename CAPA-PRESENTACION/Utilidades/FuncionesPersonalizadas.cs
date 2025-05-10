@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CAPA_PRESENTACION
+namespace CAPA_PRESENTACION.Utilidades
 {
     public static class FuncionesPersonalizadas
     {
