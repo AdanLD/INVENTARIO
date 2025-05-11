@@ -64,9 +64,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(108, 17);
             label1.Name = "label1";
-            label1.Size = new Size(56, 15);
+            label1.Size = new Size(126, 15);
             label1.TabIndex = 2;
-            label1.Text = "USUARIO";
+            label1.Text = "NUMERO DE USUARIO";
             // 
             // label2
             // 

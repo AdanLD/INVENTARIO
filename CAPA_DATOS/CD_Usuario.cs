@@ -23,10 +23,14 @@ namespace CAPA_DATOS
             {
                 try
                 {
-                    //string query = "SELECT usuario_ID,correo_Usuario,contrasena_Usuario,nombre_paterno_Usuario,numero_telefonico_Usuario,nombre_Materno_Usuario,nombre_Usuario,estado_Actividad_Usuario,documento_Usuario FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
-                    string query = "SELECT * FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
+                    StringBuilder query = new StringBuilder();
 
-                    SQLiteCommand cmd = new SQLiteCommand(query, cn); //Quizas deba cambiarse por sqlcomand (Adan).  
+                    //string query = "SELECT * FROM TB_Usuario"; //Consulta para listar todos los usuarios (Adan).
+
+                    query.AppendLine("SELECT U.usuario_ID, U.correo_Usuario, U.contrasena_Usuario, U.nombre_paterno_Usuario, U.numero_telefonico_Usuario, C.cargo_ID, U.fecha_Creacion_Usuario, U.nombre_Materno_Usuario, U.nombre_Usuario, U.hora_Creacion_Usuario, U.estado_Actividad_Usuario, U.documento_Usuario, C.descripcion_Cargo  \r\n");
+                    query.AppendLine("FROM TB_Usuario U INNER JOIN TB_Cargo C ON U.usuario_ID = C.cargo_ID");
+
+                    SQLiteCommand cmd = new SQLiteCommand(query.ToString(), cn); //Quizas deba cambiarse por sqlcomand (Adan).  
 
                     cmd.CommandType = System.Data.CommandType.Text;
 
@@ -43,7 +47,7 @@ namespace CAPA_DATOS
                                 contraseña_Usuario = sqdr["contrasena_Usuario"].ToString(),
                                 nombre_Paterno_Usuario = sqdr["nombre_paterno_Usuario"].ToString(),
                                 numero_telefonico_Usuario = sqdr["numero_telefonico_Usuario"].ToString(),
-                                ObjCargo = new Cargo(),
+                                ObjCargo = new Cargo() {cargo_ID = Convert.ToInt32(sqdr["cargo_ID"]), descripcion_Cargo = sqdr["descripcion_Cargo"].ToString()},
                                 fecha_Creacion_Usuario = DateOnly.FromDateTime(DateTime.Now),
                                 nombre_Materno_Usuario = sqdr["nombre_Materno_Usuario"].ToString(),
                                 nombre_Usuario = sqdr["nombre_Usuario"].ToString(),
