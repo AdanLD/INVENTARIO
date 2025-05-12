@@ -285,7 +285,7 @@
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(287, 9);
             label10.Name = "label10";
-            label10.Size = new Size(1095, 71);
+            label10.Size = new Size(1131, 71);
             label10.TabIndex = 20;
             label10.Text = "USUARIOS:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
@@ -312,7 +312,7 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgv_Data_FormUsuario.Size = new Size(1095, 751);
+            dgv_Data_FormUsuario.Size = new Size(1171, 751);
             dgv_Data_FormUsuario.TabIndex = 19;
             dgv_Data_FormUsuario.CellPainting += dgv_Data_FormUsuario_C;
             // 
@@ -603,7 +603,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1394, 859);
+            ClientSize = new Size(1430, 859);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
             Controls.Add(txt_Telefono_FormUsuario);

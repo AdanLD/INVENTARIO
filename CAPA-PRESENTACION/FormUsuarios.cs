@@ -117,7 +117,7 @@ namespace CAPA_PRESENTACION
                     ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Valor.ToString(),
                     hora,
-                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor.ToString(),
+                    ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor = true? "Activo":"Inactivo",
                     ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Texto.ToString(),
                     hora,
                     fecha
