@@ -32,9 +32,10 @@
             // 
             // FormProveedores
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1153, 704);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "FormProveedores";
             Text = "FormProveedores";
             Load += FormProveedores_Load;
