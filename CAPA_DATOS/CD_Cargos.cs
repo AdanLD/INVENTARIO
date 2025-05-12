@@ -10,8 +10,6 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 
-
-
 namespace CAPA_DATOS
 {
     public class CD_Cargos

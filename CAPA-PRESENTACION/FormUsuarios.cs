@@ -26,7 +26,7 @@ namespace CAPA_PRESENTACION
             {
                 cmb_Estado_FormUsuario.Items.Add(new OpcionCombo() { Valor = 1, Texto = 1 + " Activo" });
                 cmb_Estado_FormUsuario.Items.Add(new OpcionCombo() { Valor = 0, Texto = 0 + " No activo" });
-                cmb_Estado_FormUsuario.ValueMember = "Texto"; 
+                cmb_Estado_FormUsuario.ValueMember = "Texto";
                 cmb_Estado_FormUsuario.DisplayMember = "Valor";
                 cmb_Estado_FormUsuario.SelectedIndex = 0;
 
@@ -61,7 +61,7 @@ namespace CAPA_PRESENTACION
                 foreach (Usuario item in ListaUsuario)
                 {
                     dgv_Data_FormUsuario.Rows.Add(
-                new object[] 
+                new object[]
                 {
                     "",
                     item.usuario_ID,
@@ -76,8 +76,7 @@ namespace CAPA_PRESENTACION
                     item.ObjCargo.descripcion_Cargo,
                     item.estado_Actividad_Usuario == true?"Activo":"Inactivo",
                     //item.estado_Actividad_Usuario == true?"Activo":"",
-                    hora,
-                    fecha
+                    hora,                    fecha
                 }
             );
                 }
@@ -105,7 +104,7 @@ namespace CAPA_PRESENTACION
                 new object[] //Arreglo de objetos que se usaran en un registros.
                 {
                     //Variables existentes en FormUsuarios o en su contexto (Adan).
-                    "", 
+                    "",
                     txt_ID_FormUsuario.Text,
                     txt_Documento_FormUsuario.Text,
                     txt_Nombre_FormUsuario.Text,
@@ -123,6 +122,17 @@ namespace CAPA_PRESENTACION
             );
 
             FuncionesPersonalizadas.LimpiarControles(this); //Limpia los controles del formulario (Adan).
+
+
+        }
+
+        private void dgv_Data_FormUsuario_C(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            //if (e.RowIndex < 0)
+            //{
+            //    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+            //    var w = Properties.Resources.check20.width;
+            //}
         }
     }
 }

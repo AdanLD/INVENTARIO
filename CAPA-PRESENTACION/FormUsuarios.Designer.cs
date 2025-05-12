@@ -50,20 +50,6 @@
             label9 = new Label();
             label10 = new Label();
             dgv_Data_FormUsuario = new DataGridView();
-            txt_ID_FormUsuario = new TextBox();
-            label11 = new Label();
-            cmb_Buscar_FormUsuario = new ComboBox();
-            textBox6 = new TextBox();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            txt_NombrePaterno_FormUsuario = new TextBox();
-            label12 = new Label();
-            txt_NombreMaterno_FormUsuario = new TextBox();
-            label1 = new Label();
-            txt_Telefono_FormUsuario = new TextBox();
-            label13 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
             btn_Seleccionar_FormUsuario = new DataGridViewButtonColumn();
             usuario_ID = new DataGridViewTextBoxColumn();
             documento_Usuario = new DataGridViewTextBoxColumn();
@@ -79,6 +65,20 @@
             estado_Actividad_Usuario = new DataGridViewTextBoxColumn();
             hora_Creacion_Usuario = new DataGridViewTextBoxColumn();
             fecha_Creacion_Usuario = new DataGridViewTextBoxColumn();
+            txt_ID_FormUsuario = new TextBox();
+            label11 = new Label();
+            cmb_Buscar_FormUsuario = new ComboBox();
+            textBox6 = new TextBox();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
+            iconButton5 = new FontAwesome.Sharp.IconButton();
+            txt_NombrePaterno_FormUsuario = new TextBox();
+            label12 = new Label();
+            txt_NombreMaterno_FormUsuario = new TextBox();
+            label1 = new Label();
+            txt_Telefono_FormUsuario = new TextBox();
+            label13 = new Label();
+            iconButton1 = new FontAwesome.Sharp.IconButton();
+            iconButton2 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).BeginInit();
             SuspendLayout();
             // 
@@ -325,6 +325,120 @@
             dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormUsuario.Size = new Size(958, 563);
             dgv_Data_FormUsuario.TabIndex = 19;
+            dgv_Data_FormUsuario.CellPainting += dgv_Data_FormUsuario_C;
+            // 
+            // btn_Seleccionar_FormUsuario
+            // 
+            btn_Seleccionar_FormUsuario.HeaderText = "";
+            btn_Seleccionar_FormUsuario.MinimumWidth = 6;
+            btn_Seleccionar_FormUsuario.Name = "btn_Seleccionar_FormUsuario";
+            btn_Seleccionar_FormUsuario.ReadOnly = true;
+            btn_Seleccionar_FormUsuario.Width = 30;
+            // 
+            // usuario_ID
+            // 
+            usuario_ID.FillWeight = 30F;
+            usuario_ID.HeaderText = "IDENTIFICADOR DE USUARIO";
+            usuario_ID.MinimumWidth = 6;
+            usuario_ID.Name = "usuario_ID";
+            usuario_ID.ReadOnly = true;
+            usuario_ID.Visible = false;
+            usuario_ID.Width = 125;
+            // 
+            // documento_Usuario
+            // 
+            documento_Usuario.HeaderText = "DOCUMENTO";
+            documento_Usuario.MinimumWidth = 6;
+            documento_Usuario.Name = "documento_Usuario";
+            documento_Usuario.ReadOnly = true;
+            documento_Usuario.Width = 125;
+            // 
+            // nombre_Usuario
+            // 
+            nombre_Usuario.HeaderText = "NOMBRE";
+            nombre_Usuario.MinimumWidth = 6;
+            nombre_Usuario.Name = "nombre_Usuario";
+            nombre_Usuario.ReadOnly = true;
+            nombre_Usuario.Width = 125;
+            // 
+            // nombre_Paterno_Usuario
+            // 
+            nombre_Paterno_Usuario.HeaderText = "APELLIDO PATERNO";
+            nombre_Paterno_Usuario.Name = "nombre_Paterno_Usuario";
+            nombre_Paterno_Usuario.ReadOnly = true;
+            // 
+            // nombre_Materno_Usuario
+            // 
+            nombre_Materno_Usuario.HeaderText = "APELLIDO MATERNO";
+            nombre_Materno_Usuario.Name = "nombre_Materno_Usuario";
+            nombre_Materno_Usuario.ReadOnly = true;
+            // 
+            // correo_Usuario
+            // 
+            correo_Usuario.HeaderText = "CORREO";
+            correo_Usuario.MinimumWidth = 6;
+            correo_Usuario.Name = "correo_Usuario";
+            correo_Usuario.ReadOnly = true;
+            correo_Usuario.Width = 125;
+            // 
+            // numero_telefonico_Usuario
+            // 
+            numero_telefonico_Usuario.HeaderText = "NUMERO TELEFONICO";
+            numero_telefonico_Usuario.Name = "numero_telefonico_Usuario";
+            numero_telefonico_Usuario.ReadOnly = true;
+            // 
+            // contrasena_Usuario
+            // 
+            contrasena_Usuario.HeaderText = "CONTRASEÑA";
+            contrasena_Usuario.MinimumWidth = 6;
+            contrasena_Usuario.Name = "contrasena_Usuario";
+            contrasena_Usuario.ReadOnly = true;
+            contrasena_Usuario.Visible = false;
+            contrasena_Usuario.Width = 125;
+            // 
+            // cargo_ID
+            // 
+            cargo_ID.HeaderText = "CARGO";
+            cargo_ID.MinimumWidth = 6;
+            cargo_ID.Name = "cargo_ID";
+            cargo_ID.ReadOnly = true;
+            cargo_ID.Width = 125;
+            // 
+            // descripcion_Cargo
+            // 
+            descripcion_Cargo.HeaderText = "DESCRIPCION";
+            descripcion_Cargo.Name = "descripcion_Cargo";
+            descripcion_Cargo.ReadOnly = true;
+            // 
+            // ESTADO
+            // 
+            ESTADO.HeaderText = "ESTADO";
+            ESTADO.Name = "ESTADO";
+            ESTADO.ReadOnly = true;
+            // 
+            // estado_Actividad_Usuario
+            // 
+            estado_Actividad_Usuario.HeaderText = "ESTADO_VALOR";
+            estado_Actividad_Usuario.MinimumWidth = 6;
+            estado_Actividad_Usuario.Name = "estado_Actividad_Usuario";
+            estado_Actividad_Usuario.ReadOnly = true;
+            estado_Actividad_Usuario.Resizable = DataGridViewTriState.False;
+            estado_Actividad_Usuario.Visible = false;
+            estado_Actividad_Usuario.Width = 125;
+            // 
+            // hora_Creacion_Usuario
+            // 
+            hora_Creacion_Usuario.HeaderText = "HORA DE CREACION";
+            hora_Creacion_Usuario.MinimumWidth = 6;
+            hora_Creacion_Usuario.Name = "hora_Creacion_Usuario";
+            hora_Creacion_Usuario.ReadOnly = true;
+            hora_Creacion_Usuario.Width = 125;
+            // 
+            // fecha_Creacion_Usuario
+            // 
+            fecha_Creacion_Usuario.HeaderText = "FECHA DE CREACION";
+            fecha_Creacion_Usuario.Name = "fecha_Creacion_Usuario";
+            fecha_Creacion_Usuario.ReadOnly = true;
             // 
             // txt_ID_FormUsuario
             // 
@@ -492,119 +606,6 @@
             iconButton2.TextAlign = ContentAlignment.MiddleRight;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = false;
-            // 
-            // btn_Seleccionar_FormUsuario
-            // 
-            btn_Seleccionar_FormUsuario.HeaderText = "";
-            btn_Seleccionar_FormUsuario.MinimumWidth = 6;
-            btn_Seleccionar_FormUsuario.Name = "btn_Seleccionar_FormUsuario";
-            btn_Seleccionar_FormUsuario.ReadOnly = true;
-            btn_Seleccionar_FormUsuario.Width = 30;
-            // 
-            // usuario_ID
-            // 
-            usuario_ID.FillWeight = 30F;
-            usuario_ID.HeaderText = "IDENTIFICADOR DE USUARIO";
-            usuario_ID.MinimumWidth = 6;
-            usuario_ID.Name = "usuario_ID";
-            usuario_ID.ReadOnly = true;
-            usuario_ID.Visible = false;
-            usuario_ID.Width = 125;
-            // 
-            // documento_Usuario
-            // 
-            documento_Usuario.HeaderText = "DOCUMENTO";
-            documento_Usuario.MinimumWidth = 6;
-            documento_Usuario.Name = "documento_Usuario";
-            documento_Usuario.ReadOnly = true;
-            documento_Usuario.Width = 125;
-            // 
-            // nombre_Usuario
-            // 
-            nombre_Usuario.HeaderText = "NOMBRE";
-            nombre_Usuario.MinimumWidth = 6;
-            nombre_Usuario.Name = "nombre_Usuario";
-            nombre_Usuario.ReadOnly = true;
-            nombre_Usuario.Width = 125;
-            // 
-            // nombre_Paterno_Usuario
-            // 
-            nombre_Paterno_Usuario.HeaderText = "APELLIDO PATERNO";
-            nombre_Paterno_Usuario.Name = "nombre_Paterno_Usuario";
-            nombre_Paterno_Usuario.ReadOnly = true;
-            // 
-            // nombre_Materno_Usuario
-            // 
-            nombre_Materno_Usuario.HeaderText = "APELLIDO MATERNO";
-            nombre_Materno_Usuario.Name = "nombre_Materno_Usuario";
-            nombre_Materno_Usuario.ReadOnly = true;
-            // 
-            // correo_Usuario
-            // 
-            correo_Usuario.HeaderText = "CORREO";
-            correo_Usuario.MinimumWidth = 6;
-            correo_Usuario.Name = "correo_Usuario";
-            correo_Usuario.ReadOnly = true;
-            correo_Usuario.Width = 125;
-            // 
-            // numero_telefonico_Usuario
-            // 
-            numero_telefonico_Usuario.HeaderText = "NUMERO TELEFONICO";
-            numero_telefonico_Usuario.Name = "numero_telefonico_Usuario";
-            numero_telefonico_Usuario.ReadOnly = true;
-            // 
-            // contrasena_Usuario
-            // 
-            contrasena_Usuario.HeaderText = "CONTRASEÑA";
-            contrasena_Usuario.MinimumWidth = 6;
-            contrasena_Usuario.Name = "contrasena_Usuario";
-            contrasena_Usuario.ReadOnly = true;
-            contrasena_Usuario.Visible = false;
-            contrasena_Usuario.Width = 125;
-            // 
-            // cargo_ID
-            // 
-            cargo_ID.HeaderText = "CARGO";
-            cargo_ID.MinimumWidth = 6;
-            cargo_ID.Name = "cargo_ID";
-            cargo_ID.ReadOnly = true;
-            cargo_ID.Width = 125;
-            // 
-            // descripcion_Cargo
-            // 
-            descripcion_Cargo.HeaderText = "DESCRIPCION";
-            descripcion_Cargo.Name = "descripcion_Cargo";
-            descripcion_Cargo.ReadOnly = true;
-            // 
-            // ESTADO
-            // 
-            ESTADO.HeaderText = "ESTADO";
-            ESTADO.Name = "ESTADO";
-            ESTADO.ReadOnly = true;
-            // 
-            // estado_Actividad_Usuario
-            // 
-            estado_Actividad_Usuario.HeaderText = "ESTADO_VALOR";
-            estado_Actividad_Usuario.MinimumWidth = 6;
-            estado_Actividad_Usuario.Name = "estado_Actividad_Usuario";
-            estado_Actividad_Usuario.ReadOnly = true;
-            estado_Actividad_Usuario.Resizable = DataGridViewTriState.False;
-            estado_Actividad_Usuario.Visible = false;
-            estado_Actividad_Usuario.Width = 125;
-            // 
-            // hora_Creacion_Usuario
-            // 
-            hora_Creacion_Usuario.HeaderText = "HORA DE CREACION";
-            hora_Creacion_Usuario.MinimumWidth = 6;
-            hora_Creacion_Usuario.Name = "hora_Creacion_Usuario";
-            hora_Creacion_Usuario.ReadOnly = true;
-            hora_Creacion_Usuario.Width = 125;
-            // 
-            // fecha_Creacion_Usuario
-            // 
-            fecha_Creacion_Usuario.HeaderText = "FECHA DE CREACION";
-            fecha_Creacion_Usuario.Name = "fecha_Creacion_Usuario";
-            fecha_Creacion_Usuario.ReadOnly = true;
             // 
             // FormUsuarios
             // 
