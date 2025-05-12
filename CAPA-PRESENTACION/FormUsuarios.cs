@@ -75,8 +75,9 @@ namespace CAPA_PRESENTACION
                     item.ObjCargo.cargo_ID,
                     item.ObjCargo.descripcion_Cargo,
                     item.estado_Actividad_Usuario == true?"Activo":"Inactivo",
-                    //item.estado_Actividad_Usuario == true?"Activo":"",
-                    hora,                    fecha
+                    item.estado_Actividad_Usuario == true?"Activo":"Inactivo",
+                    item.hora_Creacion_Usuario,
+                    item.fecha_Creacion_Usuario
                 }
             );
                 }
@@ -98,6 +99,7 @@ namespace CAPA_PRESENTACION
         {
             string hora = TimeOnly.FromDateTime(DateTime.Now).ToString();
             string fecha = DateOnly.FromDateTime(DateTime.Now).ToString();
+           
 
             //Añade nuevas filas a dgv_Data_FormUsuario (Adan).
             dgv_Data_FormUsuario.Rows.Add(
@@ -114,6 +116,7 @@ namespace CAPA_PRESENTACION
                     txt_Telefono_FormUsuario.Text, //Hay un problema aqui (Adan).
                     ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Texto.ToString(),
                     ((OpcionCombo)cmb_Rol_FormUsuario.SelectedItem).Valor.ToString(),
+                    hora,
                     ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Valor.ToString(),
                     ((OpcionCombo)cmb_Estado_FormUsuario.SelectedItem).Texto.ToString(),
                     hora,
