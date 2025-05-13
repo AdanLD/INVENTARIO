@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
@@ -217,7 +217,7 @@
             btn_Editar_FormUsuario.IconColor = Color.White;
             btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(57, 747);
+            btn_Editar_FormUsuario.Location = new Point(55, 713);
             btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
             btn_Editar_FormUsuario.Size = new Size(181, 29);
             btn_Editar_FormUsuario.TabIndex = 16;
@@ -237,7 +237,7 @@
             btn_Eliminar_FormUsuario.IconColor = Color.White;
             btn_Eliminar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormUsuario.IconSize = 16;
-            btn_Eliminar_FormUsuario.Location = new Point(57, 791);
+            btn_Eliminar_FormUsuario.Location = new Point(55, 757);
             btn_Eliminar_FormUsuario.Name = "btn_Eliminar_FormUsuario";
             btn_Eliminar_FormUsuario.Size = new Size(181, 29);
             btn_Eliminar_FormUsuario.TabIndex = 17;
@@ -257,7 +257,7 @@
             btn_Guardar_FormUsuario.IconColor = Color.White;
             btn_Guardar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormUsuario.IconSize = 16;
-            btn_Guardar_FormUsuario.Location = new Point(57, 701);
+            btn_Guardar_FormUsuario.Location = new Point(55, 667);
             btn_Guardar_FormUsuario.Name = "btn_Guardar_FormUsuario";
             btn_Guardar_FormUsuario.Size = new Size(181, 29);
             btn_Guardar_FormUsuario.TabIndex = 15;
@@ -293,15 +293,15 @@
             // dgv_Data_FormUsuario
             // 
             dgv_Data_FormUsuario.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormUsuario.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario, usuario_ID, documento_Usuario, nombre_Usuario, nombre_Paterno_Usuario, nombre_Materno_Usuario, correo_Usuario, numero_telefonico_Usuario, contrasena_Usuario, cargo_ID, descripcion_Cargo, ESTADO, estado_Actividad_Usuario, hora_Creacion_Usuario, fecha_Creacion_Usuario });
             dgv_Data_FormUsuario.Location = new Point(287, 93);
@@ -309,10 +309,10 @@
             dgv_Data_FormUsuario.Name = "dgv_Data_FormUsuario";
             dgv_Data_FormUsuario.ReadOnly = true;
             dgv_Data_FormUsuario.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgv_Data_FormUsuario.Size = new Size(1171, 751);
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_Data_FormUsuario.Size = new Size(1171, 705);
             dgv_Data_FormUsuario.TabIndex = 19;
             dgv_Data_FormUsuario.CellPainting += dgv_Data_FormUsuario_C;
             // 
@@ -603,7 +603,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1430, 834);
+            ClientSize = new Size(1430, 801);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
             Controls.Add(txt_Telefono_FormUsuario);
