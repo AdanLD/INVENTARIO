@@ -38,7 +38,7 @@ namespace CAPA_PRESENTACION
                     iconMenu.Visible = false;
                 }
             }
-            
+
 
             string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " + UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
 
@@ -90,7 +90,7 @@ namespace CAPA_PRESENTACION
                 MessageBox.Show(EX.Message);
                 throw;
             }
-            
+
 
         }
 
@@ -148,6 +148,11 @@ namespace CAPA_PRESENTACION
         private void iconMenuItem_Informacion_Menu_Click(object sender, EventArgs e)
         {
             AbrirFormulario((IconMenuItem)sender, new FormInformacion()); //Llamada al metodo abrir formulario con destino a FormInformacion (Adan).
+        }
+
+        private void iconMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
