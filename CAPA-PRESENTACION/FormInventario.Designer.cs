@@ -33,7 +33,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(23, 21);
+            button1.Location = new Point(954, 12);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
@@ -44,7 +44,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1148, 554);
+            ClientSize = new Size(1166, 603);
             Controls.Add(button1);
             Name = "FormInventario";
             Text = "FormInventario";
