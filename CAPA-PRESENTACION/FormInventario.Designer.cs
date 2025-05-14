@@ -29,22 +29,33 @@
         private void InitializeComponent()
         {
             button1 = new Button();
+            button2 = new Button();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(954, 12);
+            button1.Location = new Point(26, 26);
             button1.Name = "button1";
             button1.Size = new Size(94, 29);
             button1.TabIndex = 1;
             button1.Text = "nuevo trabajo";
             button1.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            button2.Location = new Point(368, 187);
+            button2.Name = "button2";
+            button2.Size = new Size(369, 67);
+            button2.TabIndex = 2;
+            button2.Text = "boton de ulrimo inteto despuesde cerrar  sesion";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // FormInventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1166, 603);
+            ClientSize = new Size(1253, 649);
+            Controls.Add(button2);
             Controls.Add(button1);
             Name = "FormInventario";
             Text = "FormInventario";
@@ -54,5 +65,6 @@
 
         #endregion
         private Button button1;
+        private Button button2;
     }
 }
