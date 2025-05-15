@@ -54,7 +54,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1253, 360);
+            ClientSize = new Size(1253, 393);
             Controls.Add(button2);
             Controls.Add(button1);
             Name = "FormInventario";
