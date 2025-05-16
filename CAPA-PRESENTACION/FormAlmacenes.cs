@@ -23,7 +23,7 @@ namespace CAPA_PRESENTACION
 
         private void FormInventario_Load(object sender, EventArgs e)
         {
-
+            dgv_Data_FormAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader; //Ajusta el tamaño de las columnas al contenido (Adan).
             CargarInventario(); //Metodo que carga la informacion de la TB_Almacen.
 
             cmb_Estado_FormAlmacenes.Items.Add(new { Texto = "Activo", Valor = 1 });
@@ -51,19 +51,16 @@ namespace CAPA_PRESENTACION
                 // Verifica si el name de la columna existe y devuelve el string nombreColumna que corresponde al segundo valor del diccionario (Adan). 
                 if (headersAlmacen.TryGetValue(columna.DataPropertyName, out string nombreColumna))
                 {
-                    columna.HeaderText = nombreColumna; // 
-
+                    columna.HeaderText = nombreColumna; 
                 }
-                else if
-                    (
-
-                    columna.DataPropertyName == "almacen_ID" //||
-                                                             //columna.DataPropertyName == ""
-
-                    )
+                
+                if(columna.DataPropertyName == "almacen_ID")
                 {
                     columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
+                    dgv_Data_FormAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
                 }
+
+                
             }
 
         }

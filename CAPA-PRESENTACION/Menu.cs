@@ -159,5 +159,11 @@ namespace CAPA_PRESENTACION
         {
             AbrirFormulario((IconMenuItem)sender, new FormAlmacenes());//Llamada al metodo abrir formulario con destino a FormInventario (Adan).
         }
+
+        private void iconMenuItem_Direcciones_Menu_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new FormDirecciones());//Llamada al metodo abrir formulario con destino a FormDirecciones (Adan).
+
+        }
     }
 }

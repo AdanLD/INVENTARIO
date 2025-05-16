@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label9 = new Label();
             txt_Nombre_FormAlmacenes = new TextBox();
             txt_Capacidad_FormAlmacenes = new TextBox();
@@ -249,15 +249,15 @@
             // dgv_Data_FormAlmacenes
             // 
             dgv_Data_FormAlmacenes.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormAlmacenes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormAlmacenes.Location = new Point(264, 64);
             dgv_Data_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
@@ -265,9 +265,9 @@
             dgv_Data_FormAlmacenes.Name = "dgv_Data_FormAlmacenes";
             dgv_Data_FormAlmacenes.ReadOnly = true;
             dgv_Data_FormAlmacenes.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormAlmacenes.Size = new Size(1038, 529);
             dgv_Data_FormAlmacenes.TabIndex = 74;
             // 
