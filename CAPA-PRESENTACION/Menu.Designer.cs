@@ -43,10 +43,10 @@
             iconMenuItem_Proveedores_Menu = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem_Reportes_Menu = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem_Almacenes_Menu = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItem_Direcciones_Menu = new FontAwesome.Sharp.IconMenuItem();
             iconMenuItem_Informacion_Menu = new FontAwesome.Sharp.IconMenuItem();
             mnString_Titulo_Menu = new MenuStrip();
             panel_Contenedor = new Panel();
-            iconMenuItem_Direcciones_Menu = new FontAwesome.Sharp.IconMenuItem();
             menuStrip_Menu_Menu.SuspendLayout();
             SuspendLayout();
             // 
@@ -224,6 +224,19 @@
             iconMenuItem_Almacenes_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
             iconMenuItem_Almacenes_Menu.Click += iconMenuItem_Almacenes_Menu_Click;
             // 
+            // iconMenuItem_Direcciones_Menu
+            // 
+            iconMenuItem_Direcciones_Menu.IconChar = FontAwesome.Sharp.IconChar.LocationArrow;
+            iconMenuItem_Direcciones_Menu.IconColor = Color.Black;
+            iconMenuItem_Direcciones_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem_Direcciones_Menu.IconSize = 60;
+            iconMenuItem_Direcciones_Menu.ImageScaling = ToolStripItemImageScaling.None;
+            iconMenuItem_Direcciones_Menu.Name = "iconMenuItem_Direcciones_Menu";
+            iconMenuItem_Direcciones_Menu.Size = new Size(92, 79);
+            iconMenuItem_Direcciones_Menu.Text = "DIRECCIONES";
+            iconMenuItem_Direcciones_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
+            iconMenuItem_Direcciones_Menu.Click += iconMenuItem_Direcciones_Menu_Click;
+            // 
             // iconMenuItem_Informacion_Menu
             // 
             iconMenuItem_Informacion_Menu.IconChar = FontAwesome.Sharp.IconChar.Info;
@@ -257,19 +270,6 @@
             panel_Contenedor.Name = "panel_Contenedor";
             panel_Contenedor.Size = new Size(1502, 894);
             panel_Contenedor.TabIndex = 2;
-            // 
-            // iconMenuItem_Direcciones_Menu
-            // 
-            iconMenuItem_Direcciones_Menu.IconChar = FontAwesome.Sharp.IconChar.LocationArrow;
-            iconMenuItem_Direcciones_Menu.IconColor = Color.Black;
-            iconMenuItem_Direcciones_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem_Direcciones_Menu.IconSize = 60;
-            iconMenuItem_Direcciones_Menu.ImageScaling = ToolStripItemImageScaling.None;
-            iconMenuItem_Direcciones_Menu.Name = "iconMenuItem_Direcciones_Menu";
-            iconMenuItem_Direcciones_Menu.Size = new Size(92, 79);
-            iconMenuItem_Direcciones_Menu.Text = "DIRECCIONES";
-            iconMenuItem_Direcciones_Menu.TextImageRelation = TextImageRelation.ImageAboveText;
-            iconMenuItem_Direcciones_Menu.Click += iconMenuItem_Direcciones_Menu_Click;
             // 
             // Menu
             // 
