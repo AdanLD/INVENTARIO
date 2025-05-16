@@ -157,7 +157,7 @@ namespace CAPA_PRESENTACION
 
         private void iconMenuItem_Almacenes_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new FormInventario());//Llamada al metodo abrir formulario con destino a FormInventario (Adan).
+            AbrirFormulario((IconMenuItem)sender, new FormAlmacenes());//Llamada al metodo abrir formulario con destino a FormInventario (Adan).
         }
     }
 }
