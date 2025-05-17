@@ -37,6 +37,11 @@ namespace CAPA_PRESENTACION
 
                     dgv_Data_FormDirecciones.DataSource = tabla;
                 }
+
+                foreach (DataGridViewColumn columna in dgv_Data_FormDirecciones.Columns)
+                {
+                    columna.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
             }
             catch (Exception ex)
             {
