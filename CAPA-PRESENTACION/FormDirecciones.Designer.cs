@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             txt_Referencias_FormDireccion = new TextBox();
@@ -71,7 +71,7 @@
             iconButton1.IconColor = Color.White;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1165, 22);
+            iconButton1.Location = new Point(151, 568);
             iconButton1.Margin = new Padding(3, 2, 3, 2);
             iconButton1.Name = "iconButton1";
             iconButton1.Size = new Size(42, 22);
@@ -91,7 +91,7 @@
             iconButton2.IconColor = Color.White;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(1117, 22);
+            iconButton2.Location = new Point(199, 568);
             iconButton2.Margin = new Padding(3, 2, 3, 2);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(42, 22);
@@ -244,15 +244,15 @@
             // dgv_Data_FormDirecciones
             // 
             dgv_Data_FormDirecciones.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormDirecciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormDirecciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormDirecciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormDirecciones.Location = new Point(262, 61);
             dgv_Data_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
@@ -260,9 +260,9 @@
             dgv_Data_FormDirecciones.Name = "dgv_Data_FormDirecciones";
             dgv_Data_FormDirecciones.ReadOnly = true;
             dgv_Data_FormDirecciones.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormDirecciones.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormDirecciones.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormDirecciones.Size = new Size(1025, 529);
             dgv_Data_FormDirecciones.TabIndex = 53;
             dgv_Data_FormDirecciones.SelectionChanged += dgv_Data_FormDirecciones_SelectionChanged;

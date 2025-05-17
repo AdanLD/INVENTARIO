@@ -21,7 +21,7 @@ namespace CAPA_PRESENTACION
             InitializeComponent();
         }
 
-        private void CargarDireccion()
+        private void CargarDireccion() //Metodo que almacena la TB_Direccion en el dgv (Adan).
         {
             try
             {
@@ -40,7 +40,7 @@ namespace CAPA_PRESENTACION
 
                 foreach (DataGridViewColumn columna in dgv_Data_FormDirecciones.Columns)
                 {
-                    columna.SortMode = DataGridViewColumnSortMode.NotSortable;
+                    columna.SortMode = DataGridViewColumnSortMode.NotSortable; //Inhabilita el ordenamiento al pulsar la cabecera en cada columna (Adan).
                 }
             }
             catch (Exception ex)
@@ -96,13 +96,12 @@ namespace CAPA_PRESENTACION
                         columna.HeaderText = nombreColumna;
                     }
 
-                    //    if (columna.DataPropertyName == "direccion_ID")
-                    //    {
-                    //        columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
-                    //        dgv_Data_FormDirecciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
-                    //    }
-
+                    //if (columna.DataPropertyName == "direccion_ID")
+                    //{
+                    //    columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
+                    //    dgv_Data_FormDirecciones.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
                     //}
+
                 }
 
                 OpcionesComboBox(); //Carga los valores del comboBox (Adan).
@@ -130,23 +129,23 @@ namespace CAPA_PRESENTACION
 
                 if (string.IsNullOrEmpty(txt_Ciudad_FormDireccion.Text))
                 {
-                    MessageBox.Show($"La ciudad es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"La ciudad es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la ciudad (Adan).
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_Estado_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El estado es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El estado es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro del estado (Adan).
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_CP_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El CP es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El CP es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro del CP (Adan).
                     return;
                 }
 
                 if (string.IsNullOrEmpty(txt_Pais_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El pais es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El pais es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro del pais (Adan).
                     return;
                 }
 
@@ -156,7 +155,7 @@ namespace CAPA_PRESENTACION
 
                     string query = "INSERT INTO TB_Direccion (calle_Direccion, ciudad_Direccion, estado_Direccion, codigo_Postal_Direccion, pais_Direccion, referencias_Direccion) VALUES (@v1, @v2, @v3, @v4, @v5, @v6)";
 
-                    SQLiteCommand cmd = new SQLiteCommand(query, conexion);
+                    SQLiteCommand cmd = new SQLiteCommand(query, conexion); //Guarda los datos del registro (Adan).
 
                     cmd.Parameters.AddWithValue("@v1", Convert.ToString(txt_Calle_FormDireccion.Text));
                     cmd.Parameters.AddWithValue("@v2", Convert.ToString(txt_Ciudad_FormDireccion.Text));
@@ -181,20 +180,20 @@ namespace CAPA_PRESENTACION
         {
             try
             {
-                if (dgv_Data_FormDirecciones.CurrentRow == null) return;
+                if (dgv_Data_FormDirecciones.CurrentRow == null) return; //Si no hay una fila seleccionada se acaba el proceso (Adan).
 
                 int id = Convert.ToInt32(dgv_Data_FormDirecciones.CurrentRow.Cells["direccion_ID"].Value);
 
                 if (MessageBox.Show("¿Quieres eliminar este registro?", "CONFIRMAR",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    MessageBoxButtons.YesNo) == DialogResult.Yes) //Mensaje que confirma el proceso de eliminacion (Adan).
                 {
                     using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                     {
                         cn.Open();
 
-                        SQLiteCommand cmd = new SQLiteCommand("DELETE FROM TB_Direccion WHERE direccion_ID = @id", cn);
+                        SQLiteCommand cmd = new SQLiteCommand("DELETE FROM TB_Direccion WHERE direccion_ID = @id", cn); //Elimina la tupla (Adan).
 
-                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.Parameters.AddWithValue("@id", id); //Asocia al registro con el valor de la variable (Adan).
 
                         cmd.ExecuteNonQuery();
                     }
@@ -215,6 +214,7 @@ namespace CAPA_PRESENTACION
                 int id = Convert.ToInt32(dgv_Data_FormDirecciones.CurrentRow.Cells["direccion_ID"].Value); // Obtiene el ID del registro seleccionado (Adan).
 
                 // Almacena los nuevos valores de los campos (Adan).
+
                 string nuevaCalle = txt_Calle_FormDireccion.Text;
                 string nuevaCiudad = txt_Ciudad_FormDireccion.Text;
                 string nuevoEstado = txt_Estado_FormDireccion.Text;
@@ -224,29 +224,29 @@ namespace CAPA_PRESENTACION
 
                 if (string.IsNullOrEmpty(txt_Calle_FormDireccion.Text))
                 {
-                    MessageBox.Show($"La calle es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"La calle es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
                     return;
                 }
 
                 if (string.IsNullOrEmpty(txt_Ciudad_FormDireccion.Text))
                 {
-                    MessageBox.Show($"La ciudad es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"La ciudad es obligatoria. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_Estado_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El estado es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El estado es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_CP_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El CP es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El CP es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
                     return;
                 }
 
                 if (string.IsNullOrEmpty(txt_Pais_FormDireccion.Text))
                 {
-                    MessageBox.Show($"El pais es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro de la calle (Adan).
+                    MessageBox.Show($"El pais es obligatorio. Por favor, inserta un valor valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
                     return;
                 }
 
@@ -293,7 +293,7 @@ namespace CAPA_PRESENTACION
                 DataGridViewRow tupla = dgv_Data_FormDirecciones.CurrentRow;
 
                 //Almacena en los campos los valores de cada celda (Adan).
-                txt_Calle_FormDireccion.Text = tupla.Cells["calle_Direccion"].Value?.ToString();
+                txt_Calle_FormDireccion.Text = tupla.Cells["calle_Direccion"].Value?.ToString(); 
                 txt_Ciudad_FormDireccion.Text = tupla.Cells["ciudad_Direccion"].Value?.ToString();
                 txt_Estado_FormDireccion.Text = tupla.Cells["estado_Direccion"].Value?.ToString();
                 txt_CP_FormDireccion.Text = tupla.Cells["codigo_Postal_Direccion"].Value?.ToString();
@@ -333,7 +333,7 @@ namespace CAPA_PRESENTACION
 
                 if (!string.IsNullOrEmpty(texto))
                 {
-                    query += $" WHERE \"{columna}\" LIKE @busqueda";
+                    query += $" WHERE \"{columna}\" LIKE @busqueda"; //Si no esta vaccio el registro continua con la consulta (Adan).
                 }
 
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
@@ -345,8 +345,11 @@ namespace CAPA_PRESENTACION
                     }
 
                     SQLiteDataAdapter adaptador = new SQLiteDataAdapter(cmd);
+
                     DataTable dt = new DataTable();
+
                     adaptador.Fill(dt);
+
                     dgv_Data_FormDirecciones.DataSource = dt;
                 }
 
@@ -363,7 +366,6 @@ namespace CAPA_PRESENTACION
         {
             try
             {
-
                 CargarDireccion();
             }
             catch (Exception)

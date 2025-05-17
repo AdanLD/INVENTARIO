@@ -56,7 +56,7 @@
             menuStrip_Menu_Menu.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Almacenes_Menu, iconMenuItem_Direcciones_Menu, iconMenuItem_Informacion_Menu });
             menuStrip_Menu_Menu.Location = new Point(0, 23);
             menuStrip_Menu_Menu.Name = "menuStrip_Menu_Menu";
-            menuStrip_Menu_Menu.Size = new Size(1502, 83);
+            menuStrip_Menu_Menu.Size = new Size(1469, 83);
             menuStrip_Menu_Menu.TabIndex = 0;
             menuStrip_Menu_Menu.Text = "menuStrip1";
             // 
@@ -258,7 +258,7 @@
             mnString_Titulo_Menu.Location = new Point(0, 0);
             mnString_Titulo_Menu.Name = "mnString_Titulo_Menu";
             mnString_Titulo_Menu.RightToLeft = RightToLeft.Yes;
-            mnString_Titulo_Menu.Size = new Size(1502, 23);
+            mnString_Titulo_Menu.Size = new Size(1469, 23);
             mnString_Titulo_Menu.TabIndex = 1;
             mnString_Titulo_Menu.Text = "menuStrip2";
             mnString_Titulo_Menu.ItemClicked += mnString_Titulo_Menu_ItemClicked;
@@ -268,14 +268,14 @@
             panel_Contenedor.Dock = DockStyle.Fill;
             panel_Contenedor.Location = new Point(0, 106);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(1502, 894);
+            panel_Contenedor.Size = new Size(1469, 894);
             panel_Contenedor.TabIndex = 2;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1502, 1000);
+            ClientSize = new Size(1469, 1000);
             Controls.Add(panel_Contenedor);
             Controls.Add(menuStrip_Menu_Menu);
             Controls.Add(mnString_Titulo_Menu);

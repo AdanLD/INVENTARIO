@@ -23,8 +23,7 @@ namespace CAPA_PRESENTACION
 
         private void FormInventario_Load(object sender, EventArgs e)
         {
-            dgv_Data_FormAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader; //Ajusta el tamaño de las columnas al contenido (Adan).
-            CargarInventario(); //Metodo que carga la informacion de la TB_Almacen.
+            CargarAlmacen(); //Metodo que carga la informacion de la TB_Almacen.
 
             cmb_Estado_FormAlmacenes.Items.Add(new { Texto = "Activo", Valor = 1 });
             cmb_Estado_FormAlmacenes.Items.Add(new { Texto = "Inactivo", Valor = 0 });
@@ -54,24 +53,23 @@ namespace CAPA_PRESENTACION
                     columna.HeaderText = nombreColumna;
                 }
 
-                if (columna.DataPropertyName == "almacen_ID")
-                {
-                    columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
-                    dgv_Data_FormAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
-                }
-
+                //if (columna.DataPropertyName == "almacen_ID")
+                //{
+                //    columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
+                //}
 
             }
 
         }
 
-        private void CargarInventario()
+        private void CargarAlmacen()
         {
             try
             {
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                 {
-                    string query = "SELECT * FROM TB_Almacen"; //Selecciona todos los atributos de la TB_Almacen (Adan).
+                    string query = @"SELECT almacen_ID,nombre_Almacen,CAST(estado_Actividad_Almacen AS INTEGER) AS estado_Actividad_Almacen, direccion_ID, capacidad_Almacen, stock_Almacen, stock_Minimo_Almacen, stock_Maximo_Almacen,responsable_Almacen, fecha_Apertura_Almacen
+                                   FROM TB_Almacen"; ; //Selecciona todos los atributos de la TB_Almacen (Adan).
 
                     SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, cn);
 
@@ -80,11 +78,18 @@ namespace CAPA_PRESENTACION
                     adaptador.Fill(tabla);
 
                     dgv_Data_FormAlmacenes.DataSource = tabla;
+
+                }
+
+                foreach (DataGridViewColumn columna in dgv_Data_FormAlmacenes.Columns)
+                {
+                    columna.SortMode = DataGridViewColumnSortMode.NotSortable; //Inhabilita el ordenamiento al pulsar la cabecera en cada columna (Adan).
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                string mensajeError = $"Error: {ex.Message}\nTipo de excepción: {ex.GetType().Name}\nTraza de la pila: {ex.StackTrace}";
+                MessageBox.Show(mensajeError);
             }
         }
 
@@ -97,24 +102,85 @@ namespace CAPA_PRESENTACION
         {
             try
             {
+                if (cmb_Estado_FormAlmacenes.SelectedItem == null)
+                {
+                    MessageBox.Show("Selecciona un estado válido.");
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txt_Nombre_FormAlmacenes.Text))
+                {
+                    MessageBox.Show("El nombre del almacen es obligatorio. Por favor, inserta un valor valido.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning); //Valida el registro del nombre del almacen (Adan).
+                    return;
+                }
+
+                if (cmb_Estado_FormAlmacenes.SelectedItem == null)
+                {
+                    MessageBox.Show("El estado de actividad del almacen es obligatorio. Por favor, selecciona un valor valido.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txt_DireccionID_FormAlmacenes.Text))
+                {
+                    MessageBox.Show("La dirección del almacen es obligatoria. Por favor, inserta un valor valido.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!decimal.TryParse(txt_Capacidad_FormAlmacenes.Text, out decimal capacidad) || capacidad <= 0)
+                {
+                    MessageBox.Show("La capacidad del almacen debe ser un numero positivo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txt_Stock_FormAlmacenes.Text, out int stock) || stock < 0)
+                {
+                    MessageBox.Show("El stock del almacen debe ser un numero entero no negativo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txt_Minimo_FormAlmacenes.Text, out int stockMin) || stockMin < 0)
+                {
+                    MessageBox.Show("El stock minimo debe ser un numero entero no negativo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (!int.TryParse(txt_maximo_FormAlmacenes.Text, out int stockMax) || stockMax < stockMin)
+                {
+                    MessageBox.Show("El stock maximo debe ser un numero entero mayor o igual al stock minimo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txt_Responsable_FormAlmacenes.Text))
+                {
+                    MessageBox.Show("El responsable del almacen es obligatorio. Por favor, inserta un valor valido.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 using (SQLiteConnection conexion = new SQLiteConnection(Conectar.cadena))
                 {
                     conexion.Open();
 
-                    string query = "INSERT INTO TB_Almacen (nombre_Almacen, estado_Actividad_Almacen, direccion_ID, capacidad_Almacen, stock_Almacen, stock_Minimo_Almacen, stock_Maximo_Almacen, responsable_Almacen) VALUES (@v1, @v2, @v3, @v4, @v5)";
+                    string query = "INSERT INTO TB_Almacen (nombre_Almacen, estado_Actividad_Almacen, direccion_ID, capacidad_Almacen, stock_Almacen, stock_Minimo_Almacen, stock_Maximo_Almacen, responsable_Almacen) VALUES (@v1, @v2, @v3, @v4, @v5, @v6, @v7, @v8)";
 
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
 
                     cmd.Parameters.AddWithValue("@v1", Convert.ToString(txt_Nombre_FormAlmacenes.Text));
-                    cmd.Parameters.AddWithValue("@v2", Convert.ToString(txt_Nombre_FormAlmacenes.Text));
-                    cmd.Parameters.AddWithValue("@v3", "Dato3");
-                    cmd.Parameters.AddWithValue("@v4", "Dato4");
-                    cmd.Parameters.AddWithValue("@v5", "Dato5");
+                    var estadoSeleccionado = cmb_Estado_FormAlmacenes.SelectedValue?.ToString();
+                    cmd.Parameters.AddWithValue("@v2", estadoSeleccionado != null ? Convert.ToInt32(estadoSeleccionado) : 0);
+                    cmd.Parameters.AddWithValue("@v3", Convert.ToInt32(txt_DireccionID_FormAlmacenes.Text));
+                    cmd.Parameters.AddWithValue("@v4", Convert.ToString(txt_Capacidad_FormAlmacenes.Text));
+                    cmd.Parameters.AddWithValue("@v5", Convert.ToString(txt_Stock_FormAlmacenes.Text));
+                    cmd.Parameters.AddWithValue("@v6", Convert.ToString(txt_Minimo_FormAlmacenes.Text));
+                    cmd.Parameters.AddWithValue("@v7", Convert.ToString(txt_maximo_FormAlmacenes.Text));
+                    cmd.Parameters.AddWithValue("@v8", Convert.ToString(txt_Responsable_FormAlmacenes.Text));
+
+
 
                     cmd.ExecuteNonQuery();
                 }
-                CargarInventario(); // Actualiza el dvg (Adan).
+
+                CargarAlmacen(); // Actualiza el dvg (Adan).
 
             }
             catch (Exception ex)

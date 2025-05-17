@@ -37,7 +37,7 @@
             label2 = new Label();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
-            txt_Direccion_FormAlmacenes = new TextBox();
+            txt_DireccionID_FormAlmacenes = new TextBox();
             label12 = new Label();
             iconButton5 = new FontAwesome.Sharp.IconButton();
             btn_Buscar_FormUsuario = new FontAwesome.Sharp.IconButton();
@@ -47,8 +47,8 @@
             label10 = new Label();
             dgv_Data_FormAlmacenes = new DataGridView();
             txt_ID_FormUsuario = new TextBox();
-            btn_Eliminar_FormUsuario = new FontAwesome.Sharp.IconButton();
-            btn_Editar_FormUsuario = new FontAwesome.Sharp.IconButton();
+            btn_Eliminar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
+            btn_Editar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             btn_Guardar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
             cmb_Estado_FormAlmacenes = new ComboBox();
@@ -151,13 +151,13 @@
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = false;
             // 
-            // txt_Direccion_FormAlmacenes
+            // txt_DireccionID_FormAlmacenes
             // 
-            txt_Direccion_FormAlmacenes.Location = new Point(26, 146);
-            txt_Direccion_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
-            txt_Direccion_FormAlmacenes.Name = "txt_Direccion_FormAlmacenes";
-            txt_Direccion_FormAlmacenes.Size = new Size(218, 23);
-            txt_Direccion_FormAlmacenes.TabIndex = 83;
+            txt_DireccionID_FormAlmacenes.Location = new Point(26, 146);
+            txt_DireccionID_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
+            txt_DireccionID_FormAlmacenes.Name = "txt_DireccionID_FormAlmacenes";
+            txt_DireccionID_FormAlmacenes.Size = new Size(218, 23);
+            txt_DireccionID_FormAlmacenes.TabIndex = 83;
             // 
             // label12
             // 
@@ -243,7 +243,7 @@
             label10.Padding = new Padding(3, 0, 0, 0);
             label10.Size = new Size(1038, 62);
             label10.TabIndex = 75;
-            label10.Text = "LISTA PRODUCTOS:";
+            label10.Text = "LISTA ALMACENES:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
             label10.Click += label10_Click;
             // 
@@ -281,47 +281,47 @@
             txt_ID_FormUsuario.TabIndex = 76;
             txt_ID_FormUsuario.Text = "0";
             // 
-            // btn_Eliminar_FormUsuario
+            // btn_Eliminar_FormAlmacenes
             // 
-            btn_Eliminar_FormUsuario.BackColor = Color.Firebrick;
-            btn_Eliminar_FormUsuario.Cursor = Cursors.Hand;
-            btn_Eliminar_FormUsuario.FlatAppearance.BorderColor = Color.Black;
-            btn_Eliminar_FormUsuario.FlatStyle = FlatStyle.Flat;
-            btn_Eliminar_FormUsuario.ForeColor = Color.White;
-            btn_Eliminar_FormUsuario.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            btn_Eliminar_FormUsuario.IconColor = Color.White;
-            btn_Eliminar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Eliminar_FormUsuario.IconSize = 16;
-            btn_Eliminar_FormUsuario.Location = new Point(54, 540);
-            btn_Eliminar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            btn_Eliminar_FormUsuario.Name = "btn_Eliminar_FormUsuario";
-            btn_Eliminar_FormUsuario.Size = new Size(158, 22);
-            btn_Eliminar_FormUsuario.TabIndex = 95;
-            btn_Eliminar_FormUsuario.Text = "Eliminar";
-            btn_Eliminar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
-            btn_Eliminar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_Eliminar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Eliminar_FormAlmacenes.BackColor = Color.Firebrick;
+            btn_Eliminar_FormAlmacenes.Cursor = Cursors.Hand;
+            btn_Eliminar_FormAlmacenes.FlatAppearance.BorderColor = Color.Black;
+            btn_Eliminar_FormAlmacenes.FlatStyle = FlatStyle.Flat;
+            btn_Eliminar_FormAlmacenes.ForeColor = Color.White;
+            btn_Eliminar_FormAlmacenes.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            btn_Eliminar_FormAlmacenes.IconColor = Color.White;
+            btn_Eliminar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Eliminar_FormAlmacenes.IconSize = 16;
+            btn_Eliminar_FormAlmacenes.Location = new Point(54, 540);
+            btn_Eliminar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
+            btn_Eliminar_FormAlmacenes.Name = "btn_Eliminar_FormAlmacenes";
+            btn_Eliminar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Eliminar_FormAlmacenes.TabIndex = 95;
+            btn_Eliminar_FormAlmacenes.Text = "Eliminar";
+            btn_Eliminar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
+            btn_Eliminar_FormAlmacenes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Eliminar_FormAlmacenes.UseVisualStyleBackColor = false;
             // 
-            // btn_Editar_FormUsuario
+            // btn_Editar_FormAlmacenes
             // 
-            btn_Editar_FormUsuario.BackColor = Color.RoyalBlue;
-            btn_Editar_FormUsuario.Cursor = Cursors.Hand;
-            btn_Editar_FormUsuario.FlatAppearance.BorderColor = Color.Black;
-            btn_Editar_FormUsuario.FlatStyle = FlatStyle.Flat;
-            btn_Editar_FormUsuario.ForeColor = Color.White;
-            btn_Editar_FormUsuario.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btn_Editar_FormUsuario.IconColor = Color.White;
-            btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(54, 507);
-            btn_Editar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
-            btn_Editar_FormUsuario.Size = new Size(158, 22);
-            btn_Editar_FormUsuario.TabIndex = 94;
-            btn_Editar_FormUsuario.Text = "Editar";
-            btn_Editar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
-            btn_Editar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_Editar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Editar_FormAlmacenes.BackColor = Color.RoyalBlue;
+            btn_Editar_FormAlmacenes.Cursor = Cursors.Hand;
+            btn_Editar_FormAlmacenes.FlatAppearance.BorderColor = Color.Black;
+            btn_Editar_FormAlmacenes.FlatStyle = FlatStyle.Flat;
+            btn_Editar_FormAlmacenes.ForeColor = Color.White;
+            btn_Editar_FormAlmacenes.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btn_Editar_FormAlmacenes.IconColor = Color.White;
+            btn_Editar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Editar_FormAlmacenes.IconSize = 16;
+            btn_Editar_FormAlmacenes.Location = new Point(54, 507);
+            btn_Editar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
+            btn_Editar_FormAlmacenes.Name = "btn_Editar_FormAlmacenes";
+            btn_Editar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Editar_FormAlmacenes.TabIndex = 94;
+            btn_Editar_FormAlmacenes.Text = "Editar";
+            btn_Editar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
+            btn_Editar_FormAlmacenes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Editar_FormAlmacenes.UseVisualStyleBackColor = false;
             // 
             // btn_Guardar_FormAlmacenes
             // 
@@ -452,8 +452,8 @@
             Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(cmb_Estado_FormAlmacenes);
-            Controls.Add(btn_Eliminar_FormUsuario);
-            Controls.Add(btn_Editar_FormUsuario);
+            Controls.Add(btn_Eliminar_FormAlmacenes);
+            Controls.Add(btn_Editar_FormAlmacenes);
             Controls.Add(btn_Guardar_FormAlmacenes);
             Controls.Add(label9);
             Controls.Add(txt_Nombre_FormAlmacenes);
@@ -462,7 +462,7 @@
             Controls.Add(label2);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
-            Controls.Add(txt_Direccion_FormAlmacenes);
+            Controls.Add(txt_DireccionID_FormAlmacenes);
             Controls.Add(label12);
             Controls.Add(iconButton5);
             Controls.Add(btn_Buscar_FormUsuario);
@@ -499,7 +499,7 @@
         private ComboBox cmb_Rol_FormUsuario;
         private FontAwesome.Sharp.IconButton iconButton1;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private TextBox txt_Direccion_FormAlmacenes;
+        private TextBox txt_DireccionID_FormAlmacenes;
         private Label label12;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton btn_Buscar_FormUsuario;
@@ -514,8 +514,8 @@
         private DataGridViewTextBoxColumn nombre_Usuario;
         private DataGridViewTextBoxColumn descripcion_Cargo;
         private TextBox txt_ID_FormUsuario;
-        private FontAwesome.Sharp.IconButton btn_Eliminar_FormUsuario;
-        private FontAwesome.Sharp.IconButton btn_Editar_FormUsuario;
+        private FontAwesome.Sharp.IconButton btn_Eliminar_FormAlmacenes;
+        private FontAwesome.Sharp.IconButton btn_Editar_FormAlmacenes;
         private FontAwesome.Sharp.IconButton btn_Guardar_FormAlmacenes;
         private Label label1;
         private ComboBox cmb_Estado_FormAlmacenes;
