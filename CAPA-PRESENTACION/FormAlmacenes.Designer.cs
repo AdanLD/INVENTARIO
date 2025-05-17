@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             label9 = new Label();
             txt_Nombre_FormAlmacenes = new TextBox();
             txt_Capacidad_FormAlmacenes = new TextBox();
@@ -40,8 +40,8 @@
             txt_Direccion_FormAlmacenes = new TextBox();
             label12 = new Label();
             iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBox6 = new TextBox();
+            btn_Buscar_FormUsuario = new FontAwesome.Sharp.IconButton();
+            txt_Buscar_FormUsuario = new TextBox();
             cmb_Buscar_FormUsuario = new ComboBox();
             label11 = new Label();
             label10 = new Label();
@@ -187,31 +187,32 @@
             iconButton5.TabIndex = 81;
             iconButton5.UseVisualStyleBackColor = false;
             // 
-            // iconButton4
+            // btn_Buscar_FormUsuario
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(1024, 26);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(73, 22);
-            iconButton4.TabIndex = 80;
-            iconButton4.UseVisualStyleBackColor = false;
+            btn_Buscar_FormUsuario.BackColor = Color.White;
+            btn_Buscar_FormUsuario.Cursor = Cursors.Hand;
+            btn_Buscar_FormUsuario.FlatAppearance.BorderColor = Color.Black;
+            btn_Buscar_FormUsuario.FlatStyle = FlatStyle.Flat;
+            btn_Buscar_FormUsuario.ForeColor = Color.Black;
+            btn_Buscar_FormUsuario.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btn_Buscar_FormUsuario.IconColor = Color.Black;
+            btn_Buscar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Buscar_FormUsuario.IconSize = 16;
+            btn_Buscar_FormUsuario.Location = new Point(1024, 26);
+            btn_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
+            btn_Buscar_FormUsuario.Name = "btn_Buscar_FormUsuario";
+            btn_Buscar_FormUsuario.Size = new Size(73, 22);
+            btn_Buscar_FormUsuario.TabIndex = 80;
+            btn_Buscar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Buscar_FormUsuario.Click += iconButton4_Click;
             // 
-            // textBox6
+            // txt_Buscar_FormUsuario
             // 
-            textBox6.Location = new Point(838, 27);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(182, 23);
-            textBox6.TabIndex = 79;
+            txt_Buscar_FormUsuario.Location = new Point(838, 27);
+            txt_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormUsuario.Name = "txt_Buscar_FormUsuario";
+            txt_Buscar_FormUsuario.Size = new Size(182, 23);
+            txt_Buscar_FormUsuario.TabIndex = 79;
             // 
             // cmb_Buscar_FormUsuario
             // 
@@ -249,15 +250,15 @@
             // dgv_Data_FormAlmacenes
             // 
             dgv_Data_FormAlmacenes.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_Data_FormAlmacenes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormAlmacenes.Location = new Point(264, 64);
             dgv_Data_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
@@ -265,9 +266,9 @@
             dgv_Data_FormAlmacenes.Name = "dgv_Data_FormAlmacenes";
             dgv_Data_FormAlmacenes.ReadOnly = true;
             dgv_Data_FormAlmacenes.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormAlmacenes.Size = new Size(1038, 529);
             dgv_Data_FormAlmacenes.TabIndex = 74;
             // 
@@ -464,8 +465,8 @@
             Controls.Add(txt_Direccion_FormAlmacenes);
             Controls.Add(label12);
             Controls.Add(iconButton5);
-            Controls.Add(iconButton4);
-            Controls.Add(textBox6);
+            Controls.Add(btn_Buscar_FormUsuario);
+            Controls.Add(txt_Buscar_FormUsuario);
             Controls.Add(cmb_Buscar_FormUsuario);
             Controls.Add(label11);
             Controls.Add(label10);
@@ -501,8 +502,8 @@
         private TextBox txt_Direccion_FormAlmacenes;
         private Label label12;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private TextBox textBox6;
+        private FontAwesome.Sharp.IconButton btn_Buscar_FormUsuario;
+        private TextBox txt_Buscar_FormUsuario;
         private ComboBox cmb_Buscar_FormUsuario;
         private Label label11;
         private Label label10;

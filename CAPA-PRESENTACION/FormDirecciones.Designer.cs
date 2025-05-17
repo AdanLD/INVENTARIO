@@ -38,7 +38,7 @@
             label1 = new Label();
             txt_Estado_FormDireccion = new TextBox();
             label12 = new Label();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
+            iconButton_Restablecer_FormDirecciones = new FontAwesome.Sharp.IconButton();
             iconButton_Buscar_FormDirecciones = new FontAwesome.Sharp.IconButton();
             txt_Buscar_FormDirecciones = new TextBox();
             cmb_Buscar_FormDirecciones = new ComboBox();
@@ -154,23 +154,24 @@
             label12.TabIndex = 61;
             label12.Text = "Estado";
             // 
-            // iconButton5
+            // iconButton_Restablecer_FormDirecciones
             // 
-            iconButton5.BackColor = Color.White;
-            iconButton5.Cursor = Cursors.Hand;
-            iconButton5.FlatAppearance.BorderColor = Color.Black;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.ForeColor = Color.Black;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 19;
-            iconButton5.Location = new Point(1043, 22);
-            iconButton5.Margin = new Padding(3, 2, 3, 2);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(62, 22);
-            iconButton5.TabIndex = 60;
-            iconButton5.UseVisualStyleBackColor = false;
+            iconButton_Restablecer_FormDirecciones.BackColor = Color.White;
+            iconButton_Restablecer_FormDirecciones.Cursor = Cursors.Hand;
+            iconButton_Restablecer_FormDirecciones.FlatAppearance.BorderColor = Color.Black;
+            iconButton_Restablecer_FormDirecciones.FlatStyle = FlatStyle.Flat;
+            iconButton_Restablecer_FormDirecciones.ForeColor = Color.Black;
+            iconButton_Restablecer_FormDirecciones.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            iconButton_Restablecer_FormDirecciones.IconColor = Color.Black;
+            iconButton_Restablecer_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_Restablecer_FormDirecciones.IconSize = 19;
+            iconButton_Restablecer_FormDirecciones.Location = new Point(1043, 22);
+            iconButton_Restablecer_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Restablecer_FormDirecciones.Name = "iconButton_Restablecer_FormDirecciones";
+            iconButton_Restablecer_FormDirecciones.Size = new Size(62, 22);
+            iconButton_Restablecer_FormDirecciones.TabIndex = 60;
+            iconButton_Restablecer_FormDirecciones.UseVisualStyleBackColor = false;
+            iconButton_Restablecer_FormDirecciones.Click += iconButton_Restablecer_FormDirecciones_Click;
             // 
             // iconButton_Buscar_FormDirecciones
             // 
@@ -189,6 +190,7 @@
             iconButton_Buscar_FormDirecciones.Size = new Size(73, 22);
             iconButton_Buscar_FormDirecciones.TabIndex = 59;
             iconButton_Buscar_FormDirecciones.UseVisualStyleBackColor = false;
+            iconButton_Buscar_FormDirecciones.Click += iconButton_Buscar_FormDirecciones_Click;
             // 
             // txt_Buscar_FormDirecciones
             // 
@@ -433,7 +435,7 @@
             Controls.Add(label1);
             Controls.Add(txt_Estado_FormDireccion);
             Controls.Add(label12);
-            Controls.Add(iconButton5);
+            Controls.Add(iconButton_Restablecer_FormDirecciones);
             Controls.Add(iconButton_Buscar_FormDirecciones);
             Controls.Add(txt_Buscar_FormDirecciones);
             Controls.Add(cmb_Buscar_FormDirecciones);
@@ -468,7 +470,7 @@
         private Label label1;
         private TextBox txt_Estado_FormDireccion;
         private Label label12;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton iconButton_Restablecer_FormDirecciones;
         private FontAwesome.Sharp.IconButton iconButton_Buscar_FormDirecciones;
         private TextBox txt_Buscar_FormDirecciones;
         private ComboBox cmb_Buscar_FormDirecciones;

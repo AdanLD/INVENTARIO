@@ -51,16 +51,16 @@ namespace CAPA_PRESENTACION
                 // Verifica si el name de la columna existe y devuelve el string nombreColumna que corresponde al segundo valor del diccionario (Adan). 
                 if (headersAlmacen.TryGetValue(columna.DataPropertyName, out string nombreColumna))
                 {
-                    columna.HeaderText = nombreColumna; 
+                    columna.HeaderText = nombreColumna;
                 }
-                
-                if(columna.DataPropertyName == "almacen_ID")
+
+                if (columna.DataPropertyName == "almacen_ID")
                 {
                     columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
                     dgv_Data_FormAlmacenes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
                 }
 
-                
+
             }
 
         }
@@ -105,7 +105,7 @@ namespace CAPA_PRESENTACION
 
                     SQLiteCommand cmd = new SQLiteCommand(query, conexion);
 
-                    
+
                     cmd.Parameters.AddWithValue("@v1", Convert.ToString(txt_Nombre_FormAlmacenes.Text));
                     cmd.Parameters.AddWithValue("@v2", Convert.ToString(txt_Nombre_FormAlmacenes.Text));
                     cmd.Parameters.AddWithValue("@v3", "Dato3");
@@ -122,6 +122,11 @@ namespace CAPA_PRESENTACION
 
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
