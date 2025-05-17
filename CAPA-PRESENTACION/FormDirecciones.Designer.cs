@@ -39,16 +39,16 @@
             txt_Estado_FormDireccion = new TextBox();
             label12 = new Label();
             iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBox6 = new TextBox();
-            cmb_Buscar_FormUsuario = new ComboBox();
+            iconButton_Buscar_FormDirecciones = new FontAwesome.Sharp.IconButton();
+            txt_Buscar_FormDirecciones = new TextBox();
+            cmb_Buscar_FormDirecciones = new ComboBox();
             label11 = new Label();
-            txt_ID_FormUsuario = new TextBox();
+            txt_ID_FormDirecciones = new TextBox();
             label10 = new Label();
             dgv_Data_FormDirecciones = new DataGridView();
             label9 = new Label();
             btn_Eliminar_FormDirecciones = new FontAwesome.Sharp.IconButton();
-            btn_Editar_FormUsuario = new FontAwesome.Sharp.IconButton();
+            btn_Editar_FormDirecciones = new FontAwesome.Sharp.IconButton();
             btn_Guardar_FormDireccion = new FontAwesome.Sharp.IconButton();
             txt_Pais_FormDireccion = new TextBox();
             txt_Ciudad_FormDireccion = new TextBox();
@@ -56,6 +56,7 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
+            btn_Vaciar_FormDireccion = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormDirecciones).BeginInit();
             SuspendLayout();
             // 
@@ -171,41 +172,41 @@
             iconButton5.TabIndex = 60;
             iconButton5.UseVisualStyleBackColor = false;
             // 
-            // iconButton4
+            // iconButton_Buscar_FormDirecciones
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(954, 21);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(73, 22);
-            iconButton4.TabIndex = 59;
-            iconButton4.UseVisualStyleBackColor = false;
+            iconButton_Buscar_FormDirecciones.BackColor = Color.White;
+            iconButton_Buscar_FormDirecciones.Cursor = Cursors.Hand;
+            iconButton_Buscar_FormDirecciones.FlatAppearance.BorderColor = Color.Black;
+            iconButton_Buscar_FormDirecciones.FlatStyle = FlatStyle.Flat;
+            iconButton_Buscar_FormDirecciones.ForeColor = Color.Black;
+            iconButton_Buscar_FormDirecciones.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_Buscar_FormDirecciones.IconColor = Color.Black;
+            iconButton_Buscar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_Buscar_FormDirecciones.IconSize = 16;
+            iconButton_Buscar_FormDirecciones.Location = new Point(954, 21);
+            iconButton_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Buscar_FormDirecciones.Name = "iconButton_Buscar_FormDirecciones";
+            iconButton_Buscar_FormDirecciones.Size = new Size(73, 22);
+            iconButton_Buscar_FormDirecciones.TabIndex = 59;
+            iconButton_Buscar_FormDirecciones.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txt_Buscar_FormDirecciones
             // 
-            textBox6.Location = new Point(747, 22);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(182, 23);
-            textBox6.TabIndex = 58;
+            txt_Buscar_FormDirecciones.Location = new Point(747, 22);
+            txt_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormDirecciones.Name = "txt_Buscar_FormDirecciones";
+            txt_Buscar_FormDirecciones.Size = new Size(182, 23);
+            txt_Buscar_FormDirecciones.TabIndex = 58;
             // 
-            // cmb_Buscar_FormUsuario
+            // cmb_Buscar_FormDirecciones
             // 
-            cmb_Buscar_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_Buscar_FormUsuario.FormattingEnabled = true;
-            cmb_Buscar_FormUsuario.Location = new Point(482, 21);
-            cmb_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            cmb_Buscar_FormUsuario.Name = "cmb_Buscar_FormUsuario";
-            cmb_Buscar_FormUsuario.Size = new Size(247, 23);
-            cmb_Buscar_FormUsuario.TabIndex = 57;
+            cmb_Buscar_FormDirecciones.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_Buscar_FormDirecciones.FormattingEnabled = true;
+            cmb_Buscar_FormDirecciones.Location = new Point(482, 21);
+            cmb_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            cmb_Buscar_FormDirecciones.Name = "cmb_Buscar_FormDirecciones";
+            cmb_Buscar_FormDirecciones.Size = new Size(247, 23);
+            cmb_Buscar_FormDirecciones.TabIndex = 57;
             // 
             // label11
             // 
@@ -217,15 +218,15 @@
             label11.TabIndex = 56;
             label11.Text = "Buscar por:";
             // 
-            // txt_ID_FormUsuario
+            // txt_ID_FormDirecciones
             // 
-            txt_ID_FormUsuario.Location = new Point(204, 61);
-            txt_ID_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_ID_FormUsuario.Name = "txt_ID_FormUsuario";
-            txt_ID_FormUsuario.Size = new Size(39, 23);
-            txt_ID_FormUsuario.TabIndex = 55;
-            txt_ID_FormUsuario.Text = "0";
-            txt_ID_FormUsuario.TextChanged += txt_ID_FormUsuario_TextChanged;
+            txt_ID_FormDirecciones.Location = new Point(204, 61);
+            txt_ID_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            txt_ID_FormDirecciones.Name = "txt_ID_FormDirecciones";
+            txt_ID_FormDirecciones.Size = new Size(39, 23);
+            txt_ID_FormDirecciones.TabIndex = 55;
+            txt_ID_FormDirecciones.Text = "0";
+            txt_ID_FormDirecciones.TextChanged += txt_ID_FormUsuario_TextChanged;
             // 
             // label10
             // 
@@ -262,6 +263,7 @@
             dgv_Data_FormDirecciones.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormDirecciones.Size = new Size(1025, 529);
             dgv_Data_FormDirecciones.TabIndex = 53;
+            dgv_Data_FormDirecciones.SelectionChanged += dgv_Data_FormDirecciones_SelectionChanged;
             // 
             // label9
             // 
@@ -286,10 +288,10 @@
             btn_Eliminar_FormDirecciones.IconColor = Color.White;
             btn_Eliminar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormDirecciones.IconSize = 16;
-            btn_Eliminar_FormDirecciones.Location = new Point(45, 440);
+            btn_Eliminar_FormDirecciones.Location = new Point(23, 520);
             btn_Eliminar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormDirecciones.Name = "btn_Eliminar_FormDirecciones";
-            btn_Eliminar_FormDirecciones.Size = new Size(158, 22);
+            btn_Eliminar_FormDirecciones.Size = new Size(218, 32);
             btn_Eliminar_FormDirecciones.TabIndex = 51;
             btn_Eliminar_FormDirecciones.Text = "Eliminar";
             btn_Eliminar_FormDirecciones.TextAlign = ContentAlignment.MiddleRight;
@@ -297,26 +299,27 @@
             btn_Eliminar_FormDirecciones.UseVisualStyleBackColor = false;
             btn_Eliminar_FormDirecciones.Click += btn_Eliminar_FormDirecciones_Click;
             // 
-            // btn_Editar_FormUsuario
+            // btn_Editar_FormDirecciones
             // 
-            btn_Editar_FormUsuario.BackColor = Color.RoyalBlue;
-            btn_Editar_FormUsuario.Cursor = Cursors.Hand;
-            btn_Editar_FormUsuario.FlatAppearance.BorderColor = Color.Black;
-            btn_Editar_FormUsuario.FlatStyle = FlatStyle.Flat;
-            btn_Editar_FormUsuario.ForeColor = Color.White;
-            btn_Editar_FormUsuario.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btn_Editar_FormUsuario.IconColor = Color.White;
-            btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(45, 407);
-            btn_Editar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
-            btn_Editar_FormUsuario.Size = new Size(158, 22);
-            btn_Editar_FormUsuario.TabIndex = 50;
-            btn_Editar_FormUsuario.Text = "Editar";
-            btn_Editar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
-            btn_Editar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btn_Editar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Editar_FormDirecciones.BackColor = Color.RoyalBlue;
+            btn_Editar_FormDirecciones.Cursor = Cursors.Hand;
+            btn_Editar_FormDirecciones.FlatAppearance.BorderColor = Color.Black;
+            btn_Editar_FormDirecciones.FlatStyle = FlatStyle.Flat;
+            btn_Editar_FormDirecciones.ForeColor = Color.White;
+            btn_Editar_FormDirecciones.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            btn_Editar_FormDirecciones.IconColor = Color.White;
+            btn_Editar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Editar_FormDirecciones.IconSize = 16;
+            btn_Editar_FormDirecciones.Location = new Point(23, 477);
+            btn_Editar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            btn_Editar_FormDirecciones.Name = "btn_Editar_FormDirecciones";
+            btn_Editar_FormDirecciones.Size = new Size(218, 32);
+            btn_Editar_FormDirecciones.TabIndex = 50;
+            btn_Editar_FormDirecciones.Text = "Editar";
+            btn_Editar_FormDirecciones.TextAlign = ContentAlignment.MiddleRight;
+            btn_Editar_FormDirecciones.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Editar_FormDirecciones.UseVisualStyleBackColor = false;
+            btn_Editar_FormDirecciones.Click += btn_Editar_FormDirecciones_Click;
             // 
             // btn_Guardar_FormDireccion
             // 
@@ -329,10 +332,10 @@
             btn_Guardar_FormDireccion.IconColor = Color.White;
             btn_Guardar_FormDireccion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormDireccion.IconSize = 16;
-            btn_Guardar_FormDireccion.Location = new Point(45, 372);
+            btn_Guardar_FormDireccion.Location = new Point(23, 431);
             btn_Guardar_FormDireccion.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormDireccion.Name = "btn_Guardar_FormDireccion";
-            btn_Guardar_FormDireccion.Size = new Size(158, 22);
+            btn_Guardar_FormDireccion.Size = new Size(218, 32);
             btn_Guardar_FormDireccion.TabIndex = 49;
             btn_Guardar_FormDireccion.Text = "Guardar";
             btn_Guardar_FormDireccion.TextAlign = ContentAlignment.MiddleRight;
@@ -394,11 +397,34 @@
             label2.TabIndex = 35;
             label2.Text = "Calle";
             // 
+            // btn_Vaciar_FormDireccion
+            // 
+            btn_Vaciar_FormDireccion.BackColor = Color.Firebrick;
+            btn_Vaciar_FormDireccion.Cursor = Cursors.Hand;
+            btn_Vaciar_FormDireccion.FlatAppearance.BorderColor = Color.Black;
+            btn_Vaciar_FormDireccion.FlatStyle = FlatStyle.Flat;
+            btn_Vaciar_FormDireccion.ForeColor = Color.White;
+            btn_Vaciar_FormDireccion.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btn_Vaciar_FormDireccion.IconColor = Color.White;
+            btn_Vaciar_FormDireccion.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Vaciar_FormDireccion.IconSize = 16;
+            btn_Vaciar_FormDireccion.Location = new Point(23, 384);
+            btn_Vaciar_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            btn_Vaciar_FormDireccion.Name = "btn_Vaciar_FormDireccion";
+            btn_Vaciar_FormDireccion.Size = new Size(218, 32);
+            btn_Vaciar_FormDireccion.TabIndex = 69;
+            btn_Vaciar_FormDireccion.Text = "Vaciar";
+            btn_Vaciar_FormDireccion.TextAlign = ContentAlignment.MiddleRight;
+            btn_Vaciar_FormDireccion.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Vaciar_FormDireccion.UseVisualStyleBackColor = false;
+            btn_Vaciar_FormDireccion.Click += iconButton3_Click;
+            // 
             // FormDirecciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1301, 601);
+            Controls.Add(btn_Vaciar_FormDireccion);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
             Controls.Add(txt_Referencias_FormDireccion);
@@ -408,16 +434,16 @@
             Controls.Add(txt_Estado_FormDireccion);
             Controls.Add(label12);
             Controls.Add(iconButton5);
-            Controls.Add(iconButton4);
-            Controls.Add(textBox6);
-            Controls.Add(cmb_Buscar_FormUsuario);
+            Controls.Add(iconButton_Buscar_FormDirecciones);
+            Controls.Add(txt_Buscar_FormDirecciones);
+            Controls.Add(cmb_Buscar_FormDirecciones);
             Controls.Add(label11);
-            Controls.Add(txt_ID_FormUsuario);
+            Controls.Add(txt_ID_FormDirecciones);
             Controls.Add(label10);
             Controls.Add(dgv_Data_FormDirecciones);
             Controls.Add(label9);
             Controls.Add(btn_Eliminar_FormDirecciones);
-            Controls.Add(btn_Editar_FormUsuario);
+            Controls.Add(btn_Editar_FormDirecciones);
             Controls.Add(btn_Guardar_FormDireccion);
             Controls.Add(txt_Pais_FormDireccion);
             Controls.Add(txt_Ciudad_FormDireccion);
@@ -443,16 +469,16 @@
         private TextBox txt_Estado_FormDireccion;
         private Label label12;
         private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private TextBox textBox6;
-        private ComboBox cmb_Buscar_FormUsuario;
+        private FontAwesome.Sharp.IconButton iconButton_Buscar_FormDirecciones;
+        private TextBox txt_Buscar_FormDirecciones;
+        private ComboBox cmb_Buscar_FormDirecciones;
         private Label label11;
-        private TextBox txt_ID_FormUsuario;
+        private TextBox txt_ID_FormDirecciones;
         private Label label10;
         private DataGridView dgv_Data_FormDirecciones;
         private Label label9;
         private FontAwesome.Sharp.IconButton btn_Eliminar_FormDirecciones;
-        private FontAwesome.Sharp.IconButton btn_Editar_FormUsuario;
+        private FontAwesome.Sharp.IconButton btn_Editar_FormDirecciones;
         private FontAwesome.Sharp.IconButton btn_Guardar_FormDireccion;
         private TextBox txt_Pais_FormDireccion;
         private TextBox txt_Ciudad_FormDireccion;
@@ -460,5 +486,6 @@
         private Label label4;
         private Label label3;
         private Label label2;
+        private FontAwesome.Sharp.IconButton btn_Vaciar_FormDireccion;
     }
 }

@@ -24,7 +24,6 @@ namespace CAPA_PRESENTACION
             InitializeComponent();
         }
 
-        //static string nombreC = nombreC;
         private void Menu_Load(object sender, EventArgs e)
         {
             List<Permiso> listaPermisos = new CN_Permiso().Listar(UsuarioActual.usuario_ID); //Se asigna a la listaPermisos el resultado de la consulta de permisos para el usuario actual (Adan).
@@ -39,12 +38,10 @@ namespace CAPA_PRESENTACION
                 }
             }
 
-
             string nombreC = UsuarioActual.nombre_Usuario + " " + UsuarioActual.nombre_Paterno_Usuario + " " + UsuarioActual.nombre_Materno_Usuario; //Cadena con el nombre completo (Adan).
 
             this.Text = $"Usuario: {nombreC}."; //Cambia la propiedad del text por el nombre completo del usuario (Adan).
         }
-
 
         private void mnString_Titulo_Menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
