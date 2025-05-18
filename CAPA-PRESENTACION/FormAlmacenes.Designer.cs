@@ -39,14 +39,14 @@
             iconButton2 = new FontAwesome.Sharp.IconButton();
             txt_DireccionID_FormAlmacenes = new TextBox();
             label12 = new Label();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            btn_Buscar_FormUsuario = new FontAwesome.Sharp.IconButton();
-            txt_Buscar_FormUsuario = new TextBox();
-            cmb_Buscar_FormUsuario = new ComboBox();
+            iconButton_Restablecer_FormAlmacen = new FontAwesome.Sharp.IconButton();
+            btn_Buscar_FormAlmacen = new FontAwesome.Sharp.IconButton();
+            txt_Buscar_FormAlmacen = new TextBox();
+            cmb_Buscar_FormAlmacen = new ComboBox();
             label11 = new Label();
             label10 = new Label();
             dgv_Data_FormAlmacenes = new DataGridView();
-            txt_ID_FormUsuario = new TextBox();
+            txt_ID_FormAlmacenes = new TextBox();
             btn_Eliminar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             btn_Editar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             btn_Guardar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
@@ -60,6 +60,7 @@
             label6 = new Label();
             txt_Responsable_FormAlmacenes = new TextBox();
             label7 = new Label();
+            btn_Vaciar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormAlmacenes).BeginInit();
             SuspendLayout();
             // 
@@ -169,60 +170,61 @@
             label12.TabIndex = 82;
             label12.Text = "Direccion";
             // 
-            // iconButton5
+            // iconButton_Restablecer_FormAlmacen
             // 
-            iconButton5.BackColor = Color.White;
-            iconButton5.Cursor = Cursors.Hand;
-            iconButton5.FlatAppearance.BorderColor = Color.Black;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.ForeColor = Color.Black;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 19;
-            iconButton5.Location = new Point(1102, 26);
-            iconButton5.Margin = new Padding(3, 2, 3, 2);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(62, 22);
-            iconButton5.TabIndex = 81;
-            iconButton5.UseVisualStyleBackColor = false;
+            iconButton_Restablecer_FormAlmacen.BackColor = Color.White;
+            iconButton_Restablecer_FormAlmacen.Cursor = Cursors.Hand;
+            iconButton_Restablecer_FormAlmacen.FlatAppearance.BorderColor = Color.Black;
+            iconButton_Restablecer_FormAlmacen.FlatStyle = FlatStyle.Flat;
+            iconButton_Restablecer_FormAlmacen.ForeColor = Color.Black;
+            iconButton_Restablecer_FormAlmacen.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            iconButton_Restablecer_FormAlmacen.IconColor = Color.Black;
+            iconButton_Restablecer_FormAlmacen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_Restablecer_FormAlmacen.IconSize = 19;
+            iconButton_Restablecer_FormAlmacen.Location = new Point(1102, 26);
+            iconButton_Restablecer_FormAlmacen.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Restablecer_FormAlmacen.Name = "iconButton_Restablecer_FormAlmacen";
+            iconButton_Restablecer_FormAlmacen.Size = new Size(62, 22);
+            iconButton_Restablecer_FormAlmacen.TabIndex = 81;
+            iconButton_Restablecer_FormAlmacen.UseVisualStyleBackColor = false;
+            iconButton_Restablecer_FormAlmacen.Click += iconButton5_Click;
             // 
-            // btn_Buscar_FormUsuario
+            // btn_Buscar_FormAlmacen
             // 
-            btn_Buscar_FormUsuario.BackColor = Color.White;
-            btn_Buscar_FormUsuario.Cursor = Cursors.Hand;
-            btn_Buscar_FormUsuario.FlatAppearance.BorderColor = Color.Black;
-            btn_Buscar_FormUsuario.FlatStyle = FlatStyle.Flat;
-            btn_Buscar_FormUsuario.ForeColor = Color.Black;
-            btn_Buscar_FormUsuario.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btn_Buscar_FormUsuario.IconColor = Color.Black;
-            btn_Buscar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btn_Buscar_FormUsuario.IconSize = 16;
-            btn_Buscar_FormUsuario.Location = new Point(1024, 26);
-            btn_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            btn_Buscar_FormUsuario.Name = "btn_Buscar_FormUsuario";
-            btn_Buscar_FormUsuario.Size = new Size(73, 22);
-            btn_Buscar_FormUsuario.TabIndex = 80;
-            btn_Buscar_FormUsuario.UseVisualStyleBackColor = false;
-            btn_Buscar_FormUsuario.Click += iconButton4_Click;
+            btn_Buscar_FormAlmacen.BackColor = Color.White;
+            btn_Buscar_FormAlmacen.Cursor = Cursors.Hand;
+            btn_Buscar_FormAlmacen.FlatAppearance.BorderColor = Color.Black;
+            btn_Buscar_FormAlmacen.FlatStyle = FlatStyle.Flat;
+            btn_Buscar_FormAlmacen.ForeColor = Color.Black;
+            btn_Buscar_FormAlmacen.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btn_Buscar_FormAlmacen.IconColor = Color.Black;
+            btn_Buscar_FormAlmacen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Buscar_FormAlmacen.IconSize = 16;
+            btn_Buscar_FormAlmacen.Location = new Point(1024, 26);
+            btn_Buscar_FormAlmacen.Margin = new Padding(3, 2, 3, 2);
+            btn_Buscar_FormAlmacen.Name = "btn_Buscar_FormAlmacen";
+            btn_Buscar_FormAlmacen.Size = new Size(73, 22);
+            btn_Buscar_FormAlmacen.TabIndex = 80;
+            btn_Buscar_FormAlmacen.UseVisualStyleBackColor = false;
+            btn_Buscar_FormAlmacen.Click += iconButton4_Click;
             // 
-            // txt_Buscar_FormUsuario
+            // txt_Buscar_FormAlmacen
             // 
-            txt_Buscar_FormUsuario.Location = new Point(838, 27);
-            txt_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_Buscar_FormUsuario.Name = "txt_Buscar_FormUsuario";
-            txt_Buscar_FormUsuario.Size = new Size(182, 23);
-            txt_Buscar_FormUsuario.TabIndex = 79;
+            txt_Buscar_FormAlmacen.Location = new Point(838, 27);
+            txt_Buscar_FormAlmacen.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormAlmacen.Name = "txt_Buscar_FormAlmacen";
+            txt_Buscar_FormAlmacen.Size = new Size(182, 23);
+            txt_Buscar_FormAlmacen.TabIndex = 79;
             // 
-            // cmb_Buscar_FormUsuario
+            // cmb_Buscar_FormAlmacen
             // 
-            cmb_Buscar_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_Buscar_FormUsuario.FormattingEnabled = true;
-            cmb_Buscar_FormUsuario.Location = new Point(586, 26);
-            cmb_Buscar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            cmb_Buscar_FormUsuario.Name = "cmb_Buscar_FormUsuario";
-            cmb_Buscar_FormUsuario.Size = new Size(247, 23);
-            cmb_Buscar_FormUsuario.TabIndex = 78;
+            cmb_Buscar_FormAlmacen.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_Buscar_FormAlmacen.FormattingEnabled = true;
+            cmb_Buscar_FormAlmacen.Location = new Point(586, 26);
+            cmb_Buscar_FormAlmacen.Margin = new Padding(3, 2, 3, 2);
+            cmb_Buscar_FormAlmacen.Name = "cmb_Buscar_FormAlmacen";
+            cmb_Buscar_FormAlmacen.Size = new Size(247, 23);
+            cmb_Buscar_FormAlmacen.TabIndex = 78;
             // 
             // label11
             // 
@@ -271,15 +273,16 @@
             dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormAlmacenes.Size = new Size(1038, 529);
             dgv_Data_FormAlmacenes.TabIndex = 74;
+            dgv_Data_FormAlmacenes.SelectionChanged += dgv_Data_FormAlmacenes_SelectionChanged;
             // 
-            // txt_ID_FormUsuario
+            // txt_ID_FormAlmacenes
             // 
-            txt_ID_FormUsuario.Location = new Point(205, 51);
-            txt_ID_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_ID_FormUsuario.Name = "txt_ID_FormUsuario";
-            txt_ID_FormUsuario.Size = new Size(39, 23);
-            txt_ID_FormUsuario.TabIndex = 76;
-            txt_ID_FormUsuario.Text = "0";
+            txt_ID_FormAlmacenes.Location = new Point(205, 51);
+            txt_ID_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
+            txt_ID_FormAlmacenes.Name = "txt_ID_FormAlmacenes";
+            txt_ID_FormAlmacenes.Size = new Size(39, 23);
+            txt_ID_FormAlmacenes.TabIndex = 76;
+            txt_ID_FormAlmacenes.Text = "0";
             // 
             // btn_Eliminar_FormAlmacenes
             // 
@@ -292,7 +295,7 @@
             btn_Eliminar_FormAlmacenes.IconColor = Color.White;
             btn_Eliminar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormAlmacenes.IconSize = 16;
-            btn_Eliminar_FormAlmacenes.Location = new Point(54, 540);
+            btn_Eliminar_FormAlmacenes.Location = new Point(54, 550);
             btn_Eliminar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormAlmacenes.Name = "btn_Eliminar_FormAlmacenes";
             btn_Eliminar_FormAlmacenes.Size = new Size(158, 22);
@@ -301,6 +304,7 @@
             btn_Eliminar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
             btn_Eliminar_FormAlmacenes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Eliminar_FormAlmacenes.UseVisualStyleBackColor = false;
+            btn_Eliminar_FormAlmacenes.Click += btn_Eliminar_FormAlmacenes_Click;
             // 
             // btn_Editar_FormAlmacenes
             // 
@@ -313,7 +317,7 @@
             btn_Editar_FormAlmacenes.IconColor = Color.White;
             btn_Editar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormAlmacenes.IconSize = 16;
-            btn_Editar_FormAlmacenes.Location = new Point(54, 507);
+            btn_Editar_FormAlmacenes.Location = new Point(54, 517);
             btn_Editar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormAlmacenes.Name = "btn_Editar_FormAlmacenes";
             btn_Editar_FormAlmacenes.Size = new Size(158, 22);
@@ -322,6 +326,7 @@
             btn_Editar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
             btn_Editar_FormAlmacenes.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Editar_FormAlmacenes.UseVisualStyleBackColor = false;
+            btn_Editar_FormAlmacenes.Click += btn_Editar_FormAlmacenes_Click;
             // 
             // btn_Guardar_FormAlmacenes
             // 
@@ -334,7 +339,7 @@
             btn_Guardar_FormAlmacenes.IconColor = Color.White;
             btn_Guardar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormAlmacenes.IconSize = 16;
-            btn_Guardar_FormAlmacenes.Location = new Point(54, 472);
+            btn_Guardar_FormAlmacenes.Location = new Point(54, 482);
             btn_Guardar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormAlmacenes.Name = "btn_Guardar_FormAlmacenes";
             btn_Guardar_FormAlmacenes.Size = new Size(158, 22);
@@ -437,11 +442,34 @@
             label7.TabIndex = 106;
             label7.Text = "Responsable";
             // 
+            // btn_Vaciar_FormAlmacenes
+            // 
+            btn_Vaciar_FormAlmacenes.BackColor = Color.Firebrick;
+            btn_Vaciar_FormAlmacenes.Cursor = Cursors.Hand;
+            btn_Vaciar_FormAlmacenes.FlatAppearance.BorderColor = Color.Black;
+            btn_Vaciar_FormAlmacenes.FlatStyle = FlatStyle.Flat;
+            btn_Vaciar_FormAlmacenes.ForeColor = Color.White;
+            btn_Vaciar_FormAlmacenes.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btn_Vaciar_FormAlmacenes.IconColor = Color.White;
+            btn_Vaciar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Vaciar_FormAlmacenes.IconSize = 16;
+            btn_Vaciar_FormAlmacenes.Location = new Point(54, 447);
+            btn_Vaciar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
+            btn_Vaciar_FormAlmacenes.Name = "btn_Vaciar_FormAlmacenes";
+            btn_Vaciar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Vaciar_FormAlmacenes.TabIndex = 108;
+            btn_Vaciar_FormAlmacenes.Text = "Vaciar";
+            btn_Vaciar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
+            btn_Vaciar_FormAlmacenes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btn_Vaciar_FormAlmacenes.UseVisualStyleBackColor = false;
+            btn_Vaciar_FormAlmacenes.Click += btn_Vaciar_FormAlmacenes_Click;
+            // 
             // FormAlmacenes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1301, 601);
+            Controls.Add(btn_Vaciar_FormAlmacenes);
             Controls.Add(txt_Responsable_FormAlmacenes);
             Controls.Add(label7);
             Controls.Add(txt_Minimo_FormAlmacenes);
@@ -464,14 +492,14 @@
             Controls.Add(iconButton2);
             Controls.Add(txt_DireccionID_FormAlmacenes);
             Controls.Add(label12);
-            Controls.Add(iconButton5);
-            Controls.Add(btn_Buscar_FormUsuario);
-            Controls.Add(txt_Buscar_FormUsuario);
-            Controls.Add(cmb_Buscar_FormUsuario);
+            Controls.Add(iconButton_Restablecer_FormAlmacen);
+            Controls.Add(btn_Buscar_FormAlmacen);
+            Controls.Add(txt_Buscar_FormAlmacen);
+            Controls.Add(cmb_Buscar_FormAlmacen);
             Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(dgv_Data_FormAlmacenes);
-            Controls.Add(txt_ID_FormUsuario);
+            Controls.Add(txt_ID_FormAlmacenes);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormAlmacenes";
             Load += FormInventario_Load;
@@ -501,10 +529,10 @@
         private FontAwesome.Sharp.IconButton iconButton2;
         private TextBox txt_DireccionID_FormAlmacenes;
         private Label label12;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton btn_Buscar_FormUsuario;
-        private TextBox txt_Buscar_FormUsuario;
-        private ComboBox cmb_Buscar_FormUsuario;
+        private FontAwesome.Sharp.IconButton iconButton_Restablecer_FormAlmacen;
+        private FontAwesome.Sharp.IconButton btn_Buscar_FormAlmacen;
+        private TextBox txt_Buscar_FormAlmacen;
+        private ComboBox cmb_Buscar_FormAlmacen;
         private Label label11;
         private Label label10;
         private DataGridView dgv_Data_FormAlmacenes;
@@ -513,7 +541,7 @@
         private DataGridViewTextBoxColumn documento_Usuario;
         private DataGridViewTextBoxColumn nombre_Usuario;
         private DataGridViewTextBoxColumn descripcion_Cargo;
-        private TextBox txt_ID_FormUsuario;
+        private TextBox txt_ID_FormAlmacenes;
         private FontAwesome.Sharp.IconButton btn_Eliminar_FormAlmacenes;
         private FontAwesome.Sharp.IconButton btn_Editar_FormAlmacenes;
         private FontAwesome.Sharp.IconButton btn_Guardar_FormAlmacenes;
@@ -527,5 +555,6 @@
         private Label label6;
         private TextBox txt_Responsable_FormAlmacenes;
         private Label label7;
+        private FontAwesome.Sharp.IconButton btn_Vaciar_FormAlmacenes;
     }
 }
