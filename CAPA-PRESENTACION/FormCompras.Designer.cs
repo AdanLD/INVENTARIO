@@ -84,9 +84,9 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(comboBox1);
-            groupBox1.Location = new Point(96, 89);
+            groupBox1.Location = new Point(102, 68);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(563, 109);
+            groupBox1.Size = new Size(573, 109);
             groupBox1.TabIndex = 46;
             groupBox1.TabStop = false;
             groupBox1.Text = "Informacion compra";
@@ -191,9 +191,9 @@
             groupBox2.Controls.Add(textBox2);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
-            groupBox2.Location = new Point(749, 89);
+            groupBox2.Location = new Point(746, 68);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(577, 109);
+            groupBox2.Size = new Size(580, 109);
             groupBox2.TabIndex = 47;
             groupBox2.TabStop = false;
             groupBox2.Text = "Informacion Proveedor";
@@ -288,7 +288,7 @@
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(1142, 272);
+            textBox10.Location = new Point(1142, 243);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(184, 27);
             textBox10.TabIndex = 52;
@@ -307,7 +307,7 @@
             dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormUsuario.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
-            dgv_Data_FormUsuario.Location = new Point(96, 338);
+            dgv_Data_FormUsuario.Location = new Point(96, 317);
             dgv_Data_FormUsuario.MultiSelect = false;
             dgv_Data_FormUsuario.Name = "dgv_Data_FormUsuario";
             dgv_Data_FormUsuario.ReadOnly = true;
@@ -315,7 +315,7 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgv_Data_FormUsuario.Size = new Size(1040, 443);
+            dgv_Data_FormUsuario.Size = new Size(1040, 464);
             dgv_Data_FormUsuario.TabIndex = 49;
             // 
             // btn_Seleccionar_FormUsuario
@@ -340,7 +340,7 @@
             groupBox3.Controls.Add(textBox5);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label6);
-            groupBox3.Location = new Point(96, 223);
+            groupBox3.Location = new Point(96, 202);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(909, 109);
             groupBox3.TabIndex = 48;
@@ -361,7 +361,7 @@
             iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
             iconButton3.IconColor = Color.SteelBlue;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(1152, 338);
+            iconButton3.Location = new Point(1142, 276);
             iconButton3.Name = "iconButton3";
             iconButton3.Size = new Size(125, 53);
             iconButton3.TabIndex = 53;
@@ -372,7 +372,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(1142, 238);
+            label11.Location = new Point(1142, 217);
             label11.Name = "label11";
             label11.Size = new Size(95, 20);
             label11.TabIndex = 51;
@@ -383,7 +383,7 @@
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
             iconButton2.IconColor = Color.Green;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(1024, 238);
+            iconButton2.Location = new Point(1024, 217);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(112, 94);
             iconButton2.TabIndex = 50;
@@ -395,9 +395,9 @@
             // 
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(90, 51);
+            label10.Location = new Point(96, 9);
             label10.Name = "label10";
-            label10.Size = new Size(1275, 730);
+            label10.Size = new Size(1275, 772);
             label10.TabIndex = 45;
             label10.Text = "Registrar Compra";
             // 
