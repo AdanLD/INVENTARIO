@@ -71,10 +71,9 @@
             iconButton1.IconColor = Color.White;
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(151, 568);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
+            iconButton1.Location = new Point(173, 757);
             iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
+            iconButton1.Size = new Size(48, 29);
             iconButton1.TabIndex = 68;
             iconButton1.TextAlign = ContentAlignment.MiddleRight;
             iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -91,10 +90,9 @@
             iconButton2.IconColor = Color.White;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(199, 568);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
+            iconButton2.Location = new Point(227, 757);
             iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
+            iconButton2.Size = new Size(48, 29);
             iconButton2.TabIndex = 67;
             iconButton2.TextAlign = ContentAlignment.MiddleRight;
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -102,55 +100,52 @@
             // 
             // txt_Referencias_FormDireccion
             // 
-            txt_Referencias_FormDireccion.Location = new Point(23, 313);
-            txt_Referencias_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_Referencias_FormDireccion.Location = new Point(26, 417);
             txt_Referencias_FormDireccion.Name = "txt_Referencias_FormDireccion";
-            txt_Referencias_FormDireccion.Size = new Size(218, 23);
+            txt_Referencias_FormDireccion.Size = new Size(249, 27);
             txt_Referencias_FormDireccion.TabIndex = 66;
             // 
             // label13
             // 
             label13.AutoSize = true;
             label13.BackColor = Color.White;
-            label13.Location = new Point(24, 296);
+            label13.Location = new Point(27, 395);
             label13.Name = "label13";
-            label13.Size = new Size(67, 15);
+            label13.Size = new Size(85, 20);
             label13.TabIndex = 65;
             label13.Text = "Referencias";
             // 
             // txt_CP_FormDireccion
             // 
-            txt_CP_FormDireccion.Location = new Point(24, 228);
-            txt_CP_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_CP_FormDireccion.Location = new Point(27, 304);
             txt_CP_FormDireccion.Name = "txt_CP_FormDireccion";
-            txt_CP_FormDireccion.Size = new Size(218, 23);
+            txt_CP_FormDireccion.Size = new Size(249, 27);
             txt_CP_FormDireccion.TabIndex = 64;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.White;
-            label1.Location = new Point(24, 211);
+            label1.Location = new Point(27, 281);
             label1.Name = "label1";
-            label1.Size = new Size(81, 15);
+            label1.Size = new Size(103, 20);
             label1.TabIndex = 63;
             label1.Text = "Codigo postal";
             // 
             // txt_Estado_FormDireccion
             // 
-            txt_Estado_FormDireccion.Location = new Point(25, 186);
-            txt_Estado_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_Estado_FormDireccion.Location = new Point(29, 248);
             txt_Estado_FormDireccion.Name = "txt_Estado_FormDireccion";
-            txt_Estado_FormDireccion.Size = new Size(218, 23);
+            txt_Estado_FormDireccion.Size = new Size(249, 27);
             txt_Estado_FormDireccion.TabIndex = 62;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.BackColor = Color.White;
-            label12.Location = new Point(25, 169);
+            label12.Location = new Point(29, 225);
             label12.Name = "label12";
-            label12.Size = new Size(42, 15);
+            label12.Size = new Size(54, 20);
             label12.TabIndex = 61;
             label12.Text = "Estado";
             // 
@@ -165,10 +160,9 @@
             iconButton_Restablecer_FormDirecciones.IconColor = Color.Black;
             iconButton_Restablecer_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton_Restablecer_FormDirecciones.IconSize = 19;
-            iconButton_Restablecer_FormDirecciones.Location = new Point(1043, 22);
-            iconButton_Restablecer_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Restablecer_FormDirecciones.Location = new Point(1192, 29);
             iconButton_Restablecer_FormDirecciones.Name = "iconButton_Restablecer_FormDirecciones";
-            iconButton_Restablecer_FormDirecciones.Size = new Size(62, 22);
+            iconButton_Restablecer_FormDirecciones.Size = new Size(71, 29);
             iconButton_Restablecer_FormDirecciones.TabIndex = 60;
             iconButton_Restablecer_FormDirecciones.UseVisualStyleBackColor = false;
             iconButton_Restablecer_FormDirecciones.Click += iconButton_Restablecer_FormDirecciones_Click;
@@ -184,48 +178,44 @@
             iconButton_Buscar_FormDirecciones.IconColor = Color.Black;
             iconButton_Buscar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton_Buscar_FormDirecciones.IconSize = 16;
-            iconButton_Buscar_FormDirecciones.Location = new Point(954, 21);
-            iconButton_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Buscar_FormDirecciones.Location = new Point(1090, 28);
             iconButton_Buscar_FormDirecciones.Name = "iconButton_Buscar_FormDirecciones";
-            iconButton_Buscar_FormDirecciones.Size = new Size(73, 22);
+            iconButton_Buscar_FormDirecciones.Size = new Size(83, 29);
             iconButton_Buscar_FormDirecciones.TabIndex = 59;
             iconButton_Buscar_FormDirecciones.UseVisualStyleBackColor = false;
             iconButton_Buscar_FormDirecciones.Click += iconButton_Buscar_FormDirecciones_Click;
             // 
             // txt_Buscar_FormDirecciones
             // 
-            txt_Buscar_FormDirecciones.Location = new Point(747, 22);
-            txt_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormDirecciones.Location = new Point(877, 30);
             txt_Buscar_FormDirecciones.Name = "txt_Buscar_FormDirecciones";
-            txt_Buscar_FormDirecciones.Size = new Size(182, 23);
+            txt_Buscar_FormDirecciones.Size = new Size(207, 27);
             txt_Buscar_FormDirecciones.TabIndex = 58;
             // 
             // cmb_Buscar_FormDirecciones
             // 
             cmb_Buscar_FormDirecciones.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_Buscar_FormDirecciones.FormattingEnabled = true;
-            cmb_Buscar_FormDirecciones.Location = new Point(482, 21);
-            cmb_Buscar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            cmb_Buscar_FormDirecciones.Location = new Point(579, 31);
             cmb_Buscar_FormDirecciones.Name = "cmb_Buscar_FormDirecciones";
-            cmb_Buscar_FormDirecciones.Size = new Size(247, 23);
+            cmb_Buscar_FormDirecciones.Size = new Size(282, 28);
             cmb_Buscar_FormDirecciones.TabIndex = 57;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.BackColor = Color.White;
-            label11.Location = new Point(410, 29);
+            label11.Location = new Point(491, 39);
             label11.Name = "label11";
-            label11.Size = new Size(66, 15);
+            label11.Size = new Size(82, 20);
             label11.TabIndex = 56;
             label11.Text = "Buscar por:";
             // 
             // txt_ID_FormDirecciones
             // 
-            txt_ID_FormDirecciones.Location = new Point(204, 61);
-            txt_ID_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            txt_ID_FormDirecciones.Location = new Point(233, 81);
             txt_ID_FormDirecciones.Name = "txt_ID_FormDirecciones";
-            txt_ID_FormDirecciones.Size = new Size(39, 23);
+            txt_ID_FormDirecciones.Size = new Size(44, 27);
             txt_ID_FormDirecciones.TabIndex = 55;
             txt_ID_FormDirecciones.Text = "0";
             txt_ID_FormDirecciones.TextChanged += txt_ID_FormUsuario_TextChanged;
@@ -234,9 +224,9 @@
             // 
             label10.BackColor = Color.RoyalBlue;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(262, 0);
+            label10.Location = new Point(299, 0);
             label10.Name = "label10";
-            label10.Size = new Size(1027, 53);
+            label10.Size = new Size(1174, 71);
             label10.TabIndex = 54;
             label10.Text = "DIRECCIONES:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
@@ -254,8 +244,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgv_Data_FormDirecciones.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormDirecciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Data_FormDirecciones.Location = new Point(262, 61);
-            dgv_Data_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            dgv_Data_FormDirecciones.Location = new Point(299, 81);
             dgv_Data_FormDirecciones.MultiSelect = false;
             dgv_Data_FormDirecciones.Name = "dgv_Data_FormDirecciones";
             dgv_Data_FormDirecciones.ReadOnly = true;
@@ -263,7 +252,7 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dgv_Data_FormDirecciones.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgv_Data_FormDirecciones.Size = new Size(1025, 529);
+            dgv_Data_FormDirecciones.Size = new Size(1171, 705);
             dgv_Data_FormDirecciones.TabIndex = 53;
             dgv_Data_FormDirecciones.SelectionChanged += dgv_Data_FormDirecciones_SelectionChanged;
             // 
@@ -273,9 +262,9 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 15F);
-            label9.Location = new Point(25, 12);
+            label9.Location = new Point(12, 18);
             label9.Name = "label9";
-            label9.Size = new Size(217, 30);
+            label9.Size = new Size(277, 37);
             label9.TabIndex = 52;
             label9.Text = "DETALLE DIRECCIONES:";
             // 
@@ -290,10 +279,9 @@
             btn_Eliminar_FormDirecciones.IconColor = Color.White;
             btn_Eliminar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormDirecciones.IconSize = 16;
-            btn_Eliminar_FormDirecciones.Location = new Point(23, 520);
-            btn_Eliminar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            btn_Eliminar_FormDirecciones.Location = new Point(26, 693);
             btn_Eliminar_FormDirecciones.Name = "btn_Eliminar_FormDirecciones";
-            btn_Eliminar_FormDirecciones.Size = new Size(218, 32);
+            btn_Eliminar_FormDirecciones.Size = new Size(249, 43);
             btn_Eliminar_FormDirecciones.TabIndex = 51;
             btn_Eliminar_FormDirecciones.Text = "Eliminar";
             btn_Eliminar_FormDirecciones.TextAlign = ContentAlignment.MiddleRight;
@@ -312,10 +300,9 @@
             btn_Editar_FormDirecciones.IconColor = Color.White;
             btn_Editar_FormDirecciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormDirecciones.IconSize = 16;
-            btn_Editar_FormDirecciones.Location = new Point(23, 477);
-            btn_Editar_FormDirecciones.Margin = new Padding(3, 2, 3, 2);
+            btn_Editar_FormDirecciones.Location = new Point(26, 636);
             btn_Editar_FormDirecciones.Name = "btn_Editar_FormDirecciones";
-            btn_Editar_FormDirecciones.Size = new Size(218, 32);
+            btn_Editar_FormDirecciones.Size = new Size(249, 43);
             btn_Editar_FormDirecciones.TabIndex = 50;
             btn_Editar_FormDirecciones.Text = "Editar";
             btn_Editar_FormDirecciones.TextAlign = ContentAlignment.MiddleRight;
@@ -334,10 +321,9 @@
             btn_Guardar_FormDireccion.IconColor = Color.White;
             btn_Guardar_FormDireccion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormDireccion.IconSize = 16;
-            btn_Guardar_FormDireccion.Location = new Point(23, 431);
-            btn_Guardar_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            btn_Guardar_FormDireccion.Location = new Point(26, 575);
             btn_Guardar_FormDireccion.Name = "btn_Guardar_FormDireccion";
-            btn_Guardar_FormDireccion.Size = new Size(218, 32);
+            btn_Guardar_FormDireccion.Size = new Size(249, 43);
             btn_Guardar_FormDireccion.TabIndex = 49;
             btn_Guardar_FormDireccion.Text = "Guardar";
             btn_Guardar_FormDireccion.TextAlign = ContentAlignment.MiddleRight;
@@ -347,35 +333,32 @@
             // 
             // txt_Pais_FormDireccion
             // 
-            txt_Pais_FormDireccion.Location = new Point(24, 271);
-            txt_Pais_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_Pais_FormDireccion.Location = new Point(27, 361);
             txt_Pais_FormDireccion.Name = "txt_Pais_FormDireccion";
-            txt_Pais_FormDireccion.Size = new Size(218, 23);
+            txt_Pais_FormDireccion.Size = new Size(249, 27);
             txt_Pais_FormDireccion.TabIndex = 41;
             // 
             // txt_Ciudad_FormDireccion
             // 
-            txt_Ciudad_FormDireccion.Location = new Point(24, 142);
-            txt_Ciudad_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_Ciudad_FormDireccion.Location = new Point(27, 189);
             txt_Ciudad_FormDireccion.Name = "txt_Ciudad_FormDireccion";
-            txt_Ciudad_FormDireccion.Size = new Size(218, 23);
+            txt_Ciudad_FormDireccion.Size = new Size(249, 27);
             txt_Ciudad_FormDireccion.TabIndex = 39;
             // 
             // txt_Calle_FormDireccion
             // 
-            txt_Calle_FormDireccion.Location = new Point(24, 103);
-            txt_Calle_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            txt_Calle_FormDireccion.Location = new Point(27, 137);
             txt_Calle_FormDireccion.Name = "txt_Calle_FormDireccion";
-            txt_Calle_FormDireccion.Size = new Size(218, 23);
+            txt_Calle_FormDireccion.Size = new Size(249, 27);
             txt_Calle_FormDireccion.TabIndex = 38;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(24, 254);
+            label4.Location = new Point(27, 339);
             label4.Name = "label4";
-            label4.Size = new Size(28, 15);
+            label4.Size = new Size(34, 20);
             label4.TabIndex = 37;
             label4.Text = "Pais";
             // 
@@ -383,9 +366,9 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(24, 125);
+            label3.Location = new Point(27, 167);
             label3.Name = "label3";
-            label3.Size = new Size(45, 15);
+            label3.Size = new Size(56, 20);
             label3.TabIndex = 36;
             label3.Text = "Ciudad";
             // 
@@ -393,9 +376,9 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(24, 86);
+            label2.Location = new Point(27, 115);
             label2.Name = "label2";
-            label2.Size = new Size(33, 15);
+            label2.Size = new Size(42, 20);
             label2.TabIndex = 35;
             label2.Text = "Calle";
             // 
@@ -410,10 +393,9 @@
             btn_Vaciar_FormDireccion.IconColor = Color.White;
             btn_Vaciar_FormDireccion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Vaciar_FormDireccion.IconSize = 16;
-            btn_Vaciar_FormDireccion.Location = new Point(23, 384);
-            btn_Vaciar_FormDireccion.Margin = new Padding(3, 2, 3, 2);
+            btn_Vaciar_FormDireccion.Location = new Point(26, 512);
             btn_Vaciar_FormDireccion.Name = "btn_Vaciar_FormDireccion";
-            btn_Vaciar_FormDireccion.Size = new Size(218, 32);
+            btn_Vaciar_FormDireccion.Size = new Size(249, 43);
             btn_Vaciar_FormDireccion.TabIndex = 69;
             btn_Vaciar_FormDireccion.Text = "Vaciar";
             btn_Vaciar_FormDireccion.TextAlign = ContentAlignment.MiddleRight;
@@ -423,9 +405,9 @@
             // 
             // FormDirecciones
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1301, 601);
+            ClientSize = new Size(1487, 801);
             Controls.Add(btn_Vaciar_FormDireccion);
             Controls.Add(iconButton1);
             Controls.Add(iconButton2);
@@ -453,6 +435,7 @@
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "FormDirecciones";
             Load += FormDirecciones_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormDirecciones).EndInit();

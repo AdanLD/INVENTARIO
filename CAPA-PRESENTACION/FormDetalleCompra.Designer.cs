@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label10 = new Label();
             iconButton5 = new FontAwesome.Sharp.IconButton();
             label11 = new Label();
@@ -63,7 +63,7 @@
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(70, 9);
             label10.Name = "label10";
-            label10.Size = new Size(1135, 807);
+            label10.Size = new Size(1135, 758);
             label10.TabIndex = 46;
             label10.Text = "Detalles Compra";
             // 
@@ -125,7 +125,7 @@
             groupBox1.Controls.Add(textBox1);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
-            groupBox1.Location = new Point(92, 101);
+            groupBox1.Location = new Point(92, 86);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(819, 109);
             groupBox1.TabIndex = 97;
@@ -178,7 +178,7 @@
             groupBox2.Controls.Add(textBox7);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
-            groupBox2.Location = new Point(92, 228);
+            groupBox2.Location = new Point(92, 201);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(736, 109);
             groupBox2.TabIndex = 98;
@@ -228,25 +228,25 @@
             // dgv_Data_FormUsuario
             // 
             dgv_Data_FormUsuario.AllowUserToAddRows = false;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Control;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle13.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle13.Padding = new Padding(2);
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormUsuario.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
-            dgv_Data_FormUsuario.Location = new Point(92, 353);
+            dgv_Data_FormUsuario.Location = new Point(92, 316);
             dgv_Data_FormUsuario.MultiSelect = false;
             dgv_Data_FormUsuario.Name = "dgv_Data_FormUsuario";
             dgv_Data_FormUsuario.ReadOnly = true;
             dgv_Data_FormUsuario.RowHeadersWidth = 51;
-            dataGridViewCellStyle14.SelectionBackColor = Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = Color.Black;
-            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormUsuario.Size = new Size(1040, 382);
             dgv_Data_FormUsuario.TabIndex = 99;
             // 
@@ -261,7 +261,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(92, 757);
+            label5.Location = new Point(92, 710);
             label5.Name = "label5";
             label5.Size = new Size(93, 20);
             label5.TabIndex = 100;
@@ -269,7 +269,7 @@
             // 
             // textBox8
             // 
-            textBox8.Location = new Point(191, 754);
+            textBox8.Location = new Point(194, 710);
             textBox8.Name = "textBox8";
             textBox8.Size = new Size(125, 27);
             textBox8.TabIndex = 101;
@@ -279,7 +279,7 @@
             iconButton2.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
             iconButton2.IconColor = Color.Red;
             iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(968, 741);
+            iconButton2.Location = new Point(972, 704);
             iconButton2.Name = "iconButton2";
             iconButton2.Size = new Size(164, 52);
             iconButton2.TabIndex = 102;
@@ -291,7 +291,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1228, 821);
+            ClientSize = new Size(1228, 764);
             Controls.Add(iconButton2);
             Controls.Add(textBox8);
             Controls.Add(label5);
