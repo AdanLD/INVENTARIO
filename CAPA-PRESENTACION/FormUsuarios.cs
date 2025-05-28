@@ -99,7 +99,7 @@ namespace CAPA_PRESENTACION
         {
             string hora = TimeOnly.FromDateTime(DateTime.Now).ToString();
             string fecha = DateOnly.FromDateTime(DateTime.Now).ToString();
-           
+
 
             //Añade nuevas filas a dgv_Data_FormUsuario (Adan).
             dgv_Data_FormUsuario.Rows.Add(
@@ -136,6 +136,68 @@ namespace CAPA_PRESENTACION
             //    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
             //    var w = Properties.Resources.check20.width;
             //}
+        }
+
+        private void dgv_Data_FormUsuario_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataGridViewRow tupla = dgv_Data_FormUsuario.CurrentRow;
+
+                //Almacena en los campos los valores de cada celda (Adan).
+                txt_Documento_FormUsuario.Text = tupla.Cells["documento_Usuario"].Value?.ToString();
+                txt_Nombre_FormUsuario.Text = tupla.Cells["nombre_Usuario"].Value?.ToString();
+                txt_NombrePaterno_FormUsuario.Text = tupla.Cells["nombre_paterno_Usuario"].Value?.ToString(); //Activo?
+                txt_NombreMaterno_FormUsuario.Text = tupla.Cells["nombre_Materno_Usuario"].Value?.ToString();
+                txt_Correo_FormUsuario.Text = tupla.Cells["correo_Usuario"].Value?.ToString();
+                txt_Telefono_FormUsuario.Text = tupla.Cells["numero_telefonico_Usuario"].Value?.ToString();
+                txt_Contraseaña_FormUsuario.Text = tupla.Cells["contrasena_Usuario"].Value?.ToString();
+                txt_confirmarContraseaña_FormUsuario.Text = tupla.Cells["contrasena_Usuario"].Value?.ToString(); //No aparece.
+
+
+                var valorCargo = tupla.Cells["cargo_ID"].Value;
+
+                if (valorCargo != null)
+                {
+                    foreach (var item in cmb_Rol_FormUsuario.Items)
+                    {
+                        var prop = item.GetType().GetProperty("Valor");
+                        if (prop != null && prop.GetValue(item)?.ToString() == valorCargo.ToString())
+                        {
+                            cmb_Rol_FormUsuario.SelectedItem = item;
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    cmb_Rol_FormUsuario.SelectedIndex = -1;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btn_Vaciar_FormAlmacenes_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this); //Limpia los campos de texto (Adan).
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btn_Editar_FormUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
