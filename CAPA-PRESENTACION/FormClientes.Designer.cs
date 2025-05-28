@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
@@ -207,7 +207,7 @@
             // 
             // label10
             // 
-            label10.BackColor = Color.RoyalBlue;
+            label10.BackColor = Color.Orange;
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(248, -2);
             label10.Name = "label10";
@@ -240,7 +240,7 @@
             btn_Eliminar_FormClientes.IconColor = Color.White;
             btn_Eliminar_FormClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormClientes.IconSize = 16;
-            btn_Eliminar_FormClientes.Location = new Point(35, 537);
+            btn_Eliminar_FormClientes.Location = new Point(35, 514);
             btn_Eliminar_FormClientes.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormClientes.Name = "btn_Eliminar_FormClientes";
             btn_Eliminar_FormClientes.Size = new Size(168, 33);
@@ -262,7 +262,7 @@
             btn_Editar_FormClientes.IconColor = Color.White;
             btn_Editar_FormClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormClientes.IconSize = 16;
-            btn_Editar_FormClientes.Location = new Point(35, 500);
+            btn_Editar_FormClientes.Location = new Point(35, 477);
             btn_Editar_FormClientes.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormClientes.Name = "btn_Editar_FormClientes";
             btn_Editar_FormClientes.Size = new Size(168, 33);
@@ -284,7 +284,7 @@
             btn_Guardar_FormClientes.IconColor = Color.White;
             btn_Guardar_FormClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormClientes.IconSize = 16;
-            btn_Guardar_FormClientes.Location = new Point(35, 463);
+            btn_Guardar_FormClientes.Location = new Point(35, 440);
             btn_Guardar_FormClientes.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormClientes.Name = "btn_Guardar_FormClientes";
             btn_Guardar_FormClientes.Size = new Size(168, 33);
@@ -398,15 +398,15 @@
             // dgv_Data_FormClientes
             // 
             dgv_Data_FormClientes.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_Data_FormClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormClientes.Location = new Point(246, 53);
             dgv_Data_FormClientes.Margin = new Padding(3, 2, 3, 2);
@@ -414,9 +414,9 @@
             dgv_Data_FormClientes.Name = "dgv_Data_FormClientes";
             dgv_Data_FormClientes.ReadOnly = true;
             dgv_Data_FormClientes.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dgv_Data_FormClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dgv_Data_FormClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormClientes.Size = new Size(1025, 517);
             dgv_Data_FormClientes.TabIndex = 53;
             dgv_Data_FormClientes.SelectionChanged += dgv_Data_FormClientes_SelectionChanged;
@@ -432,7 +432,7 @@
             btn_Vaciar_FormAlmacenes.IconColor = Color.White;
             btn_Vaciar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Vaciar_FormAlmacenes.IconSize = 16;
-            btn_Vaciar_FormAlmacenes.Location = new Point(35, 426);
+            btn_Vaciar_FormAlmacenes.Location = new Point(35, 403);
             btn_Vaciar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Vaciar_FormAlmacenes.Name = "btn_Vaciar_FormAlmacenes";
             btn_Vaciar_FormAlmacenes.Size = new Size(168, 33);

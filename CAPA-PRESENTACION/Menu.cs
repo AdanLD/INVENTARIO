@@ -162,5 +162,22 @@ namespace CAPA_PRESENTACION
             AbrirFormulario((IconMenuItem)sender, new FormDirecciones());//Llamada al metodo abrir formulario con destino a FormDirecciones (Adan).
 
         }
+
+        private void negocioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormNegocio()); //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
+        }
+
+        private void rEPORTECOMPRASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormCompras()); //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
+
+        }
+
+        private void rEPORTEVENTAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormReporteVentas());  //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
+
+        }
     }
 }

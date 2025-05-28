@@ -293,7 +293,7 @@
             // 
             // label10
             // 
-            label10.BackColor = Color.RoyalBlue;
+            label10.BackColor = Color.Orange;
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(251, 8);
             label10.Name = "label10";

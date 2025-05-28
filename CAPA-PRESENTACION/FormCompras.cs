@@ -19,7 +19,15 @@ namespace CAPA_PRESENTACION
 
         private void FormCompras_Load(object sender, EventArgs e)
         {
+            txt_Fecha_FormCompras.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+                List<string> TiposDoc = new List<string> { "BOLETA", "FACTURA" };
+                cmb_TipoDoc_FormCompras.DataSource = TiposDoc;
+            
         }
     }
 }

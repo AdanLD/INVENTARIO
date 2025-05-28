@@ -72,6 +72,7 @@ namespace CAPA_PRESENTACION
             cmb_Buscar_FormClientes.ValueMember = "Key";
             cmb_Buscar_FormClientes.DataSource = new BindingSource(headersAlmacen, null);
         }
+
         private void FormClientes_Load(object sender, EventArgs e)
         {
             try

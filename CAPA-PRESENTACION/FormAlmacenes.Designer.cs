@@ -238,7 +238,7 @@
             // 
             // label10
             // 
-            label10.BackColor = Color.RoyalBlue;
+            label10.BackColor = Color.Orange;
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(264, -2);
             label10.Name = "label10";
@@ -295,10 +295,10 @@
             btn_Eliminar_FormAlmacenes.IconColor = Color.White;
             btn_Eliminar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormAlmacenes.IconSize = 16;
-            btn_Eliminar_FormAlmacenes.Location = new Point(54, 550);
+            btn_Eliminar_FormAlmacenes.Location = new Point(54, 548);
             btn_Eliminar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormAlmacenes.Name = "btn_Eliminar_FormAlmacenes";
-            btn_Eliminar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Eliminar_FormAlmacenes.Size = new Size(156, 29);
             btn_Eliminar_FormAlmacenes.TabIndex = 95;
             btn_Eliminar_FormAlmacenes.Text = "Eliminar";
             btn_Eliminar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
@@ -317,10 +317,10 @@
             btn_Editar_FormAlmacenes.IconColor = Color.White;
             btn_Editar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormAlmacenes.IconSize = 16;
-            btn_Editar_FormAlmacenes.Location = new Point(54, 517);
+            btn_Editar_FormAlmacenes.Location = new Point(54, 515);
             btn_Editar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormAlmacenes.Name = "btn_Editar_FormAlmacenes";
-            btn_Editar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Editar_FormAlmacenes.Size = new Size(156, 29);
             btn_Editar_FormAlmacenes.TabIndex = 94;
             btn_Editar_FormAlmacenes.Text = "Editar";
             btn_Editar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
@@ -342,7 +342,7 @@
             btn_Guardar_FormAlmacenes.Location = new Point(54, 482);
             btn_Guardar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormAlmacenes.Name = "btn_Guardar_FormAlmacenes";
-            btn_Guardar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Guardar_FormAlmacenes.Size = new Size(156, 29);
             btn_Guardar_FormAlmacenes.TabIndex = 93;
             btn_Guardar_FormAlmacenes.Text = "Guardar";
             btn_Guardar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
@@ -453,10 +453,10 @@
             btn_Vaciar_FormAlmacenes.IconColor = Color.White;
             btn_Vaciar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Vaciar_FormAlmacenes.IconSize = 16;
-            btn_Vaciar_FormAlmacenes.Location = new Point(54, 447);
+            btn_Vaciar_FormAlmacenes.Location = new Point(54, 449);
             btn_Vaciar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Vaciar_FormAlmacenes.Name = "btn_Vaciar_FormAlmacenes";
-            btn_Vaciar_FormAlmacenes.Size = new Size(158, 22);
+            btn_Vaciar_FormAlmacenes.Size = new Size(156, 29);
             btn_Vaciar_FormAlmacenes.TabIndex = 108;
             btn_Vaciar_FormAlmacenes.Text = "Vaciar";
             btn_Vaciar_FormAlmacenes.TextAlign = ContentAlignment.MiddleRight;
