@@ -30,31 +30,31 @@
         {
             label10 = new Label();
             label9 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker_Inicio = new DateTimePicker();
+            dateTimePicker_Final = new DateTimePicker();
             label1 = new Label();
             label2 = new Label();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            cmb_Buscar_FormUsuario = new ComboBox();
+            iconButton_BuscarEntre_FormReporteCompras = new FontAwesome.Sharp.IconButton();
+            cmb_BuscarProvedores_FormReporteCompras = new ComboBox();
             label3 = new Label();
             label4 = new Label();
-            dataGridView1 = new DataGridView();
+            dvg_ReporteCompras_FormReporteCompras = new DataGridView();
             label5 = new Label();
-            comboBox1 = new ComboBox();
-            textBox2 = new TextBox();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cmb_Buscar_FormReporteCompras = new ComboBox();
+            txt_Buscar_FormReporteCompras = new TextBox();
+            iconButton_Vaciar_FormReporteCompras = new FontAwesome.Sharp.IconButton();
+            iconButton_Buscar_FormReporteCompras = new FontAwesome.Sharp.IconButton();
+            ((System.ComponentModel.ISupportInitialize)dvg_ReporteCompras_FormReporteCompras).BeginInit();
             SuspendLayout();
             // 
             // label10
             // 
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(12, 9);
+            label10.Location = new Point(10, 7);
             label10.Name = "label10";
-            label10.Padding = new Padding(6, 0, 0, 0);
-            label10.Size = new Size(1196, 181);
+            label10.Padding = new Padding(5, 0, 0, 0);
+            label10.Size = new Size(1046, 136);
             label10.TabIndex = 85;
             label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -64,80 +64,88 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 15F);
-            label9.Location = new Point(12, 18);
+            label9.Location = new Point(10, 14);
             label9.Name = "label9";
-            label9.Size = new Size(238, 37);
+            label9.Size = new Size(189, 30);
             label9.TabIndex = 86;
             label9.Text = "REPORTE COMPRAS";
             // 
-            // dateTimePicker1
+            // dateTimePicker_Inicio
             // 
-            dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(108, 112);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(150, 27);
-            dateTimePicker1.TabIndex = 87;
+            dateTimePicker_Inicio.CustomFormat = "dd/MM/yyyy";
+            dateTimePicker_Inicio.Format = DateTimePickerFormat.Short;
+            dateTimePicker_Inicio.Location = new Point(94, 84);
+            dateTimePicker_Inicio.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker_Inicio.Name = "dateTimePicker_Inicio";
+            dateTimePicker_Inicio.Size = new Size(132, 23);
+            dateTimePicker_Inicio.TabIndex = 87;
+            dateTimePicker_Inicio.ValueChanged += dateTimePicker_Inicio_ValueChanged;
             // 
-            // dateTimePicker2
+            // dateTimePicker_Final
             // 
-            dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(377, 112);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(150, 27);
-            dateTimePicker2.TabIndex = 88;
+            dateTimePicker_Final.CustomFormat = "dd/MM/yyyy";
+            dateTimePicker_Final.Format = DateTimePickerFormat.Short;
+            dateTimePicker_Final.Location = new Point(330, 84);
+            dateTimePicker_Final.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker_Final.Name = "dateTimePicker_Final";
+            dateTimePicker_Final.Size = new Size(132, 23);
+            dateTimePicker_Final.TabIndex = 88;
+            dateTimePicker_Final.ValueChanged += dateTimePicker_Final_ValueChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 112);
+            label1.Location = new Point(10, 84);
             label1.Name = "label1";
-            label1.Size = new Size(90, 20);
+            label1.Size = new Size(73, 15);
             label1.TabIndex = 89;
             label1.Text = "Fecha inicio:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(282, 112);
+            label2.Location = new Point(247, 84);
             label2.Name = "label2";
-            label2.Size = new Size(73, 20);
+            label2.Size = new Size(60, 15);
             label2.TabIndex = 90;
             label2.Text = "Fecha Fin:";
             // 
-            // iconButton4
+            // iconButton_BuscarEntre_FormReporteCompras
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(859, 117);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(83, 29);
-            iconButton4.TabIndex = 91;
-            iconButton4.UseVisualStyleBackColor = false;
+            iconButton_BuscarEntre_FormReporteCompras.BackColor = Color.White;
+            iconButton_BuscarEntre_FormReporteCompras.Cursor = Cursors.Hand;
+            iconButton_BuscarEntre_FormReporteCompras.FlatAppearance.BorderColor = Color.Black;
+            iconButton_BuscarEntre_FormReporteCompras.FlatStyle = FlatStyle.Flat;
+            iconButton_BuscarEntre_FormReporteCompras.ForeColor = Color.Black;
+            iconButton_BuscarEntre_FormReporteCompras.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_BuscarEntre_FormReporteCompras.IconColor = Color.Black;
+            iconButton_BuscarEntre_FormReporteCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_BuscarEntre_FormReporteCompras.IconSize = 16;
+            iconButton_BuscarEntre_FormReporteCompras.Location = new Point(752, 88);
+            iconButton_BuscarEntre_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_BuscarEntre_FormReporteCompras.Name = "iconButton_BuscarEntre_FormReporteCompras";
+            iconButton_BuscarEntre_FormReporteCompras.Size = new Size(73, 22);
+            iconButton_BuscarEntre_FormReporteCompras.TabIndex = 91;
+            iconButton_BuscarEntre_FormReporteCompras.UseVisualStyleBackColor = false;
+            iconButton_BuscarEntre_FormReporteCompras.Click += iconButton_BuscarEntre_FormReporteCompras_Click;
             // 
-            // cmb_Buscar_FormUsuario
+            // cmb_BuscarProvedores_FormReporteCompras
             // 
-            cmb_Buscar_FormUsuario.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_Buscar_FormUsuario.FormattingEnabled = true;
-            cmb_Buscar_FormUsuario.Location = new Point(676, 117);
-            cmb_Buscar_FormUsuario.Name = "cmb_Buscar_FormUsuario";
-            cmb_Buscar_FormUsuario.Size = new Size(177, 28);
-            cmb_Buscar_FormUsuario.TabIndex = 92;
+            cmb_BuscarProvedores_FormReporteCompras.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_BuscarProvedores_FormReporteCompras.FormattingEnabled = true;
+            cmb_BuscarProvedores_FormReporteCompras.Location = new Point(592, 88);
+            cmb_BuscarProvedores_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            cmb_BuscarProvedores_FormReporteCompras.Name = "cmb_BuscarProvedores_FormReporteCompras";
+            cmb_BuscarProvedores_FormReporteCompras.Size = new Size(155, 23);
+            cmb_BuscarProvedores_FormReporteCompras.TabIndex = 92;
+            cmb_BuscarProvedores_FormReporteCompras.SelectedIndexChanged += cmb_BuscarProvedores_FormReporteCompras_SelectedIndexChanged;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(554, 117);
+            label3.Location = new Point(485, 88);
             label3.Name = "label3";
-            label3.Size = new Size(94, 20);
+            label3.Size = new Size(75, 15);
             label3.TabIndex = 93;
             label3.Text = "Proveedores:";
             // 
@@ -145,105 +153,117 @@
             // 
             label4.BackColor = Color.White;
             label4.Font = new Font("Segoe UI", 15F);
-            label4.Location = new Point(12, 208);
+            label4.Location = new Point(10, 156);
             label4.Name = "label4";
-            label4.Padding = new Padding(6, 0, 0, 0);
-            label4.Size = new Size(1208, 465);
+            label4.Padding = new Padding(5, 0, 0, 0);
+            label4.Size = new Size(1057, 349);
             label4.TabIndex = 94;
             label4.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // dataGridView1
+            // dvg_ReporteCompras_FormReporteCompras
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 276);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1179, 367);
-            dataGridView1.TabIndex = 95;
+            dvg_ReporteCompras_FormReporteCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dvg_ReporteCompras_FormReporteCompras.Location = new Point(34, 201);
+            dvg_ReporteCompras_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            dvg_ReporteCompras_FormReporteCompras.Name = "dvg_ReporteCompras_FormReporteCompras";
+            dvg_ReporteCompras_FormReporteCompras.RowHeadersWidth = 51;
+            dvg_ReporteCompras_FormReporteCompras.Size = new Size(1032, 275);
+            dvg_ReporteCompras_FormReporteCompras.TabIndex = 95;
+            dvg_ReporteCompras_FormReporteCompras.CellContentClick += dvg_ReporteCompras_FormReporteCompras_CellContentClick;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(569, 240);
+            label5.Location = new Point(498, 180);
             label5.Name = "label5";
-            label5.Size = new Size(79, 20);
+            label5.Size = new Size(63, 15);
             label5.TabIndex = 96;
             label5.Text = "Buscar por";
             // 
-            // comboBox1
+            // cmb_Buscar_FormReporteCompras
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(667, 230);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(165, 28);
-            comboBox1.TabIndex = 97;
+            cmb_Buscar_FormReporteCompras.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_Buscar_FormReporteCompras.FormattingEnabled = true;
+            cmb_Buscar_FormReporteCompras.Location = new Point(584, 172);
+            cmb_Buscar_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            cmb_Buscar_FormReporteCompras.Name = "cmb_Buscar_FormReporteCompras";
+            cmb_Buscar_FormReporteCompras.Size = new Size(145, 23);
+            cmb_Buscar_FormReporteCompras.TabIndex = 97;
+            cmb_Buscar_FormReporteCompras.SelectedIndexChanged += cmb_Buscar_FormReporteCompras_SelectedIndexChanged;
             // 
-            // textBox2
+            // txt_Buscar_FormReporteCompras
             // 
-            textBox2.Location = new Point(849, 232);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(186, 27);
-            textBox2.TabIndex = 98;
+            txt_Buscar_FormReporteCompras.Location = new Point(743, 174);
+            txt_Buscar_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormReporteCompras.Name = "txt_Buscar_FormReporteCompras";
+            txt_Buscar_FormReporteCompras.Size = new Size(163, 23);
+            txt_Buscar_FormReporteCompras.TabIndex = 98;
+            txt_Buscar_FormReporteCompras.TextChanged += txt_Buscar_FormReporteCompras_TextChanged;
             // 
-            // iconButton5
+            // iconButton_Vaciar_FormReporteCompras
             // 
-            iconButton5.BackColor = Color.White;
-            iconButton5.Cursor = Cursors.Hand;
-            iconButton5.FlatAppearance.BorderColor = Color.Black;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.ForeColor = Color.Black;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 19;
-            iconButton5.Location = new Point(1148, 230);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(60, 30);
-            iconButton5.TabIndex = 99;
-            iconButton5.UseVisualStyleBackColor = false;
+            iconButton_Vaciar_FormReporteCompras.BackColor = Color.White;
+            iconButton_Vaciar_FormReporteCompras.Cursor = Cursors.Hand;
+            iconButton_Vaciar_FormReporteCompras.FlatAppearance.BorderColor = Color.Black;
+            iconButton_Vaciar_FormReporteCompras.FlatStyle = FlatStyle.Flat;
+            iconButton_Vaciar_FormReporteCompras.ForeColor = Color.Black;
+            iconButton_Vaciar_FormReporteCompras.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            iconButton_Vaciar_FormReporteCompras.IconColor = Color.Black;
+            iconButton_Vaciar_FormReporteCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_Vaciar_FormReporteCompras.IconSize = 19;
+            iconButton_Vaciar_FormReporteCompras.Location = new Point(1004, 172);
+            iconButton_Vaciar_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Vaciar_FormReporteCompras.Name = "iconButton_Vaciar_FormReporteCompras";
+            iconButton_Vaciar_FormReporteCompras.Size = new Size(52, 22);
+            iconButton_Vaciar_FormReporteCompras.TabIndex = 99;
+            iconButton_Vaciar_FormReporteCompras.UseVisualStyleBackColor = false;
+            iconButton_Vaciar_FormReporteCompras.Click += iconButton_Vaciar_FormReporteCompras_Click;
             // 
-            // iconButton1
+            // iconButton_Buscar_FormReporteCompras
             // 
-            iconButton1.BackColor = Color.White;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.Black;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1056, 230);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(64, 29);
-            iconButton1.TabIndex = 100;
-            iconButton1.UseVisualStyleBackColor = false;
+            iconButton_Buscar_FormReporteCompras.BackColor = Color.White;
+            iconButton_Buscar_FormReporteCompras.Cursor = Cursors.Hand;
+            iconButton_Buscar_FormReporteCompras.FlatAppearance.BorderColor = Color.Black;
+            iconButton_Buscar_FormReporteCompras.FlatStyle = FlatStyle.Flat;
+            iconButton_Buscar_FormReporteCompras.ForeColor = Color.Black;
+            iconButton_Buscar_FormReporteCompras.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_Buscar_FormReporteCompras.IconColor = Color.Black;
+            iconButton_Buscar_FormReporteCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_Buscar_FormReporteCompras.IconSize = 16;
+            iconButton_Buscar_FormReporteCompras.Location = new Point(923, 172);
+            iconButton_Buscar_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_Buscar_FormReporteCompras.Name = "iconButton_Buscar_FormReporteCompras";
+            iconButton_Buscar_FormReporteCompras.Size = new Size(56, 22);
+            iconButton_Buscar_FormReporteCompras.TabIndex = 100;
+            iconButton_Buscar_FormReporteCompras.UseVisualStyleBackColor = false;
+            iconButton_Buscar_FormReporteCompras.Click += iconButton_Buscar_FormReporteCompras_Click;
             // 
             // FormReportesCompras
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1232, 712);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton5);
-            Controls.Add(textBox2);
-            Controls.Add(comboBox1);
+            ClientSize = new Size(1078, 534);
+            Controls.Add(iconButton_Buscar_FormReporteCompras);
+            Controls.Add(iconButton_Vaciar_FormReporteCompras);
+            Controls.Add(txt_Buscar_FormReporteCompras);
+            Controls.Add(cmb_Buscar_FormReporteCompras);
             Controls.Add(label5);
-            Controls.Add(dataGridView1);
+            Controls.Add(dvg_ReporteCompras_FormReporteCompras);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(cmb_Buscar_FormUsuario);
-            Controls.Add(iconButton4);
+            Controls.Add(cmb_BuscarProvedores_FormReporteCompras);
+            Controls.Add(iconButton_BuscarEntre_FormReporteCompras);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dateTimePicker2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateTimePicker_Final);
+            Controls.Add(dateTimePicker_Inicio);
             Controls.Add(label9);
             Controls.Add(label10);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "FormReportesCompras";
             Text = "FormReportesCompras";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += FormReportesCompras_Load;
+            ((System.ComponentModel.ISupportInitialize)dvg_ReporteCompras_FormReporteCompras).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,19 +272,19 @@
 
         private Label label10;
         private Label label9;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateTimePicker_Inicio;
+        private DateTimePicker dateTimePicker_Final;
         private Label label1;
         private Label label2;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private ComboBox cmb_Buscar_FormUsuario;
+        private FontAwesome.Sharp.IconButton iconButton_BuscarEntre_FormReporteCompras;
+        private ComboBox cmb_BuscarProvedores_FormReporteCompras;
         private Label label3;
         private Label label4;
-        private DataGridView dataGridView1;
+        private DataGridView dvg_ReporteCompras_FormReporteCompras;
         private Label label5;
-        private ComboBox comboBox1;
-        private TextBox textBox2;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private ComboBox cmb_Buscar_FormReporteCompras;
+        private TextBox txt_Buscar_FormReporteCompras;
+        private FontAwesome.Sharp.IconButton iconButton_Vaciar_FormReporteCompras;
+        private FontAwesome.Sharp.IconButton iconButton_Buscar_FormReporteCompras;
     }
 }

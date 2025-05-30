@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
             txt_Descripcion_FormProducto = new TextBox();
@@ -44,15 +44,13 @@
             dgv_Data_FormArticulo = new DataGridView();
             label9 = new Label();
             txt_Nombre_FormProducto = new TextBox();
-            txt_Documento_FormCodigo = new TextBox();
+            txt_Codigo_FormProducto = new TextBox();
             label3 = new Label();
             label2 = new Label();
             btn_Eliminar_FormUsuario = new FontAwesome.Sharp.IconButton();
             btn_Editar_FormUsuario = new FontAwesome.Sharp.IconButton();
             btn_Guardar_FormUsuario = new FontAwesome.Sharp.IconButton();
-            label8 = new Label();
-            cmb_Estado_FormProducto = new ComboBox();
-            cmb_Rol_FormProducto = new ComboBox();
+            cmb_Categoria_FormProducto = new ComboBox();
             label7 = new Label();
             btn_Editar_FormProductos = new FontAwesome.Sharp.IconButton();
             btn_Vaciar_FormProductos = new FontAwesome.Sharp.IconButton();
@@ -205,15 +203,15 @@
             // dgv_Data_FormArticulo
             // 
             dgv_Data_FormArticulo.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_Data_FormArticulo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormArticulo.Location = new Point(262, 72);
             dgv_Data_FormArticulo.Margin = new Padding(3, 2, 3, 2);
@@ -221,9 +219,9 @@
             dgv_Data_FormArticulo.Name = "dgv_Data_FormArticulo";
             dgv_Data_FormArticulo.ReadOnly = true;
             dgv_Data_FormArticulo.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormArticulo.Size = new Size(1038, 529);
             dgv_Data_FormArticulo.TabIndex = 46;
             // 
@@ -247,13 +245,13 @@
             txt_Nombre_FormProducto.Size = new Size(218, 23);
             txt_Nombre_FormProducto.TabIndex = 39;
             // 
-            // txt_Documento_FormCodigo
+            // txt_Codigo_FormProducto
             // 
-            txt_Documento_FormCodigo.Location = new Point(24, 90);
-            txt_Documento_FormCodigo.Margin = new Padding(3, 2, 3, 2);
-            txt_Documento_FormCodigo.Name = "txt_Documento_FormCodigo";
-            txt_Documento_FormCodigo.Size = new Size(218, 23);
-            txt_Documento_FormCodigo.TabIndex = 38;
+            txt_Codigo_FormProducto.Location = new Point(24, 90);
+            txt_Codigo_FormProducto.Margin = new Padding(3, 2, 3, 2);
+            txt_Codigo_FormProducto.Name = "txt_Codigo_FormProducto";
+            txt_Codigo_FormProducto.Size = new Size(218, 23);
+            txt_Codigo_FormProducto.TabIndex = 38;
             // 
             // label3
             // 
@@ -286,7 +284,7 @@
             btn_Eliminar_FormUsuario.IconColor = Color.White;
             btn_Eliminar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormUsuario.IconSize = 16;
-            btn_Eliminar_FormUsuario.Location = new Point(52, 439);
+            btn_Eliminar_FormUsuario.Location = new Point(54, 401);
             btn_Eliminar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormUsuario.Name = "btn_Eliminar_FormUsuario";
             btn_Eliminar_FormUsuario.Size = new Size(153, 34);
@@ -307,7 +305,7 @@
             btn_Editar_FormUsuario.IconColor = Color.White;
             btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(52, 401);
+            btn_Editar_FormUsuario.Location = new Point(54, 363);
             btn_Editar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
             btn_Editar_FormUsuario.Size = new Size(153, 34);
@@ -328,7 +326,7 @@
             btn_Guardar_FormUsuario.IconColor = Color.White;
             btn_Guardar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormUsuario.IconSize = 16;
-            btn_Guardar_FormUsuario.Location = new Point(52, 363);
+            btn_Guardar_FormUsuario.Location = new Point(54, 325);
             btn_Guardar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormUsuario.Name = "btn_Guardar_FormUsuario";
             btn_Guardar_FormUsuario.Size = new Size(153, 34);
@@ -337,36 +335,17 @@
             btn_Guardar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
             btn_Guardar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Guardar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Guardar_FormUsuario.Click += btn_Guardar_FormUsuario_Click;
             // 
-            // label8
+            // cmb_Categoria_FormProducto
             // 
-            label8.AutoSize = true;
-            label8.BackColor = Color.White;
-            label8.Location = new Point(24, 242);
-            label8.Name = "label8";
-            label8.Size = new Size(42, 15);
-            label8.TabIndex = 68;
-            label8.Text = "Estado";
-            // 
-            // cmb_Estado_FormProducto
-            // 
-            cmb_Estado_FormProducto.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_Estado_FormProducto.FormattingEnabled = true;
-            cmb_Estado_FormProducto.Location = new Point(24, 256);
-            cmb_Estado_FormProducto.Margin = new Padding(3, 2, 3, 2);
-            cmb_Estado_FormProducto.Name = "cmb_Estado_FormProducto";
-            cmb_Estado_FormProducto.Size = new Size(216, 23);
-            cmb_Estado_FormProducto.TabIndex = 67;
-            // 
-            // cmb_Rol_FormProducto
-            // 
-            cmb_Rol_FormProducto.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmb_Rol_FormProducto.FormattingEnabled = true;
-            cmb_Rol_FormProducto.Location = new Point(24, 217);
-            cmb_Rol_FormProducto.Margin = new Padding(3, 2, 3, 2);
-            cmb_Rol_FormProducto.Name = "cmb_Rol_FormProducto";
-            cmb_Rol_FormProducto.Size = new Size(218, 23);
-            cmb_Rol_FormProducto.TabIndex = 66;
+            cmb_Categoria_FormProducto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmb_Categoria_FormProducto.FormattingEnabled = true;
+            cmb_Categoria_FormProducto.Location = new Point(24, 217);
+            cmb_Categoria_FormProducto.Margin = new Padding(3, 2, 3, 2);
+            cmb_Categoria_FormProducto.Name = "cmb_Categoria_FormProducto";
+            cmb_Categoria_FormProducto.Size = new Size(218, 23);
+            cmb_Categoria_FormProducto.TabIndex = 66;
             // 
             // label7
             // 
@@ -384,7 +363,7 @@
             btn_Editar_FormProductos.IconColor = Color.Black;
             btn_Editar_FormProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormProductos.ImageAlign = ContentAlignment.MiddleLeft;
-            btn_Editar_FormProductos.Location = new Point(26, 493);
+            btn_Editar_FormProductos.Location = new Point(26, 463);
             btn_Editar_FormProductos.Name = "btn_Editar_FormProductos";
             btn_Editar_FormProductos.Size = new Size(216, 92);
             btn_Editar_FormProductos.TabIndex = 69;
@@ -402,7 +381,7 @@
             btn_Vaciar_FormProductos.IconColor = Color.White;
             btn_Vaciar_FormProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Vaciar_FormProductos.IconSize = 16;
-            btn_Vaciar_FormProductos.Location = new Point(52, 325);
+            btn_Vaciar_FormProductos.Location = new Point(54, 287);
             btn_Vaciar_FormProductos.Margin = new Padding(3, 2, 3, 2);
             btn_Vaciar_FormProductos.Name = "btn_Vaciar_FormProductos";
             btn_Vaciar_FormProductos.Size = new Size(153, 34);
@@ -417,12 +396,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1311, 610);
+            ClientSize = new Size(1311, 568);
             Controls.Add(btn_Vaciar_FormProductos);
             Controls.Add(btn_Editar_FormProductos);
-            Controls.Add(label8);
-            Controls.Add(cmb_Estado_FormProducto);
-            Controls.Add(cmb_Rol_FormProducto);
+            Controls.Add(cmb_Categoria_FormProducto);
             Controls.Add(label7);
             Controls.Add(btn_Eliminar_FormUsuario);
             Controls.Add(btn_Editar_FormUsuario);
@@ -441,7 +418,7 @@
             Controls.Add(dgv_Data_FormArticulo);
             Controls.Add(label9);
             Controls.Add(txt_Nombre_FormProducto);
-            Controls.Add(txt_Documento_FormCodigo);
+            Controls.Add(txt_Codigo_FormProducto);
             Controls.Add(label3);
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
@@ -469,15 +446,13 @@
         private DataGridView dgv_Data_FormArticulo;
         private Label label9;
         private TextBox txt_Nombre_FormProducto;
-        private TextBox txt_Documento_FormCodigo;
+        private TextBox txt_Codigo_FormProducto;
         private Label label3;
         private Label label2;
         private FontAwesome.Sharp.IconButton btn_Eliminar_FormUsuario;
         private FontAwesome.Sharp.IconButton btn_Editar_FormUsuario;
         private FontAwesome.Sharp.IconButton btn_Guardar_FormUsuario;
-        private Label label8;
-        private ComboBox cmb_Estado_FormProducto;
-        private ComboBox cmb_Rol_FormProducto;
+        private ComboBox cmb_Categoria_FormProducto;
         private Label label7;
         private FontAwesome.Sharp.IconButton btn_Editar_FormProductos;
         private FontAwesome.Sharp.IconButton btn_Vaciar_FormProductos;

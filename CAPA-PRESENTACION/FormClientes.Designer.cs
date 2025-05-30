@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             txt_NombrePaterno_FormClientes = new TextBox();
             label12 = new Label();
@@ -61,46 +59,6 @@
             btn_Vaciar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormClientes).BeginInit();
             SuspendLayout();
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1220, 19);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 68;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(1172, 19);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 67;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -398,15 +356,15 @@
             // dgv_Data_FormClientes
             // 
             dgv_Data_FormClientes.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormClientes.Location = new Point(246, 53);
             dgv_Data_FormClientes.Margin = new Padding(3, 2, 3, 2);
@@ -414,9 +372,9 @@
             dgv_Data_FormClientes.Name = "dgv_Data_FormClientes";
             dgv_Data_FormClientes.ReadOnly = true;
             dgv_Data_FormClientes.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormClientes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormClientes.Size = new Size(1025, 517);
             dgv_Data_FormClientes.TabIndex = 53;
             dgv_Data_FormClientes.SelectionChanged += dgv_Data_FormClientes_SelectionChanged;
@@ -453,8 +411,6 @@
             Controls.Add(label4);
             Controls.Add(txt_Telefono_FormClientes);
             Controls.Add(txt_Correo_FormClientes);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(txt_NombreMaterno_FormClientes);
             Controls.Add(label1);
             Controls.Add(txt_NombrePaterno_FormClientes);
@@ -487,9 +443,6 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private Label label1;
         private TextBox txt_NombrePaterno_FormClientes;
         private Label label12;

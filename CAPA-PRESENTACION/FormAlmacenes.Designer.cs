@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label9 = new Label();
             txt_Nombre_FormAlmacenes = new TextBox();
             txt_Capacidad_FormAlmacenes = new TextBox();
             label3 = new Label();
             label2 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
             txt_DireccionID_FormAlmacenes = new TextBox();
             label12 = new Label();
             iconButton_Restablecer_FormAlmacen = new FontAwesome.Sharp.IconButton();
@@ -111,46 +109,6 @@
             label2.Size = new Size(101, 15);
             label2.TabIndex = 69;
             label2.Text = "Capacidad (m*m)";
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1234, 26);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 85;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(1179, 26);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 84;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
             // 
             // txt_DireccionID_FormAlmacenes
             // 
@@ -252,15 +210,15 @@
             // dgv_Data_FormAlmacenes
             // 
             dgv_Data_FormAlmacenes.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormAlmacenes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormAlmacenes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormAlmacenes.Location = new Point(264, 64);
             dgv_Data_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
@@ -268,9 +226,9 @@
             dgv_Data_FormAlmacenes.Name = "dgv_Data_FormAlmacenes";
             dgv_Data_FormAlmacenes.ReadOnly = true;
             dgv_Data_FormAlmacenes.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormAlmacenes.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormAlmacenes.Size = new Size(1038, 529);
             dgv_Data_FormAlmacenes.TabIndex = 74;
             dgv_Data_FormAlmacenes.SelectionChanged += dgv_Data_FormAlmacenes_SelectionChanged;
@@ -488,8 +446,6 @@
             Controls.Add(txt_Capacidad_FormAlmacenes);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(txt_DireccionID_FormAlmacenes);
             Controls.Add(label12);
             Controls.Add(iconButton_Restablecer_FormAlmacen);
@@ -525,8 +481,6 @@
         private Label label2;
         private DataGridViewTextBoxColumn idcategoria;
         private ComboBox cmb_Rol_FormUsuario;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private TextBox txt_DireccionID_FormAlmacenes;
         private Label label12;
         private FontAwesome.Sharp.IconButton iconButton_Restablecer_FormAlmacen;

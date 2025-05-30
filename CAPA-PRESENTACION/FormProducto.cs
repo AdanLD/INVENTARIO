@@ -80,16 +80,12 @@ namespace CAPA_PRESENTACION
             {
                 CargarArticulo(); //Llama al metodo que carga los articulos (Adan).
 
-                cmb_Rol_FormProducto.Items.Add(new { Texto = "Activo", Valor = 1 });
-                cmb_Rol_FormProducto.Items.Add(new { Texto = "Inactivo", Valor = 0 });
-                cmb_Rol_FormProducto.DisplayMember = "Texto";
-                cmb_Rol_FormProducto.ValueMember = "Valor";
+                cmb_Categoria_FormProducto.Items.Add(new { Texto = "Activo", Valor = 1 });
+                cmb_Categoria_FormProducto.Items.Add(new { Texto = "Inactivo", Valor = 0 });
+                cmb_Categoria_FormProducto.DisplayMember = "Texto";
+                cmb_Categoria_FormProducto.ValueMember = "Valor";
 
-                cmb_Estado_FormProducto.Items.Add(new { Texto = "Activo", Valor = 1 });
-                cmb_Estado_FormProducto.Items.Add(new { Texto = "Inactivo", Valor = 0 });
-                cmb_Estado_FormProducto.DisplayMember = "Texto";
-                cmb_Estado_FormProducto.ValueMember = "Valor";
-
+               
                 var headersArticulo = new Dictionary<string, string> 
             //Diccionario que almacena dos strings, el nombre del atributo y su remplazo del header (Adan).
             {
@@ -136,6 +132,51 @@ namespace CAPA_PRESENTACION
             try
             {
                 CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this); //Limpia los campos de texto (Adan).
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void btn_Guardar_FormUsuario_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SQLiteConnection conexion = new SQLiteConnection(Conectar.cadena))
+                {
+                    conexion.Open();
+
+                    string query = "INSERT INTO TB_Productos (codigo_Articulo, nombre_Articulo, descripcion_Articulo, categoria_ID) VALUES (@v1, @v2, @v3, @v4)";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@v1", txt_Codigo_FormProducto.Text);
+                        cmd.Parameters.AddWithValue("@v2", txt_Nombre_FormProducto.Text);
+                        cmd.Parameters.AddWithValue("@v3", txt_Descripcion_FormProducto.Text);
+
+                        var estadoSeleccionado = cmb_Buscar_FormArticulos.SelectedItem;
+
+                        int valorEstado = 0;
+
+                        if (estadoSeleccionado != null)
+                        {
+                            var propiedad = estadoSeleccionado.GetType().GetProperty("Valor");
+
+                            if (propiedad != null)
+                            {
+                                valorEstado = Convert.ToInt32(propiedad.GetValue(estadoSeleccionado) ?? 0);
+                            }
+                        }
+
+                        valorEstado = (valorEstado == 1) ? 1 : 0;
+                        cmd.Parameters.AddWithValue("@v4", valorEstado);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                CargarArticulo();
             }
             catch (Exception)
             {

@@ -170,7 +170,7 @@ namespace CAPA_PRESENTACION
 
         private void rEPORTECOMPRASToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormCompras()); //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
+            AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormReportesCompras()); //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
 
         }
 

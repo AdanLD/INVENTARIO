@@ -30,8 +30,6 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
             btn_Limpiar_FormCategoria = new FontAwesome.Sharp.IconButton();
             btn_Buscar_FormCategoria = new FontAwesome.Sharp.IconButton();
             txt_Buscar_FormCategoria = new TextBox();
@@ -51,46 +49,6 @@
             btn_Vaciar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormCategoria).BeginInit();
             SuspendLayout();
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(208, 339);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 68;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(208, 365);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 67;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
             // 
             // btn_Limpiar_FormCategoria
             // 
@@ -348,8 +306,6 @@
             Controls.Add(btn_Vaciar_FormAlmacenes);
             Controls.Add(label1);
             Controls.Add(txt_Nombre_FormCategoria);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(btn_Limpiar_FormCategoria);
             Controls.Add(btn_Buscar_FormCategoria);
             Controls.Add(txt_Buscar_FormCategoria);
@@ -374,9 +330,6 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton btn_Limpiar_FormCategoria;
         private FontAwesome.Sharp.IconButton btn_Buscar_FormCategoria;
         private TextBox txt_Buscar_FormCategoria;

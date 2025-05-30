@@ -199,8 +199,8 @@ namespace CAPA_PRESENTACION
                         }
                         
                         valorEstado = (valorEstado == 1) ? 1 : 0;
-                        cmd.Parameters.AddWithValue("@v2", valorEstado);
 
+                        cmd.Parameters.AddWithValue("@v2", valorEstado);
                         cmd.Parameters.AddWithValue("@v3", Convert.ToInt32(txt_DireccionID_FormAlmacenes.Text));
                         cmd.Parameters.AddWithValue("@v4", capacidad);
                         cmd.Parameters.AddWithValue("@v5", stock);
