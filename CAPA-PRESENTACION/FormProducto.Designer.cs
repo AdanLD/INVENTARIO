@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             txt_Descripcion_FormProducto = new TextBox();
             label12 = new Label();
-            iconButton5 = new FontAwesome.Sharp.IconButton();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBox6 = new TextBox();
+            btn_Vaciar_FormArticulos = new FontAwesome.Sharp.IconButton();
+            btn_Buscar_FormArticulos = new FontAwesome.Sharp.IconButton();
+            txt_Buscar_FormArticulos = new TextBox();
             cmb_Buscar_FormArticulos = new ComboBox();
             label11 = new Label();
-            txt_ID_FormUsuario = new TextBox();
+            txt_ID_FormProducto = new TextBox();
             label10 = new Label();
             dgv_Data_FormArticulo = new DataGridView();
             label9 = new Label();
@@ -56,46 +54,6 @@
             btn_Vaciar_FormProductos = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormArticulo).BeginInit();
             SuspendLayout();
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1232, 32);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 61;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(1177, 32);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 60;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
             // 
             // txt_Descripcion_FormProducto
             // 
@@ -115,49 +73,51 @@
             label12.TabIndex = 54;
             label12.Text = "Descripcion";
             // 
-            // iconButton5
+            // btn_Vaciar_FormArticulos
             // 
-            iconButton5.BackColor = Color.White;
-            iconButton5.Cursor = Cursors.Hand;
-            iconButton5.FlatAppearance.BorderColor = Color.Black;
-            iconButton5.FlatStyle = FlatStyle.Flat;
-            iconButton5.ForeColor = Color.Black;
-            iconButton5.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            iconButton5.IconColor = Color.Black;
-            iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton5.IconSize = 19;
-            iconButton5.Location = new Point(1100, 32);
-            iconButton5.Margin = new Padding(3, 2, 3, 2);
-            iconButton5.Name = "iconButton5";
-            iconButton5.Size = new Size(62, 22);
-            iconButton5.TabIndex = 53;
-            iconButton5.UseVisualStyleBackColor = false;
+            btn_Vaciar_FormArticulos.BackColor = Color.White;
+            btn_Vaciar_FormArticulos.Cursor = Cursors.Hand;
+            btn_Vaciar_FormArticulos.FlatAppearance.BorderColor = Color.Black;
+            btn_Vaciar_FormArticulos.FlatStyle = FlatStyle.Flat;
+            btn_Vaciar_FormArticulos.ForeColor = Color.Black;
+            btn_Vaciar_FormArticulos.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btn_Vaciar_FormArticulos.IconColor = Color.Black;
+            btn_Vaciar_FormArticulos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Vaciar_FormArticulos.IconSize = 19;
+            btn_Vaciar_FormArticulos.Location = new Point(1100, 32);
+            btn_Vaciar_FormArticulos.Margin = new Padding(3, 2, 3, 2);
+            btn_Vaciar_FormArticulos.Name = "btn_Vaciar_FormArticulos";
+            btn_Vaciar_FormArticulos.Size = new Size(62, 22);
+            btn_Vaciar_FormArticulos.TabIndex = 53;
+            btn_Vaciar_FormArticulos.UseVisualStyleBackColor = false;
+            btn_Vaciar_FormArticulos.Click += btn_Vaciar_FormArticulos_Click;
             // 
-            // iconButton4
+            // btn_Buscar_FormArticulos
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(1022, 32);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(73, 22);
-            iconButton4.TabIndex = 52;
-            iconButton4.UseVisualStyleBackColor = false;
+            btn_Buscar_FormArticulos.BackColor = Color.White;
+            btn_Buscar_FormArticulos.Cursor = Cursors.Hand;
+            btn_Buscar_FormArticulos.FlatAppearance.BorderColor = Color.Black;
+            btn_Buscar_FormArticulos.FlatStyle = FlatStyle.Flat;
+            btn_Buscar_FormArticulos.ForeColor = Color.Black;
+            btn_Buscar_FormArticulos.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btn_Buscar_FormArticulos.IconColor = Color.Black;
+            btn_Buscar_FormArticulos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btn_Buscar_FormArticulos.IconSize = 16;
+            btn_Buscar_FormArticulos.Location = new Point(1022, 32);
+            btn_Buscar_FormArticulos.Margin = new Padding(3, 2, 3, 2);
+            btn_Buscar_FormArticulos.Name = "btn_Buscar_FormArticulos";
+            btn_Buscar_FormArticulos.Size = new Size(73, 22);
+            btn_Buscar_FormArticulos.TabIndex = 52;
+            btn_Buscar_FormArticulos.UseVisualStyleBackColor = false;
+            btn_Buscar_FormArticulos.Click += btn_Buscar_FormArticulos_Click;
             // 
-            // textBox6
+            // txt_Buscar_FormArticulos
             // 
-            textBox6.Location = new Point(836, 33);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(182, 23);
-            textBox6.TabIndex = 51;
+            txt_Buscar_FormArticulos.Location = new Point(836, 33);
+            txt_Buscar_FormArticulos.Margin = new Padding(3, 2, 3, 2);
+            txt_Buscar_FormArticulos.Name = "txt_Buscar_FormArticulos";
+            txt_Buscar_FormArticulos.Size = new Size(182, 23);
+            txt_Buscar_FormArticulos.TabIndex = 51;
             // 
             // cmb_Buscar_FormArticulos
             // 
@@ -179,14 +139,14 @@
             label11.TabIndex = 49;
             label11.Text = "Buscar por:";
             // 
-            // txt_ID_FormUsuario
+            // txt_ID_FormProducto
             // 
-            txt_ID_FormUsuario.Location = new Point(203, 57);
-            txt_ID_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            txt_ID_FormUsuario.Name = "txt_ID_FormUsuario";
-            txt_ID_FormUsuario.Size = new Size(39, 23);
-            txt_ID_FormUsuario.TabIndex = 48;
-            txt_ID_FormUsuario.Text = "0";
+            txt_ID_FormProducto.Location = new Point(203, 57);
+            txt_ID_FormProducto.Margin = new Padding(3, 2, 3, 2);
+            txt_ID_FormProducto.Name = "txt_ID_FormProducto";
+            txt_ID_FormProducto.Size = new Size(39, 23);
+            txt_ID_FormProducto.TabIndex = 48;
+            txt_ID_FormProducto.Text = "0";
             // 
             // label10
             // 
@@ -203,15 +163,15 @@
             // dgv_Data_FormArticulo
             // 
             dgv_Data_FormArticulo.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgv_Data_FormArticulo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormArticulo.Location = new Point(262, 72);
             dgv_Data_FormArticulo.Margin = new Padding(3, 2, 3, 2);
@@ -219,11 +179,12 @@
             dgv_Data_FormArticulo.Name = "dgv_Data_FormArticulo";
             dgv_Data_FormArticulo.ReadOnly = true;
             dgv_Data_FormArticulo.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgv_Data_FormArticulo.Size = new Size(1038, 529);
             dgv_Data_FormArticulo.TabIndex = 46;
+            dgv_Data_FormArticulo.SelectionChanged += dgv_Data_FormArticulo_SelectionChanged_1;
             // 
             // label9
             // 
@@ -293,6 +254,7 @@
             btn_Eliminar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
             btn_Eliminar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Eliminar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Eliminar_FormUsuario.Click += btn_Eliminar_FormUsuario_Click;
             // 
             // btn_Editar_FormUsuario
             // 
@@ -314,6 +276,7 @@
             btn_Editar_FormUsuario.TextAlign = ContentAlignment.MiddleRight;
             btn_Editar_FormUsuario.TextImageRelation = TextImageRelation.ImageBeforeText;
             btn_Editar_FormUsuario.UseVisualStyleBackColor = false;
+            btn_Editar_FormUsuario.Click += btn_Editar_FormUsuario_Click_1;
             // 
             // btn_Guardar_FormUsuario
             // 
@@ -404,16 +367,14 @@
             Controls.Add(btn_Eliminar_FormUsuario);
             Controls.Add(btn_Editar_FormUsuario);
             Controls.Add(btn_Guardar_FormUsuario);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(txt_Descripcion_FormProducto);
             Controls.Add(label12);
-            Controls.Add(iconButton5);
-            Controls.Add(iconButton4);
-            Controls.Add(textBox6);
+            Controls.Add(btn_Vaciar_FormArticulos);
+            Controls.Add(btn_Buscar_FormArticulos);
+            Controls.Add(txt_Buscar_FormArticulos);
             Controls.Add(cmb_Buscar_FormArticulos);
             Controls.Add(label11);
-            Controls.Add(txt_ID_FormUsuario);
+            Controls.Add(txt_ID_FormProducto);
             Controls.Add(label10);
             Controls.Add(dgv_Data_FormArticulo);
             Controls.Add(label9);
@@ -423,7 +384,6 @@
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormProducto";
-            Text = "FormProducto";
             Load += FormProducto_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormArticulo).EndInit();
             ResumeLayout(false);
@@ -431,17 +391,14 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private TextBox txt_Descripcion_FormProducto;
         private Label label12;
-        private FontAwesome.Sharp.IconButton iconButton5;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private TextBox textBox6;
+        private FontAwesome.Sharp.IconButton btn_Vaciar_FormArticulos;
+        private FontAwesome.Sharp.IconButton btn_Buscar_FormArticulos;
+        private TextBox txt_Buscar_FormArticulos;
         private ComboBox cmb_Buscar_FormArticulos;
         private Label label11;
-        private TextBox txt_ID_FormUsuario;
+        private TextBox txt_ID_FormProducto;
         private Label label10;
         private DataGridView dgv_Data_FormArticulo;
         private Label label9;
