@@ -28,51 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label3 = new Label();
             groupBox1 = new GroupBox();
             txt_Fecha_FormCompras = new TextBox();
             label2 = new Label();
             label1 = new Label();
             cmb_TipoDoc_FormCompras = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
+            numericUpDown_Cantidad_FormCompras = new NumericUpDown();
             label7 = new Label();
             label8 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            txt_PrecioVenta_FormCompras = new TextBox();
+            txt_PrecioCompra_FormCompras = new TextBox();
+            txt_ArticuloID_FormCompras = new TextBox();
             label9 = new Label();
             groupBox2 = new GroupBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBox2 = new TextBox();
+            txt_RazonSocial_FormCompras = new TextBox();
+            iconButton_NumeroDocumento_FormCompras = new FontAwesome.Sharp.IconButton();
+            txt_NumeroDocumento_FormCompras = new TextBox();
             label4 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            txt_ProveedorID_FormCompras = new TextBox();
+            iconButton_BuscarCodigoProducto_FormCompras = new FontAwesome.Sharp.IconButton();
+            txt_NombreProducto_FormCompras = new TextBox();
+            txt_CodigoProducto_FormCompras = new TextBox();
             label6 = new Label();
-            textBox10 = new TextBox();
-            dgv_Data_FormUsuario = new DataGridView();
+            txt_TotalAPagar_FormCompras = new TextBox();
+            dgv_Data_FormCompras = new DataGridView();
             btn_Seleccionar_FormUsuario = new DataGridViewButtonColumn();
             groupBox3 = new GroupBox();
             label5 = new Label();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
             label11 = new Label();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            iconButton_AgregarProductos_FormCompras = new FontAwesome.Sharp.IconButton();
             label10 = new Label();
+            iconButton_CrearCompra_FormCompras = new FontAwesome.Sharp.IconButton();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_Cantidad_FormCompras).BeginInit();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormCompras).BeginInit();
             groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(275, 16);
+            label3.Location = new Point(363, 14);
             label3.Name = "label3";
             label3.Size = new Size(75, 15);
             label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(cmb_TipoDoc_FormCompras);
-            groupBox1.Location = new Point(89, 51);
+            groupBox1.Location = new Point(12, 41);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
@@ -127,66 +127,64 @@
             cmb_TipoDoc_FormCompras.Name = "cmb_TipoDoc_FormCompras";
             cmb_TipoDoc_FormCompras.Size = new Size(218, 23);
             cmb_TipoDoc_FormCompras.TabIndex = 0;
-            cmb_TipoDoc_FormCompras.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // numericUpDown1
+            // numericUpDown_Cantidad_FormCompras
             // 
-            numericUpDown1.Location = new Point(640, 50);
-            numericUpDown1.Margin = new Padding(3, 2, 3, 2);
-            numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(102, 23);
-            numericUpDown1.TabIndex = 32;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown_Cantidad_FormCompras.Location = new Point(705, 50);
+            numericUpDown_Cantidad_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            numericUpDown_Cantidad_FormCompras.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDown_Cantidad_FormCompras.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown_Cantidad_FormCompras.Name = "numericUpDown_Cantidad_FormCompras";
+            numericUpDown_Cantidad_FormCompras.Size = new Size(102, 23);
+            numericUpDown_Cantidad_FormCompras.TabIndex = 32;
+            numericUpDown_Cantidad_FormCompras.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(353, 33);
+            label7.Location = new Point(473, 33);
             label7.Name = "label7";
-            label7.Size = new Size(89, 15);
+            label7.Size = new Size(87, 15);
             label7.TabIndex = 25;
-            label7.Text = "Precio Compra:";
+            label7.Text = "Precio compra:";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(504, 33);
+            label8.Location = new Point(597, 33);
             label8.Name = "label8";
             label8.Size = new Size(75, 15);
             label8.TabIndex = 26;
-            label8.Text = "Precio Venta:";
+            label8.Text = "Precio venta:";
             // 
-            // textBox9
+            // txt_PrecioVenta_FormCompras
             // 
-            textBox9.Location = new Point(509, 50);
-            textBox9.Margin = new Padding(3, 2, 3, 2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(102, 23);
-            textBox9.TabIndex = 31;
+            txt_PrecioVenta_FormCompras.Location = new Point(597, 50);
+            txt_PrecioVenta_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_PrecioVenta_FormCompras.Name = "txt_PrecioVenta_FormCompras";
+            txt_PrecioVenta_FormCompras.Size = new Size(102, 23);
+            txt_PrecioVenta_FormCompras.TabIndex = 31;
             // 
-            // textBox8
+            // txt_PrecioCompra_FormCompras
             // 
-            textBox8.Location = new Point(353, 50);
-            textBox8.Margin = new Padding(3, 2, 3, 2);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(118, 23);
-            textBox8.TabIndex = 30;
+            txt_PrecioCompra_FormCompras.Location = new Point(473, 49);
+            txt_PrecioCompra_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_PrecioCompra_FormCompras.Name = "txt_PrecioCompra_FormCompras";
+            txt_PrecioCompra_FormCompras.Size = new Size(118, 23);
+            txt_PrecioCompra_FormCompras.TabIndex = 30;
             // 
-            // textBox7
+            // txt_ArticuloID_FormCompras
             // 
-            textBox7.Location = new Point(104, 26);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(37, 23);
-            textBox7.TabIndex = 29;
-            textBox7.Visible = false;
+            txt_ArticuloID_FormCompras.Location = new Point(788, 127);
+            txt_ArticuloID_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_ArticuloID_FormCompras.Name = "txt_ArticuloID_FormCompras";
+            txt_ArticuloID_FormCompras.Size = new Size(37, 23);
+            txt_ArticuloID_FormCompras.TabIndex = 29;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(640, 33);
+            label9.Location = new Point(705, 33);
             label9.Name = "label9";
             label9.Size = new Size(58, 15);
             label9.TabIndex = 27;
@@ -194,149 +192,154 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(iconButton4);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(txt_RazonSocial_FormCompras);
+            groupBox2.Controls.Add(iconButton_NumeroDocumento_FormCompras);
+            groupBox2.Controls.Add(txt_NumeroDocumento_FormCompras);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
-            groupBox2.Location = new Point(653, 51);
+            groupBox2.Location = new Point(519, 41);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(508, 82);
+            groupBox2.Size = new Size(569, 82);
             groupBox2.TabIndex = 47;
             groupBox2.TabStop = false;
             groupBox2.Text = "Informacion Proveedor";
             // 
-            // textBox4
+            // txt_RazonSocial_FormCompras
             // 
-            textBox4.Location = new Point(438, 0);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(37, 23);
-            textBox4.TabIndex = 28;
-            textBox4.Visible = false;
+            txt_RazonSocial_FormCompras.Location = new Point(363, 31);
+            txt_RazonSocial_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_RazonSocial_FormCompras.Name = "txt_RazonSocial_FormCompras";
+            txt_RazonSocial_FormCompras.Size = new Size(200, 23);
+            txt_RazonSocial_FormCompras.TabIndex = 27;
+            txt_RazonSocial_FormCompras.TextChanged += txt_RazonSocial_FormCompras_TextChanged;
             // 
-            // textBox3
+            // iconButton_NumeroDocumento_FormCompras
             // 
-            textBox3.Location = new Point(275, 35);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 23);
-            textBox3.TabIndex = 27;
+            iconButton_NumeroDocumento_FormCompras.BackColor = Color.White;
+            iconButton_NumeroDocumento_FormCompras.Cursor = Cursors.Hand;
+            iconButton_NumeroDocumento_FormCompras.FlatAppearance.BorderColor = Color.Black;
+            iconButton_NumeroDocumento_FormCompras.FlatStyle = FlatStyle.Flat;
+            iconButton_NumeroDocumento_FormCompras.ForeColor = Color.Black;
+            iconButton_NumeroDocumento_FormCompras.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_NumeroDocumento_FormCompras.IconColor = Color.Black;
+            iconButton_NumeroDocumento_FormCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_NumeroDocumento_FormCompras.IconSize = 16;
+            iconButton_NumeroDocumento_FormCompras.Location = new Point(225, 14);
+            iconButton_NumeroDocumento_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_NumeroDocumento_FormCompras.Name = "iconButton_NumeroDocumento_FormCompras";
+            iconButton_NumeroDocumento_FormCompras.Size = new Size(61, 40);
+            iconButton_NumeroDocumento_FormCompras.TabIndex = 26;
+            iconButton_NumeroDocumento_FormCompras.UseVisualStyleBackColor = false;
+            iconButton_NumeroDocumento_FormCompras.Click += iconButton_NumeroDocumento_FormCompras_Click;
             // 
-            // iconButton4
+            // txt_NumeroDocumento_FormCompras
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(204, 34);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(52, 20);
-            iconButton4.TabIndex = 26;
-            iconButton4.UseVisualStyleBackColor = false;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(5, 34);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(194, 23);
-            textBox2.TabIndex = 3;
+            txt_NumeroDocumento_FormCompras.Location = new Point(5, 34);
+            txt_NumeroDocumento_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_NumeroDocumento_FormCompras.Name = "txt_NumeroDocumento_FormCompras";
+            txt_NumeroDocumento_FormCompras.Size = new Size(194, 23);
+            txt_NumeroDocumento_FormCompras.TabIndex = 3;
+            txt_NumeroDocumento_FormCompras.TextChanged += txt_NumeroDocumento_FormCompras_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(5, 17);
             label4.Name = "label4";
-            label4.Size = new Size(120, 15);
+            label4.Size = new Size(135, 15);
             label4.TabIndex = 1;
-            label4.Text = "Numero Documento:";
+            label4.Text = "Numero de documento:";
             // 
-            // iconButton1
+            // txt_ProveedorID_FormCompras
             // 
-            iconButton1.BackColor = Color.White;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.Black;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(146, 50);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(52, 20);
-            iconButton1.TabIndex = 29;
-            iconButton1.UseVisualStyleBackColor = false;
+            txt_ProveedorID_FormCompras.Location = new Point(1051, 14);
+            txt_ProveedorID_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_ProveedorID_FormCompras.Name = "txt_ProveedorID_FormCompras";
+            txt_ProveedorID_FormCompras.Size = new Size(37, 23);
+            txt_ProveedorID_FormCompras.TabIndex = 28;
+            txt_ProveedorID_FormCompras.Visible = false;
             // 
-            // textBox6
+            // iconButton_BuscarCodigoProducto_FormCompras
             // 
-            textBox6.Location = new Point(210, 50);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(121, 23);
-            textBox6.TabIndex = 4;
+            iconButton_BuscarCodigoProducto_FormCompras.BackColor = Color.White;
+            iconButton_BuscarCodigoProducto_FormCompras.Cursor = Cursors.Hand;
+            iconButton_BuscarCodigoProducto_FormCompras.FlatAppearance.BorderColor = Color.Black;
+            iconButton_BuscarCodigoProducto_FormCompras.FlatStyle = FlatStyle.Flat;
+            iconButton_BuscarCodigoProducto_FormCompras.ForeColor = Color.Black;
+            iconButton_BuscarCodigoProducto_FormCompras.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_BuscarCodigoProducto_FormCompras.IconColor = Color.Black;
+            iconButton_BuscarCodigoProducto_FormCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_BuscarCodigoProducto_FormCompras.IconSize = 16;
+            iconButton_BuscarCodigoProducto_FormCompras.Location = new Point(147, 20);
+            iconButton_BuscarCodigoProducto_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_BuscarCodigoProducto_FormCompras.Name = "iconButton_BuscarCodigoProducto_FormCompras";
+            iconButton_BuscarCodigoProducto_FormCompras.Size = new Size(79, 58);
+            iconButton_BuscarCodigoProducto_FormCompras.TabIndex = 29;
+            iconButton_BuscarCodigoProducto_FormCompras.UseVisualStyleBackColor = false;
+            iconButton_BuscarCodigoProducto_FormCompras.Click += iconButton_BuscarCodigoProducto_FormCompras_Click;
             // 
-            // textBox5
+            // txt_NombreProducto_FormCompras
             // 
-            textBox5.Location = new Point(5, 50);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(136, 23);
-            textBox5.TabIndex = 3;
+            txt_NombreProducto_FormCompras.Location = new Point(346, 47);
+            txt_NombreProducto_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_NombreProducto_FormCompras.Name = "txt_NombreProducto_FormCompras";
+            txt_NombreProducto_FormCompras.Size = new Size(121, 23);
+            txt_NombreProducto_FormCompras.TabIndex = 4;
+            // 
+            // txt_CodigoProducto_FormCompras
+            // 
+            txt_CodigoProducto_FormCompras.Location = new Point(5, 50);
+            txt_CodigoProducto_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_CodigoProducto_FormCompras.Name = "txt_CodigoProducto_FormCompras";
+            txt_CodigoProducto_FormCompras.Size = new Size(136, 23);
+            txt_CodigoProducto_FormCompras.TabIndex = 3;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(5, 28);
             label6.Name = "label6";
-            label6.Size = new Size(81, 15);
+            label6.Size = new Size(117, 15);
             label6.TabIndex = 1;
-            label6.Text = "Cod.Producto";
+            label6.Text = "Codigo del producto";
             // 
-            // textBox10
+            // txt_TotalAPagar_FormCompras
             // 
-            textBox10.Location = new Point(999, 182);
-            textBox10.Margin = new Padding(3, 2, 3, 2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(162, 23);
-            textBox10.TabIndex = 52;
+            txt_TotalAPagar_FormCompras.Location = new Point(935, 296);
+            txt_TotalAPagar_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_TotalAPagar_FormCompras.Name = "txt_TotalAPagar_FormCompras";
+            txt_TotalAPagar_FormCompras.Size = new Size(162, 23);
+            txt_TotalAPagar_FormCompras.TabIndex = 52;
+            txt_TotalAPagar_FormCompras.TextChanged += txt_TotalAPagar_FormCompras_TextChanged;
             // 
-            // dgv_Data_FormUsuario
+            // dgv_Data_FormCompras
             // 
-            dgv_Data_FormUsuario.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dgv_Data_FormUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Data_FormUsuario.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
-            dgv_Data_FormUsuario.Location = new Point(84, 238);
-            dgv_Data_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            dgv_Data_FormUsuario.MultiSelect = false;
-            dgv_Data_FormUsuario.Name = "dgv_Data_FormUsuario";
-            dgv_Data_FormUsuario.ReadOnly = true;
-            dgv_Data_FormUsuario.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.SelectionBackColor = Color.White;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            dgv_Data_FormUsuario.Size = new Size(910, 348);
-            dgv_Data_FormUsuario.TabIndex = 49;
+            dgv_Data_FormCompras.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormCompras.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_Data_FormCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Data_FormCompras.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
+            dgv_Data_FormCompras.Location = new Point(12, 238);
+            dgv_Data_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            dgv_Data_FormCompras.MultiSelect = false;
+            dgv_Data_FormCompras.Name = "dgv_Data_FormCompras";
+            dgv_Data_FormCompras.ReadOnly = true;
+            dgv_Data_FormCompras.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormCompras.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_Data_FormCompras.Size = new Size(917, 348);
+            dgv_Data_FormCompras.TabIndex = 49;
+            dgv_Data_FormCompras.CellContentClick += dgv_Data_FormCompras_CellContentClick;
             // 
             // btn_Seleccionar_FormUsuario
             // 
@@ -349,22 +352,21 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(numericUpDown1);
+            groupBox3.Controls.Add(numericUpDown_Cantidad_FormCompras);
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(textBox9);
-            groupBox3.Controls.Add(textBox8);
-            groupBox3.Controls.Add(textBox7);
-            groupBox3.Controls.Add(iconButton1);
-            groupBox3.Controls.Add(textBox6);
-            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(txt_PrecioVenta_FormCompras);
+            groupBox3.Controls.Add(txt_PrecioCompra_FormCompras);
+            groupBox3.Controls.Add(iconButton_BuscarCodigoProducto_FormCompras);
+            groupBox3.Controls.Add(txt_NombreProducto_FormCompras);
+            groupBox3.Controls.Add(txt_CodigoProducto_FormCompras);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label6);
-            groupBox3.Location = new Point(84, 152);
+            groupBox3.Location = new Point(12, 152);
             groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 2, 3, 2);
-            groupBox3.Size = new Size(795, 82);
+            groupBox3.Size = new Size(813, 82);
             groupBox3.TabIndex = 48;
             groupBox3.TabStop = false;
             groupBox3.Text = "Informacion de Producto";
@@ -372,83 +374,86 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(210, 33);
+            label5.Location = new Point(346, 33);
             label5.Name = "label5";
             label5.Size = new Size(59, 15);
             label5.TabIndex = 2;
             label5.Text = "Producto:";
             // 
-            // iconButton3
-            // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            iconButton3.IconColor = Color.SteelBlue;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(999, 207);
-            iconButton3.Margin = new Padding(3, 2, 3, 2);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(109, 40);
-            iconButton3.TabIndex = 53;
-            iconButton3.Text = "Registrar";
-            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = true;
-            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(999, 163);
+            label11.Location = new Point(935, 279);
             label11.Name = "label11";
             label11.Size = new Size(75, 15);
             label11.TabIndex = 51;
-            label11.Text = "Total a Pagar";
+            label11.Text = "Total a pagar";
             // 
-            // iconButton2
+            // iconButton_AgregarProductos_FormCompras
             // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            iconButton2.IconColor = Color.Green;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(896, 163);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(98, 70);
-            iconButton2.TabIndex = 50;
-            iconButton2.Text = "Agregar";
-            iconButton2.TextImageRelation = TextImageRelation.ImageAboveText;
-            iconButton2.UseVisualStyleBackColor = true;
+            iconButton_AgregarProductos_FormCompras.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            iconButton_AgregarProductos_FormCompras.IconColor = Color.Green;
+            iconButton_AgregarProductos_FormCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_AgregarProductos_FormCompras.Location = new Point(831, 164);
+            iconButton_AgregarProductos_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_AgregarProductos_FormCompras.Name = "iconButton_AgregarProductos_FormCompras";
+            iconButton_AgregarProductos_FormCompras.Size = new Size(98, 70);
+            iconButton_AgregarProductos_FormCompras.TabIndex = 50;
+            iconButton_AgregarProductos_FormCompras.Text = "Agregar";
+            iconButton_AgregarProductos_FormCompras.TextImageRelation = TextImageRelation.ImageAboveText;
+            iconButton_AgregarProductos_FormCompras.UseVisualStyleBackColor = true;
+            iconButton_AgregarProductos_FormCompras.Click += iconButton_AgregarProductos_FormCompras_Click;
             // 
             // label10
             // 
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(84, 7);
+            label10.Location = new Point(-4, 1);
             label10.Name = "label10";
-            label10.Size = new Size(1116, 579);
+            label10.Size = new Size(863, 599);
             label10.TabIndex = 45;
             label10.Text = "Registrar Compra";
+            // 
+            // iconButton_CrearCompra_FormCompras
+            // 
+            iconButton_CrearCompra_FormCompras.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            iconButton_CrearCompra_FormCompras.IconColor = Color.SteelBlue;
+            iconButton_CrearCompra_FormCompras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_CrearCompra_FormCompras.Location = new Point(935, 507);
+            iconButton_CrearCompra_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            iconButton_CrearCompra_FormCompras.Name = "iconButton_CrearCompra_FormCompras";
+            iconButton_CrearCompra_FormCompras.Size = new Size(168, 76);
+            iconButton_CrearCompra_FormCompras.TabIndex = 63;
+            iconButton_CrearCompra_FormCompras.Text = "Crear venta";
+            iconButton_CrearCompra_FormCompras.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton_CrearCompra_FormCompras.UseVisualStyleBackColor = true;
+            iconButton_CrearCompra_FormCompras.Click += iconButton_CrearCompra_FormCompras_Click;
             // 
             // FormCompras
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1251, 601);
+            ClientSize = new Size(1109, 594);
+            Controls.Add(txt_ProveedorID_FormCompras);
+            Controls.Add(iconButton_CrearCompra_FormCompras);
             Controls.Add(groupBox1);
             Controls.Add(groupBox2);
-            Controls.Add(textBox10);
-            Controls.Add(dgv_Data_FormUsuario);
+            Controls.Add(txt_TotalAPagar_FormCompras);
+            Controls.Add(dgv_Data_FormCompras);
+            Controls.Add(txt_ArticuloID_FormCompras);
             Controls.Add(groupBox3);
-            Controls.Add(iconButton3);
             Controls.Add(label11);
-            Controls.Add(iconButton2);
+            Controls.Add(iconButton_AgregarProductos_FormCompras);
             Controls.Add(label10);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormCompras";
-            Text = "FormCompras";
             Load += FormCompras_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_Cantidad_FormCompras).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormCompras).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ResumeLayout(false);
@@ -463,31 +468,31 @@
         private Label label2;
         private Label label1;
         private ComboBox cmb_TipoDoc_FormCompras;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown_Cantidad_FormCompras;
         private Label label7;
         private Label label8;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox txt_PrecioVenta_FormCompras;
+        private TextBox txt_PrecioCompra_FormCompras;
+        private TextBox txt_ArticuloID_FormCompras;
         private Label label9;
         private GroupBox groupBox2;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private FontAwesome.Sharp.IconButton iconButton4;
-        private TextBox textBox2;
+        private TextBox txt_ProveedorID_FormCompras;
+        private TextBox txt_RazonSocial_FormCompras;
+        private FontAwesome.Sharp.IconButton iconButton_NumeroDocumento_FormCompras;
+        private TextBox txt_NumeroDocumento_FormCompras;
         private Label label4;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private FontAwesome.Sharp.IconButton iconButton_BuscarCodigoProducto_FormCompras;
+        private TextBox txt_NombreProducto_FormCompras;
+        private TextBox txt_CodigoProducto_FormCompras;
         private Label label6;
-        private TextBox textBox10;
-        private DataGridView dgv_Data_FormUsuario;
+        private TextBox txt_TotalAPagar_FormCompras;
+        private DataGridView dgv_Data_FormCompras;
         private DataGridViewButtonColumn btn_Seleccionar_FormUsuario;
         private GroupBox groupBox3;
         private Label label5;
-        private FontAwesome.Sharp.IconButton iconButton3;
         private Label label11;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton_AgregarProductos_FormCompras;
         private Label label10;
+        private FontAwesome.Sharp.IconButton iconButton_CrearCompra_FormCompras;
     }
 }

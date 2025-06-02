@@ -16,5 +16,10 @@ namespace CAPA_PRESENTACION
         {
             InitializeComponent();
         }
+
+        private void FormDetalleVenta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

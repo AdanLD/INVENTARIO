@@ -359,6 +359,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormDetalleVenta";
             Text = "FormRegistrar";
+            Load += FormDetalleVenta_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

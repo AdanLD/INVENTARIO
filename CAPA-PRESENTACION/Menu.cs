@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,7 +53,7 @@ namespace CAPA_PRESENTACION
 
         private static Form formActivo = null; //Declaracion de la variable formActivo para almacenar el formulario activo (Adan).
 
-        private void AbrirFormulario(IconMenuItem menu, Form formulario) /* Recibe el inconMenuItem pulsado y su respectivo formulario */
+        private void AbrirFormulario(IconMenuItem menu, Form formulario) 
         {
             try
             {
@@ -108,7 +109,7 @@ namespace CAPA_PRESENTACION
 
         private void iconMenuItem_Registrar_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_RegistrarVentas_Menu, new FormVentas()); //Llamada al metodo abrir formulario con destino a FormVentas (Adan).
+            AbrirFormulario(iconMenuItem_RegistrarVentas_Menu, new FormVentas(UsuarioActual.usuario_ID));
         }
 
         private void iconMenuItem_VerDetalle_Menu_Click(object sender, EventArgs e)
@@ -118,7 +119,7 @@ namespace CAPA_PRESENTACION
 
         private void iconMenuItem_RegistrarCompras_Menu_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(iconMenuItem_Compras_Menu, new FormCompras()); //Llamada al metodo abrir formulario con destino a FormCompras (Adan).
+            AbrirFormulario(iconMenuItem_Compras_Menu, new FormCompras(UsuarioActual.usuario_ID)); //Llamada al metodo abrir formulario con destino a FormCompras (Adan).
         }
 
         private void iconMenuItem_VerDetalleCompras_Menu_Click(object sender, EventArgs e)

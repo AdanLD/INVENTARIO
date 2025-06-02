@@ -28,82 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            iconButton3 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            iconButton_CrearVenta_FormVentas = new FontAwesome.Sharp.IconButton();
+            iconButton_AgregarProductos_FormVentas = new FontAwesome.Sharp.IconButton();
             label5 = new Label();
             groupBox3 = new GroupBox();
             label9 = new Label();
-            numericUpDown1 = new NumericUpDown();
+            numericUpDown_Cantidad_FormVentas = new NumericUpDown();
             label7 = new Label();
             label8 = new Label();
-            textBox9 = new TextBox();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
+            txt_PrecioStock_FormVentas = new TextBox();
+            txt_PrecioVenta_FormVentas = new TextBox();
+            iconButton_BuscarNumDoc_FormVentas = new FontAwesome.Sharp.IconButton();
+            txt_NombreProducto_FormVentas = new TextBox();
+            txt_CodigoProducto_FormVentas = new TextBox();
             label6 = new Label();
+            txt_ProductoID_FormCompras = new TextBox();
             btn_Seleccionar_FormUsuario = new DataGridViewButtonColumn();
-            textBox10 = new TextBox();
-            dgv_Data_FormUsuario = new DataGridView();
+            txt_Total_FormVentas = new TextBox();
+            dgv_Data_FormVentas = new DataGridView();
             groupBox2 = new GroupBox();
-            textBox3 = new TextBox();
-            iconButton4 = new FontAwesome.Sharp.IconButton();
-            textBox2 = new TextBox();
+            label14 = new Label();
+            label1 = new Label();
+            txt_ApellidoMaterno_FormCompras = new TextBox();
+            txt_ApellidoPaterno_FormCompras = new TextBox();
+            txt_NombreCliente_FormCompras = new TextBox();
+            txt_NumeorDocumento_FormVentas = new TextBox();
             label3 = new Label();
             label4 = new Label();
+            iconButton4 = new FontAwesome.Sharp.IconButton();
             label11 = new Label();
             groupBox1 = new GroupBox();
             txt_Fecha_FormCompras = new TextBox();
             label2 = new Label();
             label12 = new Label();
-            cmb_TipoDoc_FormVenta = new ComboBox();
+            cmb_TipoDoc_FormCompras = new ComboBox();
             label10 = new Label();
-            label1 = new Label();
             label13 = new Label();
-            textBox4 = new TextBox();
-            textBox11 = new TextBox();
+            txt_MetodoPago_FormVentas = new TextBox();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_Cantidad_FormVentas).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormVentas).BeginInit();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // iconButton3
+            // iconButton_CrearVenta_FormVentas
             // 
-            iconButton3.IconChar = FontAwesome.Sharp.IconChar.Tag;
-            iconButton3.IconColor = Color.SteelBlue;
-            iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton3.Location = new Point(942, 344);
-            iconButton3.Margin = new Padding(3, 2, 3, 2);
-            iconButton3.Name = "iconButton3";
-            iconButton3.Size = new Size(131, 40);
-            iconButton3.TabIndex = 62;
-            iconButton3.Text = "Crear venta";
-            iconButton3.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton3.UseVisualStyleBackColor = true;
+            iconButton_CrearVenta_FormVentas.IconChar = FontAwesome.Sharp.IconChar.Tag;
+            iconButton_CrearVenta_FormVentas.IconColor = Color.SteelBlue;
+            iconButton_CrearVenta_FormVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_CrearVenta_FormVentas.Location = new Point(1323, 405);
+            iconButton_CrearVenta_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            iconButton_CrearVenta_FormVentas.Name = "iconButton_CrearVenta_FormVentas";
+            iconButton_CrearVenta_FormVentas.Size = new Size(168, 76);
+            iconButton_CrearVenta_FormVentas.TabIndex = 62;
+            iconButton_CrearVenta_FormVentas.Text = "Crear venta";
+            iconButton_CrearVenta_FormVentas.TextImageRelation = TextImageRelation.ImageBeforeText;
+            iconButton_CrearVenta_FormVentas.UseVisualStyleBackColor = true;
+            iconButton_CrearVenta_FormVentas.Click += iconButton_CrearVenta_FormVentas_Click;
             // 
-            // iconButton2
+            // iconButton_AgregarProductos_FormVentas
             // 
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
-            iconButton2.IconColor = Color.Green;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.Location = new Point(839, 170);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(98, 70);
-            iconButton2.TabIndex = 59;
-            iconButton2.Text = "Agregar";
-            iconButton2.TextImageRelation = TextImageRelation.ImageAboveText;
-            iconButton2.UseVisualStyleBackColor = true;
+            iconButton_AgregarProductos_FormVentas.IconChar = FontAwesome.Sharp.IconChar.PlusSquare;
+            iconButton_AgregarProductos_FormVentas.IconColor = Color.Green;
+            iconButton_AgregarProductos_FormVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_AgregarProductos_FormVentas.Location = new Point(1191, 159);
+            iconButton_AgregarProductos_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            iconButton_AgregarProductos_FormVentas.Name = "iconButton_AgregarProductos_FormVentas";
+            iconButton_AgregarProductos_FormVentas.Size = new Size(126, 82);
+            iconButton_AgregarProductos_FormVentas.TabIndex = 59;
+            iconButton_AgregarProductos_FormVentas.Text = "Agregar productos";
+            iconButton_AgregarProductos_FormVentas.TextImageRelation = TextImageRelation.ImageAboveText;
+            iconButton_AgregarProductos_FormVentas.UseVisualStyleBackColor = true;
+            iconButton_AgregarProductos_FormVentas.Click += iconButton_AgregarProductos_FormVentas_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(210, 33);
+            label5.Location = new Point(612, 33);
             label5.Name = "label5";
             label5.Size = new Size(59, 15);
             label5.TabIndex = 2;
@@ -112,22 +116,21 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(label9);
-            groupBox3.Controls.Add(numericUpDown1);
+            groupBox3.Controls.Add(numericUpDown_Cantidad_FormVentas);
             groupBox3.Controls.Add(label7);
             groupBox3.Controls.Add(label8);
-            groupBox3.Controls.Add(textBox9);
-            groupBox3.Controls.Add(textBox8);
-            groupBox3.Controls.Add(textBox7);
-            groupBox3.Controls.Add(iconButton1);
-            groupBox3.Controls.Add(textBox6);
-            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(txt_PrecioStock_FormVentas);
+            groupBox3.Controls.Add(txt_PrecioVenta_FormVentas);
+            groupBox3.Controls.Add(iconButton_BuscarNumDoc_FormVentas);
+            groupBox3.Controls.Add(txt_NombreProducto_FormVentas);
+            groupBox3.Controls.Add(txt_CodigoProducto_FormVentas);
             groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(label6);
             groupBox3.Location = new Point(27, 159);
             groupBox3.Margin = new Padding(3, 2, 3, 2);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(3, 2, 3, 2);
-            groupBox3.Size = new Size(795, 82);
+            groupBox3.Size = new Size(1158, 82);
             groupBox3.TabIndex = 57;
             groupBox3.TabStop = false;
             groupBox3.Text = "Informacion de Producto";
@@ -135,27 +138,27 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(640, 33);
+            label9.Location = new Point(1042, 33);
             label9.Name = "label9";
             label9.Size = new Size(58, 15);
             label9.TabIndex = 27;
             label9.Text = "Cantidad:";
             // 
-            // numericUpDown1
+            // numericUpDown_Cantidad_FormVentas
             // 
-            numericUpDown1.Location = new Point(640, 50);
-            numericUpDown1.Margin = new Padding(3, 2, 3, 2);
-            numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
-            numericUpDown1.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(102, 23);
-            numericUpDown1.TabIndex = 32;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown_Cantidad_FormVentas.Location = new Point(1042, 50);
+            numericUpDown_Cantidad_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            numericUpDown_Cantidad_FormVentas.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
+            numericUpDown_Cantidad_FormVentas.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numericUpDown_Cantidad_FormVentas.Name = "numericUpDown_Cantidad_FormVentas";
+            numericUpDown_Cantidad_FormVentas.Size = new Size(102, 23);
+            numericUpDown_Cantidad_FormVentas.TabIndex = 32;
+            numericUpDown_Cantidad_FormVentas.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(353, 33);
+            label7.Location = new Point(755, 33);
             label7.Name = "label7";
             label7.Size = new Size(43, 15);
             label7.TabIndex = 25;
@@ -164,79 +167,80 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(504, 33);
+            label8.Location = new Point(906, 33);
             label8.Name = "label8";
             label8.Size = new Size(39, 15);
             label8.TabIndex = 26;
             label8.Text = "Stock:";
             // 
-            // textBox9
+            // txt_PrecioStock_FormVentas
             // 
-            textBox9.Location = new Point(509, 50);
-            textBox9.Margin = new Padding(3, 2, 3, 2);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(102, 23);
-            textBox9.TabIndex = 31;
+            txt_PrecioStock_FormVentas.Location = new Point(911, 50);
+            txt_PrecioStock_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_PrecioStock_FormVentas.Name = "txt_PrecioStock_FormVentas";
+            txt_PrecioStock_FormVentas.Size = new Size(102, 23);
+            txt_PrecioStock_FormVentas.TabIndex = 31;
             // 
-            // textBox8
+            // txt_PrecioVenta_FormVentas
             // 
-            textBox8.Location = new Point(353, 50);
-            textBox8.Margin = new Padding(3, 2, 3, 2);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(118, 23);
-            textBox8.TabIndex = 30;
+            txt_PrecioVenta_FormVentas.Location = new Point(755, 50);
+            txt_PrecioVenta_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_PrecioVenta_FormVentas.Name = "txt_PrecioVenta_FormVentas";
+            txt_PrecioVenta_FormVentas.Size = new Size(118, 23);
+            txt_PrecioVenta_FormVentas.TabIndex = 30;
             // 
-            // textBox7
+            // iconButton_BuscarNumDoc_FormVentas
             // 
-            textBox7.Location = new Point(104, 26);
-            textBox7.Margin = new Padding(3, 2, 3, 2);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(37, 23);
-            textBox7.TabIndex = 29;
-            textBox7.Visible = false;
+            iconButton_BuscarNumDoc_FormVentas.BackColor = Color.White;
+            iconButton_BuscarNumDoc_FormVentas.Cursor = Cursors.Hand;
+            iconButton_BuscarNumDoc_FormVentas.FlatAppearance.BorderColor = Color.Black;
+            iconButton_BuscarNumDoc_FormVentas.FlatStyle = FlatStyle.Flat;
+            iconButton_BuscarNumDoc_FormVentas.ForeColor = Color.Black;
+            iconButton_BuscarNumDoc_FormVentas.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton_BuscarNumDoc_FormVentas.IconColor = Color.Black;
+            iconButton_BuscarNumDoc_FormVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton_BuscarNumDoc_FormVentas.IconSize = 16;
+            iconButton_BuscarNumDoc_FormVentas.Location = new Point(203, 20);
+            iconButton_BuscarNumDoc_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            iconButton_BuscarNumDoc_FormVentas.Name = "iconButton_BuscarNumDoc_FormVentas";
+            iconButton_BuscarNumDoc_FormVentas.Size = new Size(90, 58);
+            iconButton_BuscarNumDoc_FormVentas.TabIndex = 29;
+            iconButton_BuscarNumDoc_FormVentas.UseVisualStyleBackColor = false;
+            iconButton_BuscarNumDoc_FormVentas.Click += iconButton_BuscarNumDoc_FormVentas_Click;
             // 
-            // iconButton1
+            // txt_NombreProducto_FormVentas
             // 
-            iconButton1.BackColor = Color.White;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.Black;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton1.IconColor = Color.Black;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(146, 50);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(52, 20);
-            iconButton1.TabIndex = 29;
-            iconButton1.UseVisualStyleBackColor = false;
+            txt_NombreProducto_FormVentas.Location = new Point(612, 50);
+            txt_NombreProducto_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_NombreProducto_FormVentas.Name = "txt_NombreProducto_FormVentas";
+            txt_NombreProducto_FormVentas.Size = new Size(121, 23);
+            txt_NombreProducto_FormVentas.TabIndex = 4;
             // 
-            // textBox6
+            // txt_CodigoProducto_FormVentas
             // 
-            textBox6.Location = new Point(210, 50);
-            textBox6.Margin = new Padding(3, 2, 3, 2);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(121, 23);
-            textBox6.TabIndex = 4;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(5, 50);
-            textBox5.Margin = new Padding(3, 2, 3, 2);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(136, 23);
-            textBox5.TabIndex = 3;
+            txt_CodigoProducto_FormVentas.Location = new Point(5, 50);
+            txt_CodigoProducto_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_CodigoProducto_FormVentas.Name = "txt_CodigoProducto_FormVentas";
+            txt_CodigoProducto_FormVentas.Size = new Size(192, 23);
+            txt_CodigoProducto_FormVentas.TabIndex = 3;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(5, 28);
             label6.Name = "label6";
-            label6.Size = new Size(81, 15);
+            label6.Size = new Size(120, 15);
             label6.TabIndex = 1;
-            label6.Text = "Cod.Producto";
+            label6.Text = "Codigo del producto:";
+            // 
+            // txt_ProductoID_FormCompras
+            // 
+            txt_ProductoID_FormCompras.Location = new Point(1148, 132);
+            txt_ProductoID_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_ProductoID_FormCompras.Name = "txt_ProductoID_FormCompras";
+            txt_ProductoID_FormCompras.Size = new Size(37, 23);
+            txt_ProductoID_FormCompras.TabIndex = 29;
+            txt_ProductoID_FormCompras.Visible = false;
             // 
             // btn_Seleccionar_FormUsuario
             // 
@@ -246,94 +250,113 @@
             btn_Seleccionar_FormUsuario.ReadOnly = true;
             btn_Seleccionar_FormUsuario.Width = 30;
             // 
-            // textBox10
+            // txt_Total_FormVentas
             // 
-            textBox10.Location = new Point(942, 190);
-            textBox10.Margin = new Padding(3, 2, 3, 2);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(162, 23);
-            textBox10.TabIndex = 61;
+            txt_Total_FormVentas.Location = new Point(1323, 265);
+            txt_Total_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_Total_FormVentas.Name = "txt_Total_FormVentas";
+            txt_Total_FormVentas.Size = new Size(162, 23);
+            txt_Total_FormVentas.TabIndex = 61;
             // 
-            // dgv_Data_FormUsuario
+            // dgv_Data_FormVentas
             // 
-            dgv_Data_FormUsuario.AllowUserToAddRows = false;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormUsuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dgv_Data_FormUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv_Data_FormUsuario.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
-            dgv_Data_FormUsuario.Location = new Point(27, 245);
-            dgv_Data_FormUsuario.Margin = new Padding(3, 2, 3, 2);
-            dgv_Data_FormUsuario.MultiSelect = false;
-            dgv_Data_FormUsuario.Name = "dgv_Data_FormUsuario";
-            dgv_Data_FormUsuario.ReadOnly = true;
-            dgv_Data_FormUsuario.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.SelectionBackColor = Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dgv_Data_FormUsuario.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            dgv_Data_FormUsuario.Size = new Size(910, 348);
-            dgv_Data_FormUsuario.TabIndex = 58;
+            dgv_Data_FormVentas.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormVentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgv_Data_FormVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Data_FormVentas.Columns.AddRange(new DataGridViewColumn[] { btn_Seleccionar_FormUsuario });
+            dgv_Data_FormVentas.Location = new Point(27, 245);
+            dgv_Data_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            dgv_Data_FormVentas.MultiSelect = false;
+            dgv_Data_FormVentas.Name = "dgv_Data_FormVentas";
+            dgv_Data_FormVentas.ReadOnly = true;
+            dgv_Data_FormVentas.RowHeadersWidth = 51;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dgv_Data_FormVentas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgv_Data_FormVentas.Size = new Size(1290, 348);
+            dgv_Data_FormVentas.TabIndex = 58;
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(iconButton4);
-            groupBox2.Controls.Add(textBox2);
+            groupBox2.Controls.Add(label14);
+            groupBox2.Controls.Add(label1);
+            groupBox2.Controls.Add(txt_ApellidoMaterno_FormCompras);
+            groupBox2.Controls.Add(txt_ApellidoPaterno_FormCompras);
+            groupBox2.Controls.Add(txt_NombreCliente_FormCompras);
+            groupBox2.Controls.Add(txt_NumeorDocumento_FormVentas);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(label4);
-            groupBox2.Location = new Point(596, 58);
+            groupBox2.Location = new Point(539, 43);
             groupBox2.Margin = new Padding(3, 2, 3, 2);
             groupBox2.Name = "groupBox2";
             groupBox2.Padding = new Padding(3, 2, 3, 2);
-            groupBox2.Size = new Size(508, 82);
+            groupBox2.Size = new Size(946, 82);
             groupBox2.TabIndex = 56;
             groupBox2.TabStop = false;
             groupBox2.Text = "Informacion Cliente";
             // 
-            // textBox3
+            // label14
             // 
-            textBox3.Location = new Point(275, 35);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(200, 23);
-            textBox3.TabIndex = 27;
+            label14.AutoSize = true;
+            label14.Location = new Point(740, 16);
+            label14.Name = "label14";
+            label14.Size = new Size(102, 15);
+            label14.TabIndex = 31;
+            label14.Text = "Apellido materno:";
             // 
-            // iconButton4
+            // label1
             // 
-            iconButton4.BackColor = Color.White;
-            iconButton4.Cursor = Cursors.Hand;
-            iconButton4.FlatAppearance.BorderColor = Color.Black;
-            iconButton4.FlatStyle = FlatStyle.Flat;
-            iconButton4.ForeColor = Color.Black;
-            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton4.IconColor = Color.Black;
-            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton4.IconSize = 16;
-            iconButton4.Location = new Point(204, 34);
-            iconButton4.Margin = new Padding(3, 2, 3, 2);
-            iconButton4.Name = "iconButton4";
-            iconButton4.Size = new Size(52, 20);
-            iconButton4.TabIndex = 26;
-            iconButton4.UseVisualStyleBackColor = false;
+            label1.AutoSize = true;
+            label1.Location = new Point(534, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 15);
+            label1.TabIndex = 30;
+            label1.Text = "Apellido paterno:";
             // 
-            // textBox2
+            // txt_ApellidoMaterno_FormCompras
             // 
-            textBox2.Location = new Point(5, 34);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(194, 23);
-            textBox2.TabIndex = 3;
+            txt_ApellidoMaterno_FormCompras.Location = new Point(740, 34);
+            txt_ApellidoMaterno_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_ApellidoMaterno_FormCompras.Name = "txt_ApellidoMaterno_FormCompras";
+            txt_ApellidoMaterno_FormCompras.Size = new Size(200, 23);
+            txt_ApellidoMaterno_FormCompras.TabIndex = 29;
+            // 
+            // txt_ApellidoPaterno_FormCompras
+            // 
+            txt_ApellidoPaterno_FormCompras.Location = new Point(534, 34);
+            txt_ApellidoPaterno_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_ApellidoPaterno_FormCompras.Name = "txt_ApellidoPaterno_FormCompras";
+            txt_ApellidoPaterno_FormCompras.Size = new Size(200, 23);
+            txt_ApellidoPaterno_FormCompras.TabIndex = 28;
+            // 
+            // txt_NombreCliente_FormCompras
+            // 
+            txt_NombreCliente_FormCompras.Location = new Point(328, 34);
+            txt_NombreCliente_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            txt_NombreCliente_FormCompras.Name = "txt_NombreCliente_FormCompras";
+            txt_NombreCliente_FormCompras.Size = new Size(200, 23);
+            txt_NombreCliente_FormCompras.TabIndex = 27;
+            // 
+            // txt_NumeorDocumento_FormVentas
+            // 
+            txt_NumeorDocumento_FormVentas.Location = new Point(6, 34);
+            txt_NumeorDocumento_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_NumeorDocumento_FormVentas.Name = "txt_NumeorDocumento_FormVentas";
+            txt_NumeorDocumento_FormVentas.Size = new Size(282, 23);
+            txt_NumeorDocumento_FormVentas.TabIndex = 3;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(275, 16);
+            label3.Location = new Point(328, 16);
             label3.Name = "label3";
             label3.Size = new Size(54, 15);
             label3.TabIndex = 2;
@@ -348,10 +371,29 @@
             label4.TabIndex = 1;
             label4.Text = "Numero Documento:";
             // 
+            // iconButton4
+            // 
+            iconButton4.BackColor = Color.White;
+            iconButton4.Cursor = Cursors.Hand;
+            iconButton4.FlatAppearance.BorderColor = Color.Black;
+            iconButton4.FlatStyle = FlatStyle.Flat;
+            iconButton4.ForeColor = Color.Black;
+            iconButton4.IconChar = FontAwesome.Sharp.IconChar.Search;
+            iconButton4.IconColor = Color.Black;
+            iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconButton4.IconSize = 16;
+            iconButton4.Location = new Point(1409, 11);
+            iconButton4.Margin = new Padding(3, 2, 3, 2);
+            iconButton4.Name = "iconButton4";
+            iconButton4.Size = new Size(76, 29);
+            iconButton4.TabIndex = 26;
+            iconButton4.UseVisualStyleBackColor = false;
+            iconButton4.Click += iconButton4_Click;
+            // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(942, 170);
+            label11.Location = new Point(1323, 245);
             label11.Name = "label11";
             label11.Size = new Size(75, 15);
             label11.TabIndex = 60;
@@ -362,12 +404,12 @@
             groupBox1.Controls.Add(txt_Fecha_FormCompras);
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(label12);
-            groupBox1.Controls.Add(cmb_TipoDoc_FormVenta);
-            groupBox1.Location = new Point(32, 58);
+            groupBox1.Controls.Add(cmb_TipoDoc_FormCompras);
+            groupBox1.Location = new Point(27, 43);
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(501, 82);
+            groupBox1.Size = new Size(506, 82);
             groupBox1.TabIndex = 55;
             groupBox1.TabStop = false;
             groupBox1.Text = "Informacion Venta";
@@ -398,87 +440,69 @@
             label12.TabIndex = 1;
             label12.Text = "Fecha:";
             // 
-            // cmb_TipoDoc_FormVenta
+            // cmb_TipoDoc_FormCompras
             // 
-            cmb_TipoDoc_FormVenta.FormattingEnabled = true;
-            cmb_TipoDoc_FormVenta.Items.AddRange(new object[] { "BOLETA", "FACTURA" });
-            cmb_TipoDoc_FormVenta.Location = new Point(248, 34);
-            cmb_TipoDoc_FormVenta.Margin = new Padding(3, 2, 3, 2);
-            cmb_TipoDoc_FormVenta.Name = "cmb_TipoDoc_FormVenta";
-            cmb_TipoDoc_FormVenta.Size = new Size(218, 23);
-            cmb_TipoDoc_FormVenta.TabIndex = 0;
-            cmb_TipoDoc_FormVenta.SelectedIndexChanged += cmb_TipoDoc_FormVenta_SelectedIndexChanged;
+            cmb_TipoDoc_FormCompras.FormattingEnabled = true;
+            cmb_TipoDoc_FormCompras.Items.AddRange(new object[] { "BOLETA", "FACTURA" });
+            cmb_TipoDoc_FormCompras.Location = new Point(248, 34);
+            cmb_TipoDoc_FormCompras.Margin = new Padding(3, 2, 3, 2);
+            cmb_TipoDoc_FormCompras.Name = "cmb_TipoDoc_FormCompras";
+            cmb_TipoDoc_FormCompras.Size = new Size(218, 23);
+            cmb_TipoDoc_FormCompras.TabIndex = 0;
+            cmb_TipoDoc_FormCompras.SelectedIndexChanged += cmb_TipoDoc_FormVenta_SelectedIndexChanged;
             // 
             // label10
             // 
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(27, 14);
+            label10.Location = new Point(-7, 0);
             label10.Name = "label10";
-            label10.Size = new Size(1116, 579);
+            label10.Size = new Size(1598, 617);
             label10.TabIndex = 46;
-            label10.Text = "Registrar Venta";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(942, 277);
-            label1.Name = "label1";
-            label1.Size = new Size(49, 15);
-            label1.TabIndex = 63;
-            label1.Text = "Cambio";
+            label10.Text = "REGISTRAR VENTA";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(942, 228);
+            label13.Location = new Point(1323, 303);
             label13.Name = "label13";
             label13.Size = new Size(59, 15);
             label13.TabIndex = 64;
             label13.Text = "paga con:";
             // 
-            // textBox4
+            // txt_MetodoPago_FormVentas
             // 
-            textBox4.Location = new Point(942, 245);
-            textBox4.Margin = new Padding(3, 2, 3, 2);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(162, 23);
-            textBox4.TabIndex = 65;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(942, 302);
-            textBox11.Margin = new Padding(3, 2, 3, 2);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(162, 23);
-            textBox11.TabIndex = 66;
+            txt_MetodoPago_FormVentas.Location = new Point(1323, 320);
+            txt_MetodoPago_FormVentas.Margin = new Padding(3, 2, 3, 2);
+            txt_MetodoPago_FormVentas.Name = "txt_MetodoPago_FormVentas";
+            txt_MetodoPago_FormVentas.Size = new Size(162, 23);
+            txt_MetodoPago_FormVentas.TabIndex = 65;
             // 
             // FormVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1170, 608);
-            Controls.Add(textBox11);
-            Controls.Add(textBox4);
+            ClientSize = new Size(1496, 608);
+            Controls.Add(txt_MetodoPago_FormVentas);
             Controls.Add(label13);
-            Controls.Add(label1);
-            Controls.Add(iconButton3);
-            Controls.Add(iconButton2);
+            Controls.Add(iconButton_CrearVenta_FormVentas);
+            Controls.Add(iconButton4);
+            Controls.Add(iconButton_AgregarProductos_FormVentas);
             Controls.Add(groupBox3);
-            Controls.Add(textBox10);
-            Controls.Add(dgv_Data_FormUsuario);
+            Controls.Add(txt_ProductoID_FormCompras);
+            Controls.Add(txt_Total_FormVentas);
+            Controls.Add(dgv_Data_FormVentas);
             Controls.Add(groupBox2);
             Controls.Add(label11);
             Controls.Add(groupBox1);
             Controls.Add(label10);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormVentas";
-            Text = "FormCompras";
             Load += FormVentas_Load;
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown_Cantidad_FormVentas).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Data_FormVentas).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -489,28 +513,28 @@
 
         #endregion
 
-        private FontAwesome.Sharp.IconButton iconButton3;
-        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton_CrearVenta_FormVentas;
+        private FontAwesome.Sharp.IconButton iconButton_AgregarProductos_FormVentas;
         private Label label5;
         private GroupBox groupBox3;
         private Label label9;
-        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown_Cantidad_FormVentas;
         private Label label7;
         private Label label8;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox txt_PrecioStock_FormVentas;
+        private TextBox txt_PrecioVenta_FormVentas;
+        private TextBox txt_ProductoID_FormCompras;
+        private FontAwesome.Sharp.IconButton iconButton_BuscarNumDoc_FormVentas;
+        private TextBox txt_NombreProducto_FormVentas;
+        private TextBox txt_CodigoProducto_FormVentas;
         private Label label6;
         private DataGridViewButtonColumn btn_Seleccionar_FormUsuario;
-        private TextBox textBox10;
-        private DataGridView dgv_Data_FormUsuario;
+        private TextBox txt_Total_FormVentas;
+        private DataGridView dgv_Data_FormVentas;
         private GroupBox groupBox2;
-        private TextBox textBox3;
+        private TextBox txt_NombreCliente_FormCompras;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private TextBox textBox2;
+        private TextBox txt_NumeorDocumento_FormVentas;
         private Label label3;
         private Label label4;
         private Label label11;
@@ -518,11 +542,13 @@
         private TextBox txt_Fecha_FormCompras;
         private Label label2;
         private Label label12;
-        private ComboBox cmb_TipoDoc_FormVenta;
+        private ComboBox cmb_TipoDoc_FormCompras;
         private Label label10;
-        private Label label1;
         private Label label13;
-        private TextBox textBox4;
-        private TextBox textBox11;
+        private TextBox txt_MetodoPago_FormVentas;
+        private TextBox txt_ApellidoMaterno_FormCompras;
+        private TextBox txt_ApellidoPaterno_FormCompras;
+        private Label label14;
+        private Label label1;
     }
 }

@@ -59,7 +59,7 @@
             menuStrip_Menu_Menu.Items.AddRange(new ToolStripItem[] { iconMenuItem_Usuarios_Menu, iconMenuItem_Mantenedor_Menu, iconMenuItem_Ventas_Menu, iconMenuItem_Compras_Menu, iconMenuItem_Clientes_Menu, iconMenuItem_Proveedores_Menu, iconMenuItem_Reportes_Menu, iconMenuItem_Almacenes_Menu, iconMenuItem_Direcciones_Menu, iconMenuItem_Informacion_Menu });
             menuStrip_Menu_Menu.Location = new Point(0, 23);
             menuStrip_Menu_Menu.Name = "menuStrip_Menu_Menu";
-            menuStrip_Menu_Menu.Size = new Size(1469, 83);
+            menuStrip_Menu_Menu.Size = new Size(1525, 83);
             menuStrip_Menu_Menu.TabIndex = 0;
             menuStrip_Menu_Menu.Text = "menuStrip1";
             // 
@@ -135,7 +135,7 @@
             iconMenuItem_RegistrarVentas_Menu.IconColor = Color.Black;
             iconMenuItem_RegistrarVentas_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_RegistrarVentas_Menu.Name = "iconMenuItem_RegistrarVentas_Menu";
-            iconMenuItem_RegistrarVentas_Menu.Size = new Size(184, 26);
+            iconMenuItem_RegistrarVentas_Menu.Size = new Size(132, 26);
             iconMenuItem_RegistrarVentas_Menu.Text = "Registrar";
             iconMenuItem_RegistrarVentas_Menu.Click += iconMenuItem_Registrar_Menu_Click;
             // 
@@ -145,7 +145,7 @@
             iconMenuItem_VerDetalleVentas_Menu.IconColor = Color.Black;
             iconMenuItem_VerDetalleVentas_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_VerDetalleVentas_Menu.Name = "iconMenuItem_VerDetalleVentas_Menu";
-            iconMenuItem_VerDetalleVentas_Menu.Size = new Size(184, 26);
+            iconMenuItem_VerDetalleVentas_Menu.Size = new Size(132, 26);
             iconMenuItem_VerDetalleVentas_Menu.Text = "Ver detalle";
             iconMenuItem_VerDetalleVentas_Menu.Click += iconMenuItem_VerDetalle_Menu_Click;
             // 
@@ -168,7 +168,7 @@
             iconMenuItem_RegistrarCompras_Menu.IconColor = Color.Black;
             iconMenuItem_RegistrarCompras_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_RegistrarCompras_Menu.Name = "iconMenuItem_RegistrarCompras_Menu";
-            iconMenuItem_RegistrarCompras_Menu.Size = new Size(184, 26);
+            iconMenuItem_RegistrarCompras_Menu.Size = new Size(132, 26);
             iconMenuItem_RegistrarCompras_Menu.Text = "Registrar";
             iconMenuItem_RegistrarCompras_Menu.Click += iconMenuItem_RegistrarCompras_Menu_Click;
             // 
@@ -178,7 +178,7 @@
             iconMenuItem_VerDetalleCompras_Menu.IconColor = Color.Black;
             iconMenuItem_VerDetalleCompras_Menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconMenuItem_VerDetalleCompras_Menu.Name = "iconMenuItem_VerDetalleCompras_Menu";
-            iconMenuItem_VerDetalleCompras_Menu.Size = new Size(184, 26);
+            iconMenuItem_VerDetalleCompras_Menu.Size = new Size(132, 26);
             iconMenuItem_VerDetalleCompras_Menu.Text = "Ver detalle";
             iconMenuItem_VerDetalleCompras_Menu.Click += iconMenuItem_VerDetalleCompras_Menu_Click;
             // 
@@ -283,7 +283,7 @@
             mnString_Titulo_Menu.Location = new Point(0, 0);
             mnString_Titulo_Menu.Name = "mnString_Titulo_Menu";
             mnString_Titulo_Menu.RightToLeft = RightToLeft.Yes;
-            mnString_Titulo_Menu.Size = new Size(1469, 23);
+            mnString_Titulo_Menu.Size = new Size(1525, 23);
             mnString_Titulo_Menu.TabIndex = 1;
             mnString_Titulo_Menu.Text = "menuStrip2";
             mnString_Titulo_Menu.ItemClicked += mnString_Titulo_Menu_ItemClicked;
@@ -293,14 +293,14 @@
             panel_Contenedor.Dock = DockStyle.Fill;
             panel_Contenedor.Location = new Point(0, 106);
             panel_Contenedor.Name = "panel_Contenedor";
-            panel_Contenedor.Size = new Size(1469, 805);
+            panel_Contenedor.Size = new Size(1525, 805);
             panel_Contenedor.TabIndex = 2;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1469, 911);
+            ClientSize = new Size(1525, 911);
             Controls.Add(panel_Contenedor);
             Controls.Add(menuStrip_Menu_Menu);
             Controls.Add(mnString_Titulo_Menu);

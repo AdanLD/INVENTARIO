@@ -20,6 +20,43 @@ namespace CAPA_PRESENTACION
             InitializeComponent();
         }
 
+        private void VerificarEsquemaDocumento()
+        {
+            try
+            {
+                using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
+                {
+                    cn.Open();
+                    string query = "PRAGMA table_info(TB_Proveedor);";
+                    SQLiteCommand cmd = new SQLiteCommand(query, cn);
+                    bool documentoExiste = false;
+
+                    using (SQLiteDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            if (dr["name"].ToString().Equals("documento_Proveedor", StringComparison.OrdinalIgnoreCase))
+                            {
+                                documentoExiste = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (!documentoExiste)
+                    {
+                        query = "ALTER TABLE TB_Proveedor ADD COLUMN documento_Proveedor TEXT;";
+                        cmd = new SQLiteCommand(query, cn);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error verificando esquema: {ex.Message}");
+            }
+        }
+
         private void CargarProveedor()
         {
             try
@@ -52,32 +89,32 @@ namespace CAPA_PRESENTACION
 
         private void OpcionesComboBox()
         {
-            var headersProveedor = new Dictionary<string, string> 
-
-            //Diccionario que almacena dos strings, el nombre del atributo y su remplazo del header (Adan).
-{
-            { "proveedor_ID","IDENTIFICADOR DEL PROVEEDOR"},
-            { "nombre_Proveedor","NOMBRE"},
-            { "direccion_ID", "DIRECCION" },
-            { "correo_Proveedor", "CORREO" },
-            { "estado_Proveedor", "ESTADO DE ACTIVIDAD" },
-            { "fecha_Creacion_Proveedor", "FECHA DE REGISTRO" },
-            { "telefono_Cliente","TELEFONO"},
-            { "hora_Creacion_Proveedor","HORA DE REGISTRO"},
-            { "fecha_Registro_Cliente","FECHA DE REGISTRO"},
-            { "numero_Telefonico_Proveedor","NUMERO TELEFONICO"},
-            { "razonSocial_Proveedor","RAZON SOCIAL"}
-
+            var headersProveedor = new Dictionary<string, string>
+            {
+                { "proveedor_ID","IDENTIFICADOR DEL PROVEEDOR"},
+                { "nombre_Proveedor","NOMBRE"},
+                { "direccion_ID", "DIRECCION" },
+                { "correo_Proveedor", "CORREO" },
+                { "estado_Proveedor", "ESTADO DE ACTIVIDAD" },
+                { "fecha_Creacion_Proveedor", "FECHA DE REGISTRO" },
+                { "telefono_Cliente","TELEFONO"},
+                { "hora_Creacion_Proveedor","HORA DE REGISTRO"},
+                { "fecha_Registro_Cliente","FECHA DE REGISTRO"},
+                { "numero_Telefonico_Proveedor","NUMERO TELEFONICO"},
+                { "razonSocial_Proveedor","RAZON SOCIAL"},
+                { "documento_Proveedor","DOCUMENTO"}
             };
 
             cmb_Buscar_FormProveedor.DisplayMember = "Value";
             cmb_Buscar_FormProveedor.ValueMember = "Key";
             cmb_Buscar_FormProveedor.DataSource = new BindingSource(headersProveedor, null);
         }
+
         private void FormProveedores_Load(object sender, EventArgs e)
         {
             try
             {
+                VerificarEsquemaDocumento(); // Verificar campo documento
                 CargarProveedor(); //Llama al metodo que carga los proveedores (Adan).
 
                 cmb_Estado_FormProveedor.Items.Add(new { Texto = "Activo", Valor = 1 });
@@ -85,36 +122,28 @@ namespace CAPA_PRESENTACION
                 cmb_Estado_FormProveedor.DisplayMember = "Texto";
                 cmb_Estado_FormProveedor.ValueMember = "Valor";
 
-                var headersProveedor = new Dictionary<string, string> 
-            //Diccionario que almacena dos strings, el nombre del atributo y su remplazo del header (Adan).
-            {
-            { "proveedor_ID","IDENTIFICADOR DEL PROVEEDOR"},
-            { "nombre_Proveedor","NOMBRE"},
-            { "direccion_ID", "DIRECCION" },
-            { "correo_Proveedor", "CORREO" },
-            { "estado_Proveedor", "ESTADO DE ACTIVIDAD" },
-            { "fecha_Creacion_Proveedor", "FECHA DE REGISTRO" },
-            { "telefono_Cliente","TELEFONO"},
-            { "hora_Creacion_Proveedor","HORA DE REGISTRO"},
-            { "fecha_Registro_Cliente","FECHA DE REGISTRO"},
-            { "numero_Telefonico_Proveedor","NUMERO TELEFONICO"},
-            { "razonSocial_Proveedor","RAZON SOCIAL"}
-
-            };
-
-                foreach (DataGridViewColumn columna in dgv_Data_FormProveedor.Columns) //Se aplica en c/u de las columnas del dvg (Adan).
+                var headersProveedor = new Dictionary<string, string>
                 {
-                    // Verifica si el name de la columna existe y devuelve el string nombreColumna que corresponde al segundo valor del diccionario (Adan). 
+                    { "proveedor_ID","IDENTIFICADOR DEL PROVEEDOR"},
+                    { "nombre_Proveedor","NOMBRE"},
+                    { "direccion_ID", "DIRECCION" },
+                    { "correo_Proveedor", "CORREO" },
+                    { "estado_Proveedor", "ESTADO DE ACTIVIDAD" },
+                    { "fecha_Creacion_Proveedor", "FECHA DE REGISTRO" },
+                    { "telefono_Cliente","TELEFONO"},
+                    { "hora_Creacion_Proveedor","HORA DE REGISTRO"},
+                    { "fecha_Registro_Cliente","FECHA DE REGISTRO"},
+                    { "numero_Telefonico_Proveedor","NUMERO TELEFONICO"},
+                    { "razonSocial_Proveedor","RAZON SOCIAL"},
+                    { "documento_Proveedor","DOCUMENTO"}
+                };
+
+                foreach (DataGridViewColumn columna in dgv_Data_FormProveedor.Columns)
+                {
                     if (headersProveedor.TryGetValue(columna.DataPropertyName, out string nombreColumna))
                     {
                         columna.HeaderText = nombreColumna;
                     }
-
-                    //if (columna.DataPropertyName == "almacen_ID")
-                    //{
-                    //    columna.Visible = false; //Oculta a la columna de coincidir su name con alguna de las opciones especificadas.
-                    //}
-
                 }
 
                 OpcionesComboBox();
@@ -131,7 +160,7 @@ namespace CAPA_PRESENTACION
         {
             try
             {
-                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this); //Limpia los campos de texto (Adan).
+                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this);
             }
             catch (Exception)
             {
@@ -143,11 +172,29 @@ namespace CAPA_PRESENTACION
         {
             try
             {
+                // Validación de documento
+                if (string.IsNullOrWhiteSpace(txt_Documento_FormProveedor.Text))
+                {
+                    MessageBox.Show("El documento es obligatorio", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 using (SQLiteConnection conexion = new SQLiteConnection(Conectar.cadena))
                 {
                     conexion.Open();
 
-                    string query = "INSERT INTO TB_Proveedor (nombre_Proveedor, razonSocial_Proveedor, correo_Proveedor, direccion_ID, estado_Proveedor, numero_Telefonico_Proveedor) VALUES (@v1, @v2, @v3, @v4, @v5, @v6)";
+                    string query = @"INSERT INTO TB_Proveedor (
+                        nombre_Proveedor, 
+                        razonSocial_Proveedor, 
+                        correo_Proveedor, 
+                        direccion_ID, 
+                        estado_Proveedor, 
+                        numero_Telefonico_Proveedor,
+                        documento_Proveedor
+                    ) VALUES (
+                        @v1, @v2, @v3, @v4, @v5, @v6, @v7
+                    )";
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, conexion))
                     {
@@ -156,15 +203,12 @@ namespace CAPA_PRESENTACION
                         cmd.Parameters.AddWithValue("@v3", txt_Correo_FormProveedor.Text);
                         cmd.Parameters.AddWithValue("@v4", txt_Direccion_FormProveedor.Text);
 
-
                         var estadoSeleccionado = cmb_Estado_FormProveedor.SelectedItem;
-
                         int valorEstado = 0;
 
                         if (estadoSeleccionado != null)
                         {
                             var propiedad = estadoSeleccionado.GetType().GetProperty("Valor");
-
                             if (propiedad != null)
                             {
                                 valorEstado = Convert.ToInt32(propiedad.GetValue(estadoSeleccionado) ?? 0);
@@ -175,18 +219,21 @@ namespace CAPA_PRESENTACION
 
                         cmd.Parameters.AddWithValue("@v5", valorEstado);
                         cmd.Parameters.AddWithValue("@v6", txt_Telefono_FormProveedor.Text);
-
+                        cmd.Parameters.AddWithValue("@v7", txt_Documento_FormProveedor.Text);
 
                         cmd.ExecuteNonQuery();
                     }
                 }
 
                 CargarProveedor();
+                MessageBox.Show("Proveedor registrado exitosamente", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -194,6 +241,8 @@ namespace CAPA_PRESENTACION
         {
             try
             {
+                if (dgv_Data_FormProveedor.CurrentRow == null) return;
+
                 DataGridViewRow tupla = dgv_Data_FormProveedor.CurrentRow;
 
                 txt_ID_FormProveedor.Text = tupla.Cells["proveedor_ID"].Value?.ToString();
@@ -201,6 +250,7 @@ namespace CAPA_PRESENTACION
                 txt_Direccion_FormProveedor.Text = tupla.Cells["direccion_ID"].Value?.ToString();
                 txt_RazonSocial_FormProveedor.Text = tupla.Cells["razonSocial_Proveedor"].Value?.ToString();
                 txt_Correo_FormProveedor.Text = tupla.Cells["correo_Proveedor"].Value?.ToString();
+                txt_Documento_FormProveedor.Text = tupla.Cells["documento_Proveedor"].Value?.ToString(); // Nuevo campo
 
                 var valorEstado = tupla.Cells["estado_Proveedor"].Value;
 
@@ -222,45 +272,40 @@ namespace CAPA_PRESENTACION
                 }
 
                 txt_Telefono_FormProveedor.Text = tupla.Cells["numero_Telefonico_Proveedor"].Value?.ToString();
-
             }
             catch (Exception)
             {
                 throw;
             }
-            if (dgv_Data_FormProveedor.CurrentRow == null) return;
         }
 
         private void btn_Eliminar_FormUsuario_Click(object sender, EventArgs e)
         {
             try
             {
-                if (dgv_Data_FormProveedor.CurrentRow == null) return; //Si no hay una fila seleccionada se acaba el proceso (Adan).
+                if (dgv_Data_FormProveedor.CurrentRow == null) return;
 
                 int id = Convert.ToInt32(dgv_Data_FormProveedor.CurrentRow.Cells["proveedor_ID"].Value);
 
                 if (MessageBox.Show("¿Quieres eliminar este registro?", "CONFIRMAR",
-                    MessageBoxButtons.YesNo) == DialogResult.Yes) //Mensaje que confirma el proceso de eliminacion (Adan).
+                    MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                     {
                         cn.Open();
-
-                        SQLiteCommand cmd = new SQLiteCommand("DELETE FROM TB_Proveedor WHERE proveedor_ID = @id", cn); //Elimina la tupla (Adan).
-
-                        cmd.Parameters.AddWithValue("@id", id); //Asocia al registro con el valor de la variable (Adan).
-
+                        SQLiteCommand cmd = new SQLiteCommand(
+                            "DELETE FROM TB_Proveedor WHERE proveedor_ID = @id", cn);
+                        cmd.Parameters.AddWithValue("@id", id);
                         cmd.ExecuteNonQuery();
                     }
 
                     CargarProveedor();
-
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -268,66 +313,70 @@ namespace CAPA_PRESENTACION
         {
             try
             {
-                int id = Convert.ToInt32(dgv_Data_FormProveedor.CurrentRow.Cells["proveedor_ID"].Value); // Obtiene el ID del registro seleccionado (Adan).
+                if (dgv_Data_FormProveedor.CurrentRow == null)
+                {
+                    MessageBox.Show("Seleccione un registro para editar");
+                    return;
+                }
+
+                // Validación de documento
+                if (string.IsNullOrWhiteSpace(txt_Documento_FormProveedor.Text))
+                {
+                    MessageBox.Show("El documento es obligatorio", "Error",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int id = Convert.ToInt32(dgv_Data_FormProveedor.CurrentRow.Cells["proveedor_ID"].Value);
 
                 var estadoSeleccionado = cmb_Estado_FormProveedor.SelectedItem;
-
                 int valorEstado = 0;
 
                 if (estadoSeleccionado != null)
                 {
                     var propiedad = estadoSeleccionado.GetType().GetProperty("Valor");
-
                     if (propiedad != null)
                     {
                         valorEstado = Convert.ToInt32(propiedad.GetValue(estadoSeleccionado) ?? 0);
                     }
                 }
 
-                // Almacena los nuevos valores de los campos (Adan).
-
-                int nuevoEstadoActividad = valorEstado;
-                string nuevoNombreProveedor = txt_Nombre_FormProveedor.Text;
-                string nuevaDireccion = txt_Direccion_FormProveedor.Text;
-                string nuevoRazonSocial = txt_RazonSocial_FormProveedor.Text;
-                string nuevoCorreo = txt_Correo_FormProveedor.Text;
-                string nuevoTelefono = txt_Telefono_FormProveedor.Text;
-
-
-
-                if (dgv_Data_FormProveedor.CurrentRow == null)
-                {
-                    MessageBox.Show("Seleccione un registro para editar"); // Valida que se haya seleccionado un registro (Adan).
-                    return;
-                }
-
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                 {
                     cn.Open();
 
-                    string query = @"UPDATE TB_Proveedor SET nombre_Proveedor = @v1, estado_Proveedor = @v2, direccion_ID = @v3, correo_Proveedor = @v4, numero_Telefonico_Proveedor = @v5, razonSocial_Proveedor = @v6 WHERE proveedor_ID = @id";
+                    string query = @"UPDATE TB_Proveedor SET 
+                        nombre_Proveedor = @v1, 
+                        estado_Proveedor = @v2, 
+                        direccion_ID = @v3, 
+                        correo_Proveedor = @v4, 
+                        numero_Telefonico_Proveedor = @v5, 
+                        razonSocial_Proveedor = @v6,
+                        documento_Proveedor = @v7 
+                        WHERE proveedor_ID = @id";
 
                     SQLiteCommand cmd = new SQLiteCommand(query, cn);
 
-                    cmd.Parameters.AddWithValue("@v1", nuevoNombreProveedor);
-                    cmd.Parameters.AddWithValue("@v3", nuevaDireccion);
-                    cmd.Parameters.AddWithValue("@v2", nuevoEstadoActividad);
-                    cmd.Parameters.AddWithValue("@v4", nuevoCorreo);
-                    cmd.Parameters.AddWithValue("@v5", nuevoTelefono);
-                    cmd.Parameters.AddWithValue("@v6", nuevoRazonSocial);
-
+                    cmd.Parameters.AddWithValue("@v1", txt_Nombre_FormProveedor.Text);
+                    cmd.Parameters.AddWithValue("@v2", valorEstado);
+                    cmd.Parameters.AddWithValue("@v3", txt_Direccion_FormProveedor.Text);
+                    cmd.Parameters.AddWithValue("@v4", txt_Correo_FormProveedor.Text);
+                    cmd.Parameters.AddWithValue("@v5", txt_Telefono_FormProveedor.Text);
+                    cmd.Parameters.AddWithValue("@v6", txt_RazonSocial_FormProveedor.Text);
+                    cmd.Parameters.AddWithValue("@v7", txt_Documento_FormProveedor.Text);
                     cmd.Parameters.AddWithValue("@id", id);
 
                     cmd.ExecuteNonQuery();
-
-                    MessageBox.Show("Registro modificado");
-
-                    CargarProveedor();
                 }
+
+                MessageBox.Show("Registro modificado exitosamente", "Éxito",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CargarProveedor();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -342,16 +391,14 @@ namespace CAPA_PRESENTACION
                     return;
                 }
 
-
                 string columna = cmb_Buscar_FormProveedor.SelectedValue.ToString();
-
                 string texto = txt_Buscar_FormProveedor.Text.Trim();
 
                 string query = "SELECT * FROM TB_Proveedor";
 
                 if (!string.IsNullOrEmpty(texto))
                 {
-                    query += $" WHERE \"{columna}\" LIKE @busqueda"; //Si no esta vaccio el registro continua con la consulta (Adan).
+                    query += $" WHERE \"{columna}\" LIKE @busqueda";
                 }
 
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
@@ -363,20 +410,17 @@ namespace CAPA_PRESENTACION
                     }
 
                     SQLiteDataAdapter adaptador = new SQLiteDataAdapter(cmd);
-
                     DataTable dt = new DataTable();
-
                     adaptador.Fill(dt);
-
                     dgv_Data_FormProveedor.DataSource = dt;
                 }
 
-                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this); //Limpia los campos de texto (Adan).
+                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -385,11 +429,12 @@ namespace CAPA_PRESENTACION
             try
             {
                 CargarProveedor();
+                txt_Buscar_FormProveedor.Clear();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                MessageBox.Show($"Error: {ex.Message}", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

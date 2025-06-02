@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             txt_Descripcion_FormProducto = new TextBox();
             label12 = new Label();
             btn_Vaciar_FormArticulos = new FontAwesome.Sharp.IconButton();
@@ -163,15 +163,15 @@
             // dgv_Data_FormArticulo
             // 
             dgv_Data_FormArticulo.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Control;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgv_Data_FormArticulo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgv_Data_FormArticulo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormArticulo.Location = new Point(262, 72);
             dgv_Data_FormArticulo.Margin = new Padding(3, 2, 3, 2);
@@ -179,9 +179,9 @@
             dgv_Data_FormArticulo.Name = "dgv_Data_FormArticulo";
             dgv_Data_FormArticulo.ReadOnly = true;
             dgv_Data_FormArticulo.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.SelectionBackColor = Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dgv_Data_FormArticulo.RowsDefaultCellStyle = dataGridViewCellStyle4;
             dgv_Data_FormArticulo.Size = new Size(1038, 529);
             dgv_Data_FormArticulo.TabIndex = 46;
             dgv_Data_FormArticulo.SelectionChanged += dgv_Data_FormArticulo_SelectionChanged_1;
@@ -332,6 +332,7 @@
             btn_Editar_FormProductos.TabIndex = 69;
             btn_Editar_FormProductos.Text = "DESCARGAR";
             btn_Editar_FormProductos.UseVisualStyleBackColor = true;
+            btn_Editar_FormProductos.Visible = false;
             // 
             // btn_Vaciar_FormProductos
             // 

@@ -56,6 +56,8 @@
             txt_Nombre_FormProveedor = new TextBox();
             txt_Direccion_FormProveedor = new TextBox();
             label1 = new Label();
+            txt_Documento_FormProveedor = new TextBox();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormProveedor).BeginInit();
             SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             // 
             label5.AutoSize = true;
             label5.BackColor = Color.White;
-            label5.Location = new Point(12, 358);
+            label5.Location = new Point(12, 422);
             label5.Name = "label5";
             label5.Size = new Size(42, 15);
             label5.TabIndex = 100;
@@ -73,7 +75,7 @@
             // 
             label4.AutoSize = true;
             label4.BackColor = Color.White;
-            label4.Location = new Point(12, 304);
+            label4.Location = new Point(12, 368);
             label4.Name = "label4";
             label4.Size = new Size(51, 15);
             label4.TabIndex = 99;
@@ -81,7 +83,7 @@
             // 
             // txt_Telefono_FormProveedor
             // 
-            txt_Telefono_FormProveedor.Location = new Point(12, 321);
+            txt_Telefono_FormProveedor.Location = new Point(12, 391);
             txt_Telefono_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_Telefono_FormProveedor.Name = "txt_Telefono_FormProveedor";
             txt_Telefono_FormProveedor.Size = new Size(218, 23);
@@ -89,7 +91,7 @@
             // 
             // txt_Correo_FormProveedor
             // 
-            txt_Correo_FormProveedor.Location = new Point(12, 272);
+            txt_Correo_FormProveedor.Location = new Point(12, 337);
             txt_Correo_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_Correo_FormProveedor.Name = "txt_Correo_FormProveedor";
             txt_Correo_FormProveedor.Size = new Size(218, 23);
@@ -101,7 +103,7 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 15F);
-            label9.Location = new Point(10, 54);
+            label9.Location = new Point(12, 9);
             label9.Name = "label9";
             label9.Size = new Size(208, 30);
             label9.TabIndex = 82;
@@ -118,7 +120,7 @@
             btn_Eliminar_FormUsuario.IconColor = Color.White;
             btn_Eliminar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Eliminar_FormUsuario.IconSize = 16;
-            btn_Eliminar_FormUsuario.Location = new Point(51, 551);
+            btn_Eliminar_FormUsuario.Location = new Point(43, 623);
             btn_Eliminar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Eliminar_FormUsuario.Name = "btn_Eliminar_FormUsuario";
             btn_Eliminar_FormUsuario.Size = new Size(155, 39);
@@ -140,7 +142,7 @@
             btn_Editar_FormUsuario.IconColor = Color.White;
             btn_Editar_FormUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Editar_FormUsuario.IconSize = 16;
-            btn_Editar_FormUsuario.Location = new Point(51, 508);
+            btn_Editar_FormUsuario.Location = new Point(43, 580);
             btn_Editar_FormUsuario.Margin = new Padding(3, 2, 3, 2);
             btn_Editar_FormUsuario.Name = "btn_Editar_FormUsuario";
             btn_Editar_FormUsuario.Size = new Size(155, 39);
@@ -162,7 +164,7 @@
             btn_Guardar_FormProveedores.IconColor = Color.White;
             btn_Guardar_FormProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Guardar_FormProveedores.IconSize = 16;
-            btn_Guardar_FormProveedores.Location = new Point(51, 465);
+            btn_Guardar_FormProveedores.Location = new Point(43, 537);
             btn_Guardar_FormProveedores.Margin = new Padding(3, 2, 3, 2);
             btn_Guardar_FormProveedores.Name = "btn_Guardar_FormProveedores";
             btn_Guardar_FormProveedores.Size = new Size(155, 39);
@@ -177,7 +179,7 @@
             // 
             label8.AutoSize = true;
             label8.BackColor = Color.White;
-            label8.Location = new Point(12, 254);
+            label8.Location = new Point(12, 314);
             label8.Name = "label8";
             label8.Size = new Size(41, 15);
             label8.TabIndex = 78;
@@ -187,7 +189,7 @@
             // 
             cmb_Estado_FormProveedor.DropDownStyle = ComboBoxStyle.DropDownList;
             cmb_Estado_FormProveedor.FormattingEnabled = true;
-            cmb_Estado_FormProveedor.Location = new Point(12, 376);
+            cmb_Estado_FormProveedor.Location = new Point(12, 445);
             cmb_Estado_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             cmb_Estado_FormProveedor.Name = "cmb_Estado_FormProveedor";
             cmb_Estado_FormProveedor.Size = new Size(216, 23);
@@ -195,7 +197,7 @@
             // 
             // txt_RazonSocial_FormProveedor
             // 
-            txt_RazonSocial_FormProveedor.Location = new Point(12, 224);
+            txt_RazonSocial_FormProveedor.Location = new Point(12, 283);
             txt_RazonSocial_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_RazonSocial_FormProveedor.Name = "txt_RazonSocial_FormProveedor";
             txt_RazonSocial_FormProveedor.Size = new Size(218, 23);
@@ -205,7 +207,7 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Location = new Point(12, 206);
+            label3.Location = new Point(12, 260);
             label3.Name = "label3";
             label3.Size = new Size(69, 15);
             label3.TabIndex = 74;
@@ -215,7 +217,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Location = new Point(10, 118);
+            label2.Location = new Point(10, 95);
             label2.Name = "label2";
             label2.Size = new Size(127, 15);
             label2.TabIndex = 73;
@@ -289,7 +291,7 @@
             // 
             // txt_ID_FormProveedor
             // 
-            txt_ID_FormProveedor.Location = new Point(206, 96);
+            txt_ID_FormProveedor.Location = new Point(10, 64);
             txt_ID_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_ID_FormProveedor.Name = "txt_ID_FormProveedor";
             txt_ID_FormProveedor.Size = new Size(39, 23);
@@ -330,7 +332,7 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.White;
             dataGridViewCellStyle2.SelectionForeColor = Color.Black;
             dgv_Data_FormProveedor.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgv_Data_FormProveedor.Size = new Size(1039, 528);
+            dgv_Data_FormProveedor.Size = new Size(1039, 600);
             dgv_Data_FormProveedor.TabIndex = 83;
             dgv_Data_FormProveedor.SelectionChanged += dgv_Data_FormProveedor_SelectionChanged;
             // 
@@ -365,7 +367,7 @@
             btn_Vaciar_FormAlmacenes.IconColor = Color.White;
             btn_Vaciar_FormAlmacenes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Vaciar_FormAlmacenes.IconSize = 16;
-            btn_Vaciar_FormAlmacenes.Location = new Point(51, 422);
+            btn_Vaciar_FormAlmacenes.Location = new Point(43, 494);
             btn_Vaciar_FormAlmacenes.Margin = new Padding(3, 2, 3, 2);
             btn_Vaciar_FormAlmacenes.Name = "btn_Vaciar_FormAlmacenes";
             btn_Vaciar_FormAlmacenes.Size = new Size(155, 39);
@@ -378,7 +380,7 @@
             // 
             // txt_Nombre_FormProveedor
             // 
-            txt_Nombre_FormProveedor.Location = new Point(10, 135);
+            txt_Nombre_FormProveedor.Location = new Point(10, 118);
             txt_Nombre_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_Nombre_FormProveedor.Name = "txt_Nombre_FormProveedor";
             txt_Nombre_FormProveedor.Size = new Size(218, 23);
@@ -386,7 +388,7 @@
             // 
             // txt_Direccion_FormProveedor
             // 
-            txt_Direccion_FormProveedor.Location = new Point(10, 181);
+            txt_Direccion_FormProveedor.Location = new Point(12, 229);
             txt_Direccion_FormProveedor.Margin = new Padding(3, 2, 3, 2);
             txt_Direccion_FormProveedor.Name = "txt_Direccion_FormProveedor";
             txt_Direccion_FormProveedor.Size = new Size(218, 23);
@@ -396,17 +398,37 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.White;
-            label1.Location = new Point(10, 163);
+            label1.Location = new Point(12, 206);
             label1.Name = "label1";
             label1.Size = new Size(57, 15);
             label1.TabIndex = 111;
             label1.Text = "Direccion";
             // 
+            // txt_Documento_FormProveedor
+            // 
+            txt_Documento_FormProveedor.Location = new Point(12, 170);
+            txt_Documento_FormProveedor.Margin = new Padding(3, 2, 3, 2);
+            txt_Documento_FormProveedor.Name = "txt_Documento_FormProveedor";
+            txt_Documento_FormProveedor.Size = new Size(218, 23);
+            txt_Documento_FormProveedor.TabIndex = 114;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.White;
+            label6.Location = new Point(12, 147);
+            label6.Name = "label6";
+            label6.Size = new Size(70, 15);
+            label6.TabIndex = 113;
+            label6.Text = "Documento";
+            // 
             // FormProveedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1313, 601);
+            ClientSize = new Size(1313, 673);
+            Controls.Add(txt_Documento_FormProveedor);
+            Controls.Add(label6);
             Controls.Add(txt_Direccion_FormProveedor);
             Controls.Add(label1);
             Controls.Add(btn_Vaciar_FormAlmacenes);
@@ -470,5 +492,7 @@
         private TextBox txt_Nombre_FormProveedor;
         private TextBox txt_Direccion_FormProveedor;
         private Label label1;
+        private TextBox txt_Documento_FormProveedor;
+        private Label label6;
     }
 }
