@@ -114,10 +114,12 @@
             // 
             // dgv_Data_FormReporteVentas
             // 
+            dgv_Data_FormReporteVentas.AllowUserToAddRows = false;
             dgv_Data_FormReporteVentas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgv_Data_FormReporteVentas.Location = new Point(118, 231);
             dgv_Data_FormReporteVentas.Margin = new Padding(3, 2, 3, 2);
             dgv_Data_FormReporteVentas.Name = "dgv_Data_FormReporteVentas";
+            dgv_Data_FormReporteVentas.ReadOnly = true;
             dgv_Data_FormReporteVentas.RowHeadersWidth = 51;
             dgv_Data_FormReporteVentas.Size = new Size(1032, 275);
             dgv_Data_FormReporteVentas.TabIndex = 111;
@@ -144,7 +146,7 @@
             btn_Buscar_FormReporteVentas.IconColor = Color.Black;
             btn_Buscar_FormReporteVentas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btn_Buscar_FormReporteVentas.IconSize = 16;
-            btn_Buscar_FormReporteVentas.Location = new Point(676, 108);
+            btn_Buscar_FormReporteVentas.Location = new Point(581, 108);
             btn_Buscar_FormReporteVentas.Margin = new Padding(3, 2, 3, 2);
             btn_Buscar_FormReporteVentas.Name = "btn_Buscar_FormReporteVentas";
             btn_Buscar_FormReporteVentas.Size = new Size(73, 22);
@@ -236,7 +238,6 @@
             Controls.Add(label10);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormReporteVentas";
-            Text = "FormReporteVentas";
             Load += FormReporteVentas_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormReporteVentas).EndInit();
             ResumeLayout(false);

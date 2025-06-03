@@ -254,7 +254,7 @@
             // 
             // txt_ProveedorID_FormCompras
             // 
-            txt_ProveedorID_FormCompras.Location = new Point(1051, 14);
+            txt_ProveedorID_FormCompras.Location = new Point(1045, 14);
             txt_ProveedorID_FormCompras.Margin = new Padding(3, 2, 3, 2);
             txt_ProveedorID_FormCompras.Name = "txt_ProveedorID_FormCompras";
             txt_ProveedorID_FormCompras.Size = new Size(37, 23);

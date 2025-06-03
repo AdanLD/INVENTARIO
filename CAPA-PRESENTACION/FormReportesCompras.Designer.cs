@@ -162,10 +162,12 @@
             // 
             // dvg_ReporteCompras_FormReporteCompras
             // 
+            dvg_ReporteCompras_FormReporteCompras.AllowUserToAddRows = false;
             dvg_ReporteCompras_FormReporteCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvg_ReporteCompras_FormReporteCompras.Location = new Point(34, 201);
             dvg_ReporteCompras_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
             dvg_ReporteCompras_FormReporteCompras.Name = "dvg_ReporteCompras_FormReporteCompras";
+            dvg_ReporteCompras_FormReporteCompras.ReadOnly = true;
             dvg_ReporteCompras_FormReporteCompras.RowHeadersWidth = 51;
             dvg_ReporteCompras_FormReporteCompras.Size = new Size(1032, 275);
             dvg_ReporteCompras_FormReporteCompras.TabIndex = 95;
@@ -261,7 +263,6 @@
             Controls.Add(label10);
             Margin = new Padding(3, 2, 3, 2);
             Name = "FormReportesCompras";
-            Text = "FormReportesCompras";
             Load += FormReportesCompras_Load;
             ((System.ComponentModel.ISupportInitialize)dvg_ReporteCompras_FormReporteCompras).EndInit();
             ResumeLayout(false);

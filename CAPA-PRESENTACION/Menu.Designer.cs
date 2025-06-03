@@ -306,6 +306,7 @@
             Controls.Add(mnString_Titulo_Menu);
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             MainMenuStrip = menuStrip_Menu_Menu;
+            MaximizeBox = false;
             Name = "Menu";
             Text = "USUARIO:";
             Load += Menu_Load;
