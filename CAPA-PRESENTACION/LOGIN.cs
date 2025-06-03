@@ -11,9 +11,11 @@ using CAPA_NEGOCIO;
 using CAPA_ENTIDAD;
 using FontAwesome.Sharp;
 using CAPA_PRESENTACION.Utilidades;
+using static CAPA_PRESENTACION.FormInventario;
 
 namespace CAPA_PRESENTACION
 {
+
     public partial class LOGIN : CAPA_PRESENTACION.PADRE
     {
         public LOGIN()
@@ -33,6 +35,7 @@ namespace CAPA_PRESENTACION
                 List<Usuario> TEST = new CN_Usuario().Enlistar();
 
                 Usuario ObjAUsuario = new CN_Usuario().Enlistar().Where(u => u.documento_Usuario == txt_Login_Usuario.Text && u.contraseña_Usuario == txt_Login_Contraseña.Text).FirstOrDefault(); //Busca al usuario(obj) con las coincidencias (Adan);
+                Global.UsuarioActualID = ObjAUsuario.usuario_ID;// Asigna el ID del usuario actual a la variable global UsuarioActualID (Adan).
 
                 if (ObjAUsuario != null)
                 {
@@ -51,6 +54,7 @@ namespace CAPA_PRESENTACION
                 {
                     MessageBox.Show("Usuario inexistente");
                 }
+
             }
             catch (Exception ex)
             {

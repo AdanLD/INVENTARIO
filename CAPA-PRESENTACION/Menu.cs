@@ -53,7 +53,7 @@ namespace CAPA_PRESENTACION
 
         private static Form formActivo = null; //Declaracion de la variable formActivo para almacenar el formulario activo (Adan).
 
-        private void AbrirFormulario(IconMenuItem menu, Form formulario) 
+        private void AbrirFormulario(IconMenuItem menu, Form formulario)
         {
             try
             {
@@ -179,6 +179,11 @@ namespace CAPA_PRESENTACION
         {
             AbrirFormulario(iconMenuItem_Mantenedor_Menu, new FormReporteVentas());  //Llamada al metodo abrir formulario con destino a FormNegocio (Adan).
 
+        }
+
+        private void iconMenuItem_Inventario_Menu_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new FormInventario());//Llamada al metodo abrir formulario con destino a FormInventario (Adan).
         }
     }
 }
