@@ -307,7 +307,7 @@
             label10.Padding = new Padding(5, 0, 0, 0);
             label10.Size = new Size(1039, 53);
             label10.TabIndex = 84;
-            label10.Text = "Lista de Proveedores:";
+            label10.Text = "LISTA DE PROVEEDORES:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // dgv_Data_FormProveedor

@@ -6,8 +6,6 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CAPA_PRESENTACION
@@ -23,19 +21,19 @@ namespace CAPA_PRESENTACION
         {
             var headersReportesCompras = new Dictionary<string, string>
             {
-                { "venta_ID","IDENTIFICADOR DE VENTA"},
-                { "tipo_Documento_Venta","TIPO DE DOCUMENTO"},
-                { "numero_Documento_Venta", "NUMERO DE DOCUMENTO DE VENTA" },
-                { "tipo_Documento_Cliente_Venta", "TIPO DE DOCUMENTO DE CLIENTE" },
-                { "nombre_Cliente_Venta", "NOMBRE DE CLIENTE"},
-                { "apellido_Paterno_Cliente_Venta", "APELLIDO PATERNO DEL CLIENTE" },
-                { "apellido_Materno_Cliente_Venta","APELLIDO MATERNO DEL CLIENTE"},
-                { "monto_Pago_Venta","MONTO DE PAGO"},
-                { "monto_Cambio_Venta","MONTO DE CAMBIO"},
-                { "monto_Total_Venta","MONTO TOTAL"}, 
-                { "fecha_Creacion_Venta","FECHA DE CREACION"}, 
-                { "hora_Creacion_Venta","HORA DE CREACION"},   
-                { "usuario_ID","IDENTIFICADOR DE USUARIO"}
+                { "venta_ID", "IDENTIFICADOR DE VENTA" },
+                { "tipo_Documento_Venta", "TIPO DE DOCUMENTO" },
+                { "numero_Documento_Venta", "NUMERO DE DOCUMENTO" },
+                { "tipo_Documento_Cliente_Venta", "DOCUMENTO DEL CLIENTE" },
+                { "nombre_Cliente_Venta", "CLIENTE" },
+                { "apellido_Paterno_Cliente_Venta", "APELLIDO PATERNO" },
+                { "apellido_Materno_Cliente_Venta", "APELLIDO MATERNO" },
+                { "monto_Pago_Venta", "PAGO" },
+                { "monto_Cambio_Venta", "CAMBIO" },
+                { "monto_Total_Venta", "TOTAL" },
+                { "fecha_Creacion_Compra", "FECHA" }, 
+                { "hora_Creacion_Compra", "HORA" },    
+                { "usuario_ID", "IDENTIFICADOR DE USUARIO" }
             };
 
             cmb_Buscar_FormReporteCompras.DisplayMember = "Value";
@@ -45,130 +43,72 @@ namespace CAPA_PRESENTACION
 
         private void CargarVentasPorFechas(DateTime fechaInicio, DateTime fechaFin)
         {
-            
-        }
-
-        private void CargarReportesCompra()
-        {
             try
             {
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                 {
-                    string query = @"SELECT * FROM TB_Venta";
+                    string query = @"SELECT * FROM TB_Venta 
+                                    WHERE fecha_Creacion_Compra BETWEEN @fechaInicio AND @fechaFin";
 
-                    SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, cn);
+                    SQLiteCommand cmd = new SQLiteCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@fechaFin", fechaFin.ToString("yyyy-MM-dd"));
 
+                    SQLiteDataAdapter adaptador = new SQLiteDataAdapter(cmd);
                     DataTable tabla = new DataTable();
-
                     adaptador.Fill(tabla);
-
                     dgv_Data_FormReporteVentas.DataSource = tabla;
                 }
 
-                foreach (DataGridViewColumn columna in dgv_Data_FormReporteVentas.Columns)
-                {
-                    columna.SortMode = DataGridViewColumnSortMode.NotSortable;
-                }
+                ConfigurarHeadersGrid();
             }
             catch (Exception ex)
             {
-                string mensajeError = $"Error: {ex.Message}\nTipo de excepción: {ex.GetType().Name}\nTraza de la pila: {ex.StackTrace}";
-                MessageBox.Show(mensajeError);
+                MessageBox.Show($"Error al cargar ventas: {ex.Message}");
+            }
+        }
+
+        private void ConfigurarHeadersGrid()
+        {
+            var headersEspanol = new Dictionary<string, string>
+            {
+                { "venta_ID", "IDENTIFICADOR DE VENTA" },
+                { "tipo_Documento_Venta", "TIPO DE DOCUMENTO" },
+                { "numero_Documento_Venta", "NUMERO DE DOCUMENTO" },
+                { "tipo_Documento_Cliente_Venta", "DOCUMENTO DEL CLIENTE" },
+                { "nombre_Cliente_Venta", "CLIENTE" },
+                { "apellido_Paterno_Cliente_Venta", "APELLIDO PATERNO" },
+                { "apellido_Materno_Cliente_Venta", "APELLIDO MATERNO" },
+                { "monto_Pago_Venta", "PAGO" },
+                { "monto_Cambio_Venta", "CAMBIO" },
+                { "monto_Total_Venta", "TOTAL" },
+                { "fecha_Creacion_Compra", "FECHA" },
+                { "hora_Creacion_Compra", "HORA" },
+                { "usuario_ID", "IDENTIFICADOR DE USUARIO" }
+            };
+
+            foreach (DataGridViewColumn col in dgv_Data_FormReporteVentas.Columns)
+            {
+                if (headersEspanol.TryGetValue(col.DataPropertyName, out string nombreColumna))
+                {
+                    col.HeaderText = nombreColumna;
+                }
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
         }
 
         private void btn_Buscar_FormReporteVentas_Click(object sender, EventArgs e)
         {
-            try
-            {
-                CargarReporteVentas();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
-        private void CargarReporteVentas()
-        {
-            try
-            {
-                using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
-                {
-                    string query = @"SELECT * FROM TB_Venta";
-
-                    SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, cn);
-
-                    DataTable tabla = new DataTable();
-
-                    adaptador.Fill(tabla);
-
-                    dgv_Data_FormReporteVentas.DataSource = tabla;
-                }
-
-                foreach (DataGridViewColumn columna in dgv_Data_FormReporteVentas.Columns)
-                {
-                    columna.SortMode = DataGridViewColumnSortMode.NotSortable;
-                }
-            }
-            catch (Exception ex)
-            {
-                string mensajeError = $"Error: {ex.Message}\nTipo de excepción: {ex.GetType().Name}\nTraza de la pila: {ex.StackTrace}";
-                MessageBox.Show(mensajeError);
-            }
+            CargarVentasPorFechas(dateTimePicker_Inicio.Value, dateTimePicker_Final.Value);
         }
 
         private void FormReporteVentas_Load(object sender, EventArgs e)
         {
-            try
-            {
-                CargarReportesCompra();
-
-                dateTimePicker_Inicio.Value = DateTime.Today.AddDays(-30);
-                dateTimePicker_Final.Value = DateTime.Today;
-
-                var headersAlmacen = new Dictionary<string, string>
-                {
-                    { "venta_ID","IDENTIFICADOR DE VENTA"},
-                    { "tipo_Documento_Venta","TIPO DE DOCUMENTO"},
-                    { "numero_Documento_Venta", "NUMERO DE DOCUMENTO DE VENTA" },
-                    { "tipo_Documento_Cliente_Venta", "TIPO DE DOCUMENTO DE CLIENTE" },
-                    { "nombre_Cliente_Venta", "NOMBRE DE CLIENTE"},
-                    { "apellido_Paterno_Cliente_Venta", "APELLIDO PATERNO DEL CLIENTE" },
-                    { "apellido_Materno_Cliente_Venta","APELLIDO MATERNO DEL CLIENTE"},
-                    { "monto_Pago_Venta","MONTO DE PAGO"},
-                    { "monto_Cambio_Venta","MONTO DE CAMBIO"},
-                    { "monto_Total_Venta","MONTO TOTAL"}, 
-                    { "fecha_Creacion_Venta","FECHA DE CREACION"},
-                    { "hora_Creacion_Venta","HORA DE CREACION"},    
-                    { "usuario_ID","IDENTIFICADOR DE USUARIO"},
-                };
-
-                foreach (DataGridViewColumn columna in dgv_Data_FormReporteVentas.Columns)
-                {
-                    if (headersAlmacen.TryGetValue(columna.DataPropertyName, out string nombreColumna))
-                    {
-                        columna.HeaderText = nombreColumna;
-                    }
-                }
-
-                OpcionesComboBox();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            dateTimePicker_Inicio.Value = DateTime.Today.AddDays(-30);
+            dateTimePicker_Final.Value = DateTime.Today;
+            OpcionesComboBox();
+            CargarVentasPorFechas(dateTimePicker_Inicio.Value, dateTimePicker_Final.Value);
         }
-
-        private void dateTimePicker_Inicio_ValueChanged(object sender, EventArgs e) { }
-
-        private void cmb_BuscarClientes_FormReporteVentas_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void dateTimePicker_Final_ValueChanged(object sender, EventArgs e) { }
-
-        private void cmb_Buscar_FormReporteCompras_SelectedIndexChanged(object sender, EventArgs e) { }
-
-        private void txt_Buscar_FormReporteVentas_TextChanged(object sender, EventArgs e) { }
 
         private void iconButton_Buscar_FormReporteVentas_Click(object sender, EventArgs e)
         {
@@ -181,18 +121,23 @@ namespace CAPA_PRESENTACION
                     return;
                 }
 
-                string columna = cmb_Buscar_FormReporteCompras.SelectedValue.ToString();
+                string columna = ((KeyValuePair<string, string>)cmb_Buscar_FormReporteCompras.SelectedItem).Key;
                 string texto = txt_Buscar_FormReporteVentas.Text.Trim();
-                string query = "SELECT * FROM TB_Venta";
-
-                if (!string.IsNullOrEmpty(texto))
-                {
-                    query += $" WHERE \"{columna}\" LIKE @busqueda";
-                }
 
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                 {
+                    string query = @"SELECT * FROM TB_Venta 
+                                    WHERE fecha_Creacion_Compra BETWEEN @fechaInicio AND @fechaFin";
+
+                    if (!string.IsNullOrEmpty(texto))
+                    {
+                        query += $" AND [{columna}] LIKE @busqueda";
+                    }
+
                     SQLiteCommand cmd = new SQLiteCommand(query, cn);
+                    cmd.Parameters.AddWithValue("@fechaInicio", dateTimePicker_Inicio.Value.ToString("yyyy-MM-dd"));
+                    cmd.Parameters.AddWithValue("@fechaFin", dateTimePicker_Final.Value.ToString("yyyy-MM-dd"));
+
                     if (!string.IsNullOrEmpty(texto))
                     {
                         cmd.Parameters.AddWithValue("@busqueda", $"%{texto}%");
@@ -202,16 +147,26 @@ namespace CAPA_PRESENTACION
                     DataTable dt = new DataTable();
                     adaptador.Fill(dt);
                     dgv_Data_FormReporteVentas.DataSource = dt;
-                }
 
-                CAPA_PRESENTACION.Utilidades.FuncionesPersonalizadas.LimpiarControles(this);
+                    ConfigurarHeadersGrid();
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                MessageBox.Show($"Error en la búsqueda: {ex.Message}");
             }
         }
 
-        private void iconButton_Vaciar_FormReporteVentas_Click(object sender, EventArgs e) { }
+        private void iconButton_Vaciar_FormReporteVentas_Click(object sender, EventArgs e)
+        {
+            txt_Buscar_FormReporteVentas.Clear();
+            CargarVentasPorFechas(dateTimePicker_Inicio.Value, dateTimePicker_Final.Value);
+        }
+
+        private void dateTimePicker_Inicio_ValueChanged(object sender, EventArgs e) { }
+        private void cmb_BuscarClientes_FormReporteVentas_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void dateTimePicker_Final_ValueChanged(object sender, EventArgs e) { }
+        private void cmb_Buscar_FormReporteCompras_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void txt_Buscar_FormReporteVentas_TextChanged(object sender, EventArgs e) { }
     }
 }

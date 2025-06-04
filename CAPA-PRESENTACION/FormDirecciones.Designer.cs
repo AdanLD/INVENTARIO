@@ -30,8 +30,6 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
             txt_Referencias_FormDireccion = new TextBox();
             label13 = new Label();
             txt_CP_FormDireccion = new TextBox();
@@ -59,46 +57,6 @@
             btn_Vaciar_FormDireccion = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormDirecciones).BeginInit();
             SuspendLayout();
-            // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(151, 568);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 68;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(199, 568);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 67;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
             // 
             // txt_Referencias_FormDireccion
             // 
@@ -427,8 +385,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1301, 601);
             Controls.Add(btn_Vaciar_FormDireccion);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(txt_Referencias_FormDireccion);
             Controls.Add(label13);
             Controls.Add(txt_CP_FormDireccion);
@@ -462,9 +418,6 @@
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private TextBox txt_Referencias_FormDireccion;
         private Label label13;
         private TextBox txt_CP_FormDireccion;

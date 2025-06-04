@@ -6,8 +6,6 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CAPA_PRESENTACION
@@ -26,16 +24,14 @@ namespace CAPA_PRESENTACION
                 using (SQLiteConnection cn = new SQLiteConnection(Conectar.cadena))
                 {
                     string query = "SELECT proveedor_ID, nombre_Proveedor FROM TB_Proveedor";
-
                     SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, cn);
-
                     DataTable tablaProveedores = new DataTable();
-
                     adaptador.Fill(tablaProveedores);
 
                     cmb_BuscarProvedores_FormReporteCompras.DisplayMember = "nombre_Proveedor";
                     cmb_BuscarProvedores_FormReporteCompras.ValueMember = "proveedor_ID";
                     cmb_BuscarProvedores_FormReporteCompras.DataSource = tablaProveedores;
+                    cmb_BuscarProvedores_FormReporteCompras.SelectedIndex = -1; 
                 }
             }
             catch (Exception ex)
@@ -48,15 +44,15 @@ namespace CAPA_PRESENTACION
         {
             var headersReportesCompras = new Dictionary<string, string>
             {
-                { "compra_ID","ID COMPRA"},
-                { "tipo_Documento_Compra","TIPO DOC"},
-                { "numero_Documento_Compra", "NUM DOC" },
+                { "compra_ID", "IDENTIFICADOR DE COMPRA" },
+                { "tipo_Documento_Compra", "TIPO DE DOCUMENTO" },
+                { "numero_Documento_Compra", "NUMERO DE DOCUMENTO" },
                 { "monto_Total_Compra", "MONTO" },
-                { "moneda_Compra", "MONEDA"},
+                { "moneda_Compra", "MONEDA" },
                 { "fecha_Creacion_Compra", "FECHA" },
-                { "hora_Creacion_Compra","HORA"},
-                { "usuario_ID","ID USUARIO"},
-                { "proveedor_ID","ID PROVEEDOR"}
+                { "hora_Creacion_Compra", "HORA" },
+                { "usuario_ID", "IDENTIFICADOR DE USUARIO" },
+                { "proveedor_ID", "IDENTIFICADOR DE PROVEEDOR" }
             };
 
             cmb_Buscar_FormReporteCompras.DisplayMember = "Value";
@@ -70,18 +66,24 @@ namespace CAPA_PRESENTACION
             {
                 string columna = "";
                 string texto = txt_Buscar_FormReporteCompras.Text.Trim();
-                bool usarFiltroTexto = false;
+                bool usarFiltroTexto = !string.IsNullOrEmpty(texto);
+                int proveedorID = -1;
 
-                if (!string.IsNullOrEmpty(texto))
+                if (cmb_BuscarProvedores_FormReporteCompras.SelectedValue != null)
                 {
-                    if (cmb_Buscar_FormReporteCompras.SelectedItem == null)
-                    {
-                        MessageBox.Show("Selecciona una columna para buscar", "Advertencia",
-                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-                    columna = cmb_Buscar_FormReporteCompras.SelectedValue.ToString();
-                    usarFiltroTexto = true;
+                    proveedorID = Convert.ToInt32(cmb_BuscarProvedores_FormReporteCompras.SelectedValue);
+                }
+
+                if (usarFiltroTexto && cmb_Buscar_FormReporteCompras.SelectedItem == null)
+                {
+                    MessageBox.Show("Selecciona una columna para buscar", "Advertencia",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (usarFiltroTexto)
+                {
+                    columna = ((KeyValuePair<string, string>)cmb_Buscar_FormReporteCompras.SelectedItem).Key;
                 }
 
                 string fechaInicio = dateTimePicker_Inicio.Value.ToString("yyyy-MM-dd");
@@ -103,6 +105,11 @@ namespace CAPA_PRESENTACION
                         FROM TB_Compra
                         WHERE fecha_Creacion_Compra BETWEEN @fechaInicio AND @fechaFin";
 
+                    if (proveedorID > 0)
+                    {
+                        query += " AND proveedor_ID = @proveedorID";
+                    }
+
                     if (usarFiltroTexto)
                     {
                         query += $" AND \"{columna}\" LIKE @busqueda";
@@ -111,6 +118,11 @@ namespace CAPA_PRESENTACION
                     SQLiteCommand cmd = new SQLiteCommand(query, cn);
                     cmd.Parameters.AddWithValue("@fechaInicio", fechaInicio);
                     cmd.Parameters.AddWithValue("@fechaFin", fechaFin);
+
+                    if (proveedorID > 0)
+                    {
+                        cmd.Parameters.AddWithValue("@proveedorID", proveedorID);
+                    }
 
                     if (usarFiltroTexto)
                     {
@@ -123,32 +135,26 @@ namespace CAPA_PRESENTACION
                     dvg_ReporteCompras_FormReporteCompras.DataSource = dt;
                 }
 
-                // Configurar las cabeceras de las columnas
-                var headersAlmacen = new Dictionary<string, string>
+                var headers = new Dictionary<string, string>
                 {
-                    { "compra_ID","ID COMPRA"},
-                    { "tipo_Documento_Compra","TIPO DOC"},
-                    { "numero_Documento_Compra", "NUM DOC" },
+                    { "compra_ID", "IDENTIFICADOR DE COMPRA" },
+                    { "tipo_Documento_Compra", "TIPO DE DOCUMENTO" },
+                    { "numero_Documento_Compra", "NUMERO DE DOCMENTO" },
                     { "monto_Total_Compra", "MONTO" },
-                    { "moneda_Compra", "MONEDA"},
+                    { "moneda_Compra", "MONEDA" },
                     { "fecha_Creacion_Compra", "FECHA" },
-                    { "hora_Creacion_Compra","HORA"},
-                    { "usuario_ID","ID USUARIO"},
-                    { "proveedor_ID","ID PROVEEDOR"}
+                    { "hora_Creacion_Compra", "HORA" },
+                    { "usuario_ID", "IDENTIFICADOR DE USUARIO" },
+                    { "proveedor_ID", "IDENTIFICADOR DE PROVEEDOR" }
                 };
 
                 foreach (DataGridViewColumn col in dvg_ReporteCompras_FormReporteCompras.Columns)
                 {
-                    if (headersAlmacen.TryGetValue(col.DataPropertyName, out string nombreColumna))
+                    if (headers.TryGetValue(col.DataPropertyName, out string nombreColumna))
                     {
                         col.HeaderText = nombreColumna;
                     }
-                }
-
-                // Deshabilitar ordenación en las columnas
-                foreach (DataGridViewColumn columnaa in dvg_ReporteCompras_FormReporteCompras.Columns)
-                {
-                    columnaa.SortMode = DataGridViewColumnSortMode.NotSortable;
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
                 }
             }
             catch (Exception ex)
@@ -163,10 +169,9 @@ namespace CAPA_PRESENTACION
             {
                 dateTimePicker_Inicio.Value = DateTime.Today.AddDays(-30);
                 dateTimePicker_Final.Value = DateTime.Today;
-
                 CargarProveedores();
                 OpcionesComboBox();
-                BuscarConFiltros(); 
+                BuscarConFiltros();
             }
             catch (Exception ex)
             {
@@ -186,19 +191,12 @@ namespace CAPA_PRESENTACION
 
         private void cmb_BuscarProvedores_FormReporteCompras_SelectedIndexChanged(object sender, EventArgs e)
         {
+            BuscarConFiltros(); 
         }
 
         private void iconButton_BuscarEntre_FormReporteCompras_Click(object sender, EventArgs e)
         {
             BuscarConFiltros();
-        }
-
-        private void cmb_Buscar_FormReporteCompras_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void txt_Buscar_FormReporteCompras_TextChanged(object sender, EventArgs e)
-        {
         }
 
         private void iconButton_Buscar_FormReporteCompras_Click(object sender, EventArgs e)
@@ -209,11 +207,8 @@ namespace CAPA_PRESENTACION
         private void iconButton_Vaciar_FormReporteCompras_Click(object sender, EventArgs e)
         {
             txt_Buscar_FormReporteCompras.Clear();
+            cmb_BuscarProvedores_FormReporteCompras.SelectedIndex = -1;
             BuscarConFiltros();
-        }
-
-        private void dvg_ReporteCompras_FormReporteCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
     }
 }

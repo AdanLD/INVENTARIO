@@ -455,9 +455,9 @@
             // 
             label10.BackColor = Color.White;
             label10.Font = new Font("Segoe UI", 15F);
-            label10.Location = new Point(-7, 0);
+            label10.Location = new Point(0, 0);
             label10.Name = "label10";
-            label10.Size = new Size(1598, 617);
+            label10.Size = new Size(2132, 938);
             label10.TabIndex = 46;
             label10.Text = "REGISTRAR VENTA";
             // 
@@ -482,7 +482,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1496, 608);
+            ClientSize = new Size(1738, 766);
             Controls.Add(txt_MetodoPago_FormVentas);
             Controls.Add(label13);
             Controls.Add(iconButton_CrearVenta_FormVentas);

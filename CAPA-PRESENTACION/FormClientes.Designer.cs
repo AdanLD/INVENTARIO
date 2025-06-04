@@ -172,7 +172,7 @@
             label10.Padding = new Padding(5, 0, 0, 0);
             label10.Size = new Size(1023, 53);
             label10.TabIndex = 54;
-            label10.Text = "Lista de Clientes:";
+            label10.Text = "LISTA DE CLIENTES:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // label9
@@ -435,7 +435,6 @@
             Controls.Add(label2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormClientes";
-            Text = "FormClientes";
             Load += FormClientes_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormClientes).EndInit();
             ResumeLayout(false);

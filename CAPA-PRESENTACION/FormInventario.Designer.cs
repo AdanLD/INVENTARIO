@@ -44,6 +44,7 @@
             groupBox1 = new GroupBox();
             groupBox2 = new GroupBox();
             lbl_Info = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv_Inventario).BeginInit();
             ((System.ComponentModel.ISupportInitialize)num_Cantidad).BeginInit();
             groupBox1.SuspendLayout();
@@ -204,17 +205,30 @@
             // lbl_Info
             // 
             lbl_Info.AutoSize = true;
-            lbl_Info.Location = new Point(667, 131);
+            lbl_Info.Location = new Point(611, 166);
             lbl_Info.Name = "lbl_Info";
             lbl_Info.Size = new Size(38, 15);
             lbl_Info.TabIndex = 16;
             lbl_Info.Text = "label5";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.White;
+            label9.BorderStyle = BorderStyle.FixedSingle;
+            label9.Font = new Font("Segoe UI", 15F);
+            label9.Location = new Point(5, 7);
+            label9.Name = "label9";
+            label9.Size = new Size(243, 30);
+            label9.TabIndex = 83;
+            label9.Text = "GESTION DE INVENTARIO:";
             // 
             // FormInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1029, 593);
+            Controls.Add(label9);
             Controls.Add(lbl_Info);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -251,5 +265,6 @@
         private GroupBox groupBox1;
         private GroupBox groupBox2;
         private Label lbl_Info;
+        private Label label9;
     }
 }

@@ -77,8 +77,6 @@
             label1 = new Label();
             txt_Telefono_FormUsuario = new TextBox();
             label13 = new Label();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
-            iconButton2 = new FontAwesome.Sharp.IconButton();
             btn_Vaciar_FormAlmacenes = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)dgv_Data_FormUsuario).BeginInit();
             SuspendLayout();
@@ -285,7 +283,7 @@
             label9.BackColor = Color.White;
             label9.BorderStyle = BorderStyle.FixedSingle;
             label9.Font = new Font("Segoe UI", 15F);
-            label9.Location = new Point(27, 9);
+            label9.Location = new Point(36, 9);
             label9.Name = "label9";
             label9.Size = new Size(181, 30);
             label9.TabIndex = 18;
@@ -297,7 +295,7 @@
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(251, 8);
             label10.Name = "label10";
-            label10.Size = new Size(990, 53);
+            label10.Size = new Size(1025, 53);
             label10.TabIndex = 20;
             label10.Text = "USUARIOS:";
             label10.TextAlign = ContentAlignment.MiddleLeft;
@@ -582,46 +580,6 @@
             label13.TabIndex = 31;
             label13.Text = "Telefono";
             // 
-            // iconButton1
-            // 
-            iconButton1.BackColor = Color.RoyalBlue;
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.Black;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 16;
-            iconButton1.Location = new Point(1154, 29);
-            iconButton1.Margin = new Padding(3, 2, 3, 2);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(42, 22);
-            iconButton1.TabIndex = 34;
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // iconButton2
-            // 
-            iconButton2.BackColor = Color.ForestGreen;
-            iconButton2.Cursor = Cursors.Hand;
-            iconButton2.FlatAppearance.BorderColor = Color.Black;
-            iconButton2.FlatStyle = FlatStyle.Flat;
-            iconButton2.ForeColor = Color.White;
-            iconButton2.IconChar = FontAwesome.Sharp.IconChar.Save;
-            iconButton2.IconColor = Color.White;
-            iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton2.IconSize = 16;
-            iconButton2.Location = new Point(1106, 29);
-            iconButton2.Margin = new Padding(3, 2, 3, 2);
-            iconButton2.Name = "iconButton2";
-            iconButton2.Size = new Size(42, 22);
-            iconButton2.TabIndex = 33;
-            iconButton2.TextAlign = ContentAlignment.MiddleRight;
-            iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton2.UseVisualStyleBackColor = false;
-            // 
             // btn_Vaciar_FormAlmacenes
             // 
             btn_Vaciar_FormAlmacenes.BackColor = Color.Firebrick;
@@ -649,10 +607,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1251, 652);
+            ClientSize = new Size(1298, 652);
             Controls.Add(btn_Vaciar_FormAlmacenes);
-            Controls.Add(iconButton1);
-            Controls.Add(iconButton2);
             Controls.Add(txt_Telefono_FormUsuario);
             Controls.Add(label13);
             Controls.Add(txt_NombreMaterno_FormUsuario);
@@ -728,8 +684,6 @@
         private TextBox txt_NombreMaterno_FormUsuario;
         private TextBox txt_Telefono_FormUsuario;
         private Label label13;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton iconButton2;
         private DataGridViewButtonColumn btn_Seleccionar_FormUsuario;
         private DataGridViewTextBoxColumn usuario_ID;
         private DataGridViewTextBoxColumn documento_Usuario;

@@ -69,9 +69,9 @@
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(-1, -1);
             label10.Name = "label10";
-            label10.Size = new Size(1032, 720);
+            label10.Size = new Size(1692, 940);
             label10.TabIndex = 47;
-            label10.Text = "Detalles Venta";
+            label10.Text = "DETALLES VENTA";
             // 
             // label5
             // 

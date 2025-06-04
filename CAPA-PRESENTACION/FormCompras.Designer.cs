@@ -410,9 +410,9 @@
             label10.Font = new Font("Segoe UI", 15F);
             label10.Location = new Point(-4, 1);
             label10.Name = "label10";
-            label10.Size = new Size(863, 599);
+            label10.Size = new Size(1691, 938);
             label10.TabIndex = 45;
-            label10.Text = "Registrar Compra";
+            label10.Text = "REGISTRAR COMPRA";
             // 
             // iconButton_CrearCompra_FormCompras
             // 

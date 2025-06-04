@@ -68,7 +68,7 @@
             label10.Name = "label10";
             label10.Size = new Size(1620, 801);
             label10.TabIndex = 46;
-            label10.Text = "Detalles Compra";
+            label10.Text = "DETALLES COMPRA";
             // 
             // iconButton_VaciarFormulario_FormDetalleCompras
             // 

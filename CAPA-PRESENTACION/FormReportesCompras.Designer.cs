@@ -54,7 +54,7 @@
             label10.Location = new Point(10, 7);
             label10.Name = "label10";
             label10.Padding = new Padding(5, 0, 0, 0);
-            label10.Size = new Size(1046, 136);
+            label10.Size = new Size(1056, 136);
             label10.TabIndex = 85;
             label10.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -164,14 +164,14 @@
             // 
             dvg_ReporteCompras_FormReporteCompras.AllowUserToAddRows = false;
             dvg_ReporteCompras_FormReporteCompras.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvg_ReporteCompras_FormReporteCompras.Location = new Point(34, 201);
+            dvg_ReporteCompras_FormReporteCompras.Location = new Point(10, 201);
             dvg_ReporteCompras_FormReporteCompras.Margin = new Padding(3, 2, 3, 2);
             dvg_ReporteCompras_FormReporteCompras.Name = "dvg_ReporteCompras_FormReporteCompras";
             dvg_ReporteCompras_FormReporteCompras.ReadOnly = true;
             dvg_ReporteCompras_FormReporteCompras.RowHeadersWidth = 51;
-            dvg_ReporteCompras_FormReporteCompras.Size = new Size(1032, 275);
+            dvg_ReporteCompras_FormReporteCompras.Size = new Size(1056, 304);
             dvg_ReporteCompras_FormReporteCompras.TabIndex = 95;
-            dvg_ReporteCompras_FormReporteCompras.CellContentClick += dvg_ReporteCompras_FormReporteCompras_CellContentClick;
+            //dvg_ReporteCompras_FormReporteCompras.CellContentClick += dvg_ReporteCompras_FormReporteCompras_CellContentClick;
             // 
             // label5
             // 
@@ -191,7 +191,7 @@
             cmb_Buscar_FormReporteCompras.Name = "cmb_Buscar_FormReporteCompras";
             cmb_Buscar_FormReporteCompras.Size = new Size(145, 23);
             cmb_Buscar_FormReporteCompras.TabIndex = 97;
-            cmb_Buscar_FormReporteCompras.SelectedIndexChanged += cmb_Buscar_FormReporteCompras_SelectedIndexChanged;
+            //cmb_Buscar_FormReporteCompras.SelectedIndexChanged += cmb_Buscar_FormReporteCompras_SelectedIndexChanged;
             // 
             // txt_Buscar_FormReporteCompras
             // 
@@ -200,7 +200,7 @@
             txt_Buscar_FormReporteCompras.Name = "txt_Buscar_FormReporteCompras";
             txt_Buscar_FormReporteCompras.Size = new Size(163, 23);
             txt_Buscar_FormReporteCompras.TabIndex = 98;
-            txt_Buscar_FormReporteCompras.TextChanged += txt_Buscar_FormReporteCompras_TextChanged;
+            //txt_Buscar_FormReporteCompras.TextChanged += txt_Buscar_FormReporteCompras_TextChanged;
             // 
             // iconButton_Vaciar_FormReporteCompras
             // 
